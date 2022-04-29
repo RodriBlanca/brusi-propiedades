@@ -1,0 +1,345 @@
+// GOOGLE FONTS
+
+// VARIABLES
+
+// Colors
+$black: #000000;
+$aqua: #01D3B7;
+$bgc: #ffffff;
+$bgc2: #F1F1F1;
+
+// GENERAL STYLES
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+// MOBILE
+@media screen and (min-width: 320px) {
+
+    .brusi-propiedades {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100px, repeat(2, 1fr), 500px;
+        min-height: 100vh;
+    }
+
+    .header {
+        align-items: center;
+        background-color: $bgc;
+        box-shadow: 0px 3px 3px darken($bgc2, 30);
+        display: flex;
+        grid-column: 1/5;
+        grid-row: 1/2;
+        height: 75px;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        z-index: 100000;
+
+        // Logo
+        &--brand {
+            &__img {
+                height: 150px;
+                margin-left: 15px;
+                margin-top: 12px;
+                width: 150px;
+            }
+        }
+
+        &--menu-mobile__label {
+            height: 3px;
+            width: 35px;
+            background-color: $black;
+            margin-right: 25px;
+            position: absolute;
+            right: 0;
+
+            &::after,
+            &::before {
+                background-color: $black;
+                content: "";
+                height: 3px;
+                position: absolute;
+                top: 9px;
+                width: 35px;
+            }
+
+            &::before {
+                top: -9px;
+            }
+        }
+    }
+
+    .menu-container {
+        align-items: flex-start;
+        background-color: $bgc;
+        box-shadow: 0px 3px 3px darken($bgc2, 30);
+        display: flex;
+        height: 0;
+        justify-content: center;
+        overflow: hidden;
+        position: absolute;
+        visibility: hidden;
+        top: 74px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+        z-index: 90000;
+
+        & ul {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 450px;
+            justify-content: space-between;
+            margin: 50px 0;
+            padding: 0;
+            transition: all .5s ease-out;
+            opacity: 0;
+
+            & li {
+                list-style: none;
+            }
+        }
+
+        &__link {
+            color: $black;
+            font-size: 1.8rem;
+            text-decoration: none;
+        }
+    }
+
+    // Menu mobile
+    #menu-button {
+        display: none;
+    }
+
+    #menu-button:checked ~ .menu-container {
+        height: 100vh;
+        visibility: visible;
+    }
+
+    #menu-button:checked ~ .menu-container ul {
+        opacity: 1;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    // Pages
+    .home, .about, .services, .properties {
+        grid-column: 1/5;
+        grid-row: 2/4;
+        min-height: 100vh;
+        margin-top: 75px;
+    }
+
+    // Home
+    .home {
+        &--services {
+            align-items: center;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+
+            &__img {
+                background-image: url('../images/Barrio Brickland-53.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 600px;
+                width: 100%;
+            }
+
+            &__text {
+                margin: 0 25px;
+                text-align: justify;
+            }
+        }
+    }
+
+    // Hero
+    .hero {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &--img-container {
+            background-image: url('../images/Barrio Brickland-63.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            width: 100%;
+        }
+
+        &--content {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 25px;
+            position: absolute;
+            top: 120px;
+        }
+
+        &--buttons {
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+            justify-content: space-between;
+
+            &__button {
+                border: 0;
+                color: $bgc;
+                cursor: pointer;
+                height: 50px;
+                width: 200px;
+            }
+        }
+    }
+
+    #sell {
+        background-color: $aqua; 
+    }
+
+    #buy {
+        background-color: $black;
+    }
+
+    .footer {
+        align-items: center;
+        display: flex;
+        background-color: $black;
+        flex-direction: column;
+        grid-column: 1/5;
+        grid-row: 4/5;
+        position: relative;
+        height: 500px;
+
+        &::after {
+            background-color: $aqua;
+            content: '';
+            height: 2px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100%;
+        }
+
+        &--logo {
+            
+            &__img {
+                height: 100px;
+                width: 100px;    
+            }
+        }
+
+        &--links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 25px;
+
+            &__section {
+                margin-bottom: 20px;
+
+                & ul {
+                    margin: 0;
+                    padding: 0;
+                    width: 150px;
+                }
+     
+                & p,
+                & ul li {
+                    color: $bgc;
+                    font-size: 1.3rem;
+                }
+
+                & p {
+                    font-size: 1.5rem;
+                }
+    
+                & ul li {
+                    list-style: none;
+                }
+            }
+
+            &__link {
+                color: $bgc;
+                list-style: none;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    
+}
+
+// TABLET 
+@media screen and (min-width: 600px) {
+    
+    .header--menu-mobile__label {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+
+        & ul {
+            display: flex;
+        }
+
+        &--item {
+            list-style: none;
+            margin-right: 25px;
+        }
+
+        &--item__link {
+            color: $black;
+            font-size: 1.3rem;
+            position: relative;
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+// DESKTOP
+@media screen and (min-width: 1024px) {
+    .navbar {
+        &--item__link::after {
+            background-color: $aqua;
+            content: '';
+            height: 2px;
+            left: 0;
+            position: absolute;
+            top: 25px;
+            transition: width 0.3s ease-in-out;
+            transition-property: width;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+            width: 0;
+        }
+
+        &--item__link:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+}
