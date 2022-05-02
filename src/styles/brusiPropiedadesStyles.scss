@@ -199,7 +199,7 @@ html, body {
         justify-content: center;
 
         &--img-container {
-            background-image: url('../images/Barrio Brickland-63.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7)), url('../images/Barrio Brickland-63.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -217,7 +217,10 @@ html, body {
             top: 120px;
 
             &__title {
+                color: $bgc;
                 font-family: 'Montserrat', sans-serif;
+                font-size: 4rem;
+                font-weight: bold;
             }
 
             &__text {
