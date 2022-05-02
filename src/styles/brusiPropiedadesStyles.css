@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&family=Montserrat:wght@400;500;700&display=swap");
 html, body {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ html, body {
   .brusi-propiedades {
     display: -ms-grid;
     display: grid;
+    font-family: 'Crimson Pro', serif;
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: 100px, (1fr)[2], 500px;
@@ -117,6 +119,7 @@ html, body {
     opacity: 0;
   }
   .menu-container ul li {
+    font-family: 'Montserrat', sans-serif;
     list-style: none;
   }
   .menu-container__link {
@@ -188,6 +191,11 @@ html, body {
   .home--services__text {
     margin: 0 25px;
     text-align: justify;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.3rem;
+  }
+  .home--services__text h2 {
+    font-family: 'Montserrat', sans-serif;
   }
   .hero {
     -webkit-box-align: center;
@@ -230,6 +238,12 @@ html, body {
     position: absolute;
     top: 120px;
   }
+  .hero--content__title {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .hero--content__text {
+    font-size: 1.4rem;
+  }
   .hero--buttons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -247,25 +261,16 @@ html, body {
     border: 0;
     color: #ffffff;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
     height: 50px;
     width: 200px;
   }
   #sell {
-    background-color: #01a08b;
-    -webkit-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
-  }
-  #sell:hover {
     background-color: #01D3B7;
   }
   #buy {
-    background-color: #1a1a1a;
-    -webkit-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
-  }
-  #buy:hover {
     background-color: #000000;
   }
   .footer {
@@ -340,6 +345,15 @@ html, body {
 }
 
 @media screen and (min-width: 600px) {
+  .brusi-propiedades {
+    -ms-grid-columns: (1fr)[8];
+        grid-template-columns: repeat(8, 1fr);
+  }
+  .header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1/9;
+  }
   .header--menu-mobile__label {
     display: none;
   }
@@ -357,9 +371,15 @@ html, body {
   }
   .navbar--item__link {
     color: #000000;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     position: relative;
     text-decoration: none;
+  }
+  .home, .about, .properties, .services {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1/9;
   }
 }
 
@@ -385,6 +405,22 @@ html, body {
   }
   .navbar--item__link:hover::after {
     width: 100%;
+  }
+  #sell {
+    background-color: #01a08b;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+  #sell:hover {
+    background-color: #01D3B7;
+  }
+  #buy {
+    background-color: #1a1a1a;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+  #buy:hover {
+    background-color: #000000;
   }
 }
 /*# sourceMappingURL=brusiPropiedadesStyles.css.map */

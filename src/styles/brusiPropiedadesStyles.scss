@@ -1,4 +1,5 @@
 // GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&family=Montserrat:wght@400;500;700&display=swap');
 
 // VARIABLES
 
@@ -23,6 +24,7 @@ html, body {
 
     .brusi-propiedades {
         display: grid;
+        font-family: 'Crimson Pro', serif;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 100px, repeat(2, 1fr), 500px;
         min-height: 100vh;
@@ -105,6 +107,7 @@ html, body {
             opacity: 0;
 
             & li {
+                font-family: 'Montserrat', sans-serif;
                 list-style: none;
             }
         }
@@ -178,6 +181,12 @@ html, body {
             &__text {
                 margin: 0 25px;
                 text-align: justify;
+                font-family: 'Crimson Pro', serif;
+                font-size: 1.3rem;
+
+                & h2 {
+                    font-family: 'Montserrat', sans-serif;
+                }
             }
         }
     }
@@ -206,6 +215,14 @@ html, body {
             margin: 0 25px;
             position: absolute;
             top: 120px;
+
+            &__title {
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            &__text {
+                font-size: 1.4rem;
+            }
         }
 
         &--buttons {
@@ -218,6 +235,7 @@ html, body {
                 border: 0;
                 color: $bgc;
                 cursor: pointer;
+                font-family: 'Montserrat', sans-serif;
                 font-size: 1.2rem;
                 font-weight: bold;
                 height: 50px;
@@ -227,21 +245,11 @@ html, body {
     }
 
     #sell {
-        background-color: darken($aqua, 10); 
-        transition: all .1s ease-in-out;
-
-        &:hover {
-            background-color: $aqua;
-        }
+        background-color: $aqua;
     }
 
     #buy {
-        background-color: lighten($black, 10);
-        transition: all .1s ease-in-out;
-
-        &:hover {
-            background-color: $black;
-        }
+        background-color: $black;
     }
 
     .footer {
@@ -317,9 +325,17 @@ html, body {
 
 // TABLET 
 @media screen and (min-width: 600px) {
-    
-    .header--menu-mobile__label {
-        display: none;
+
+    .brusi-propiedades {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .header {
+        grid-column: 1/9;
+
+        &--menu-mobile__label {
+            display: none;
+        }
     }
 
     .navbar {
@@ -336,10 +352,15 @@ html, body {
 
         &--item__link {
             color: $black;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
             position: relative;
             text-decoration: none;
         }
+    }
+
+    .home, .about, .properties, .services {
+        grid-column: 1/9;
     }
 }
 
@@ -367,6 +388,24 @@ html, body {
 
         &--item__link:hover::after {
             width: 100%;
+        }
+    }
+
+    #sell {
+        background-color: darken($aqua, 10); 
+        transition: all .1s ease-in-out;
+
+        &:hover {
+            background-color: $aqua;
+        }
+    }
+
+    #buy {
+        background-color: lighten($black, 10);
+        transition: all .1s ease-in-out;
+
+        &:hover {
+            background-color: $black;
         }
     }
 }
