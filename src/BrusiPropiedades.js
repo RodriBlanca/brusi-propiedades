@@ -19,7 +19,7 @@ const BrusiPropiedades = () => {
         <CheckButtonsProvider>
           <Header/>
           <Routes>
-              <Route path='/' element={<Home />}/>
+              <Route path='/brusi-propiedades' element={<Home />}/>
               <Route path='/brusi-propiedades/servicios' element={<Services />}/>
               <Route path='/brusi-propiedades/propiedades' element={<Properties />}/>
               <Route path='/brusi-propiedades/nosotros' element={<About />}/>
