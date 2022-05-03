@@ -4,7 +4,7 @@ import whatsapp from '../../images/whatsapp (3).png';
 
 const WhatsappLogo = () => {
   return (
-    <Link to={'https://wa.me/26517362'} className="whatsapp">
+    <Link to={'/brusi-propiedades/contacto-whatsapp'} className="whatsapp">
         <img className="whatsapp--image" src={whatsapp} alt='Link a whatsapp'/>
     </Link>
   )

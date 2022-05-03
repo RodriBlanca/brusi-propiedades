@@ -1,9 +1,10 @@
 import React from 'react';
+import homeServiceImg from '../../images/Barrio Brickland-53.jpg';
 
 const HomeServices = () => {
   return (
     <div className='home--services'>
-      <div className='home--services__img'></div>
+      <img src={homeServiceImg} alt='Imagen de la sección de servicios de la página de Inicio'/>
       <div className='home--services__text'>
         <h2>¿Sabías que una buena fotografía de tu propiedad puede ayudar a que el inmueble se venda antes?</h2>
         <p>En <strong>Brusi Propiedades</strong> contamos con la tecnología necesaria para facilitar la venta de tu inmueble.</p>

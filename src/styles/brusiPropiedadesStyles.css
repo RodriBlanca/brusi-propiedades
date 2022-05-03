@@ -180,12 +180,7 @@ html, body {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .home--services__img {
-    background-image: url("../images/Barrio Brickland-53.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
+  .home--services img {
     width: 100%;
   }
   .home--services__text {
@@ -314,6 +309,26 @@ html, body {
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
+  }
+  .featured-properties {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #F1F1F1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .featured-properties--title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
   }
   .footer {
     -webkit-box-align: center;
@@ -462,23 +477,30 @@ html, body {
   .navbar--item {
     margin-right: 25px;
   }
-  .about--image-container {
-    height: 300px;
-    width: 300px;
+  .about {
+    margin: 0 25px;
   }
   .about--content {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .about--content__img {
     width: 100%;
+  }
+  .about--content__title {
+    margin: 0;
+  }
+  .about--content__text {
+    margin: 0;
+  }
+  .about--content__button {
+    margin: 15px 0;
+  }
+  .about--text-container {
+    margin-bottom: 25px;
+    margin-left: 25px;
+    width: 600px;
   }
 }
 
@@ -535,10 +557,53 @@ html, body {
   #buy:hover {
     background-color: #000000;
   }
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero--img-container {
+    width: 75%;
+  }
+  .hero--content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero--content__title, .hero--content__text {
+    color: #000000;
+  }
+  .hero--content__title {
+    font-size: 4rem;
+    margin: 50px 0 0 0;
+  }
+  .hero--buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .footer {
     -ms-grid-column: 1;
     -ms-grid-column-span: 12;
     grid-column: 1/13;
+  }
+  .footer--links__link:hover {
+    color: #01D3B7;
   }
 }
 /*# sourceMappingURL=brusiPropiedadesStyles.css.map */
