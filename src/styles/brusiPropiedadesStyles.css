@@ -237,16 +237,19 @@ html, body {
             justify-content: center;
     margin: 0 25px;
     position: absolute;
-    top: 120px;
   }
   .hero--content__title {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: bold;
+    text-align: center;
   }
   .hero--content__text {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
+    text-align: center;
   }
   .hero--buttons {
     display: -webkit-box;
@@ -302,12 +305,15 @@ html, body {
   .about--content__button {
     background-color: #01D3B7;
     border: none;
-    color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: bold;
     height: 50px;
     margin: 0 25px 50px 25px;
     width: 200px;
+  }
+  .about--content__link {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
   }
   .footer {
     -webkit-box-align: center;
@@ -383,6 +389,14 @@ html, body {
     list-style: none;
     margin: 25px 0;
     text-decoration: none;
+  }
+  .whatsapp--image {
+    bottom: 25px;
+    height: 70px;
+    position: fixed;
+    right: 25px;
+    width: 70px;
+    z-index: 95000;
   }
 }
 

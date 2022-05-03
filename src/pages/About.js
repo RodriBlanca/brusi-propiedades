@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import purpose from '../images/undraw_shared_goals_re_jvqd (1).svg';
 import mission from '../images/undraw_select_house_qbag.svg';
 import view from '../images/undraw_stepping_up_g6oo.svg';
@@ -22,7 +23,9 @@ const About = () => {
             <h2 className='about--content__title'>Nuestro Propósito</h2>
             <p className='about--content__text'>Es hacer que el proceso, muchas veces estresante de comprar o vender una propiedad, se convierta en uno de los momento más felices de tu vida.</p>
             <p className='about--content__text'>Es por eso, que acompañamos y aconsejamos a nuestros clientes como quisiéramos que lo hicieran con nosotros brindándoles a través de nuestros servicios una experiencia única al momento de comprar o vender.</p>
-            <button className='about--content__button'>Nuestros Servicios</button>
+            <button className='about--content__button'>
+              <Link className='about--content__link' to={'/brusi-propiedades/servicios'}>Nuestros Servicios</Link>
+            </button>
           </div>
         </div>
         {/* MISIÓN */}

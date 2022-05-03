@@ -214,17 +214,20 @@ html, body {
             justify-content: center;
             margin: 0 25px;
             position: absolute;
-            top: 120px;
 
             &__title {
                 color: $bgc;
                 font-family: 'Montserrat', sans-serif;
-                font-size: 4rem;
+                font-size: 2rem;
                 font-weight: bold;
+                text-align: center;
             }
 
             &__text {
+                color: $bgc;
+                font-family: 'Montserrat', sans-serif;
                 font-size: 1.4rem;
+                text-align: center;
             }
         }
 
@@ -284,12 +287,16 @@ html, body {
             &__button {
                 background-color: $aqua;
                 border: none;
-                color: $bgc;
-                font-size: 1.2rem;
-                font-weight: bold;
                 height: 50px;
                 margin: 0 25px 50px 25px;
                 width: 200px;
+            }
+
+            &__link {
+                color: $bgc;
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-decoration: none;
             }
         }
     }
@@ -363,6 +370,17 @@ html, body {
                 margin: 25px 0;
                 text-decoration: none;
             }
+        }
+    }
+
+    .whatsapp {
+        &--image {
+            bottom: 25px;
+            height: 70px;
+            position: fixed;
+            right: 25px;
+            width: 70px;
+            z-index: 95000;
         }
     }
 }
