@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const FooterBrand = () => {
   return (
-    <Link className='footer--logo' to='/brusi-propiedades'>
+    <Link className='footer--logo' to='/'>
         <img 
             className='footer--logo__img' 
             src={footerLogo} 
