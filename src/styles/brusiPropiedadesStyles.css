@@ -44,9 +44,7 @@ html, body {
     z-index: 100000;
   }
   .header--brand__img {
-    height: 150px;
-    margin-left: 15px;
-    margin-top: 12px;
+    margin-left: 25px;
     width: 150px;
   }
   .header--menu-mobile__label {
@@ -208,8 +206,8 @@ html, body {
             justify-content: center;
   }
   .hero--img-container {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../images/Barrio Brickland-63.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/Barrio Brickland-63.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/Barrio Brickland-63.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Barrio Brickland-63.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -407,11 +405,46 @@ html, body {
   }
   .whatsapp--image {
     bottom: 25px;
-    height: 70px;
+    height: 60px;
     position: fixed;
     right: 25px;
-    width: 70px;
+    width: 60px;
     z-index: 95000;
+  }
+  .frequent-questions {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 25px 25px 25px;
+  }
+  .frequent-questions--container__question p:hover {
+    background-color: red;
+  }
+  .frequent-questions--container__answer {
+    background-color: red;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+  }
+  #question-1:checked ~ .frequent-questions--container__answer,
+  #question-2:checked ~ .frequent-questions--container__answer,
+  #question-3:checked ~ .frequent-questions--container__answer,
+  #question-4:checked ~ .frequent-questions--container__answer {
+    height: 50px;
+    visibility: visible;
   }
 }
 
@@ -477,6 +510,9 @@ html, body {
   .navbar--item {
     margin-right: 25px;
   }
+  .navbar--item__link {
+    font-size: 1.3rem;
+  }
   .about {
     margin: 0 25px;
   }
@@ -525,7 +561,7 @@ html, body {
     height: 2px;
     left: 0;
     position: absolute;
-    top: 25px;
+    top: 28px;
     -webkit-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;
     -webkit-transition-property: width;
@@ -562,15 +598,16 @@ html, body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .hero--img-container {
-    width: 75%;
+    height: 80vh;
+    width: 100%;
   }
   .hero--content {
     -webkit-box-align: center;
@@ -579,23 +616,54 @@ html, body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
+    position: absolute;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .hero--content__title, .hero--content__text {
-    color: #000000;
+    color: #ffffff;
+    font-size: 2rem;
   }
   .hero--content__title {
     font-size: 4rem;
     margin: 50px 0 0 0;
+  }
+  .hero--content__phrase {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    font-weight: lighter;
+    margin: 15px 0;
   }
   .hero--buttons {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 450px;
+  }
+  .home--services {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 50px 100px;
+  }
+  .home--services > div {
+    width: 600px;
+  }
+  .home--services__text {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+  .home--services__text h2 {
+    margin-top: 0;
   }
   .footer {
     -ms-grid-column: 1;
@@ -604,6 +672,15 @@ html, body {
   }
   .footer--links__link:hover {
     color: #01D3B7;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--services {
+    margin: 50px 100px;
+  }
+  .home--services img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=brusiPropiedadesStyles.css.map */

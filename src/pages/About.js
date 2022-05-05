@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FrequentQuestions from '../components/FrequentQuestions/FrequentQuestions';
 import purpose from '../images/undraw_shared_goals_re_jvqd (1).svg';
 import mission from '../images/undraw_select_house_qbag.svg';
 import view from '../images/undraw_stepping_up_g6oo.svg';
@@ -47,6 +48,13 @@ const About = () => {
             <h2 className='about--content__title'>Visión</h2>
             <p className='about--content__text'>Trabajar con profesionalismo hacia el camino de la excelencia, creciendo en equipo con nuestros clientes y colegas, trabajando sobre la base de la confianza y la seriedad, ejerciendo la profesión con pasión y dedicación, dejando el mejor legado posible para futuras generaciones.</p>
           </div>
+        </div>
+        <FrequentQuestions />
+        <div>
+           <h3>También podés ver más sobre nosotros siguiéndonos en nuestras redes</h3>
+           <div>
+             
+           </div>
         </div>
     </main>
   )

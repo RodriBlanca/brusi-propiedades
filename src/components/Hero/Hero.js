@@ -6,7 +6,7 @@ const Hero = () => {
     <div className='hero'>
       <div className='hero--img-container'></div>
       <div className='hero--content'>
-        <h1 className='hero--content__title'>¡Bienvenido a Brusi Propiedades!</h1>
+        <h1 className='hero--content__title'>BIENVENIDO A BRUSI PROPIEDADES</h1>
         <p className='hero--content__text'>Modernizamos el mercado inmobiliario</p>
         <p className='hero--content__text'>¿En qué podemos ayudarte?</p>
         <div className='hero--buttons'>

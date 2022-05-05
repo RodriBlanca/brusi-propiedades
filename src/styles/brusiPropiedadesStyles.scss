@@ -46,9 +46,7 @@ html, body {
         // Logo
         &--brand {
             &__img {
-                height: 150px;
-                margin-left: 15px;
-                margin-top: 12px;
+                margin-left: 25px;
                 width: 150px;
             }
         }
@@ -194,7 +192,7 @@ html, body {
         justify-content: center;
 
         &--img-container {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7)), url('../images/Barrio Brickland-63.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url('../images/Barrio Brickland-63.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -384,12 +382,45 @@ html, body {
     .whatsapp {
         &--image {
             bottom: 25px;
-            height: 70px;
+            height: 60px;
             position: fixed;
             right: 25px;
-            width: 70px;
+            width: 60px;
             z-index: 95000;
         }
+    }
+
+    .frequent-questions {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 25px 25px 25px;
+
+        &--container {
+            &__question {
+                & p:hover {
+                    background-color: red;
+                }
+            }
+
+            &__answer {
+                background-color: red;
+                height: 0;
+                overflow: hidden;
+                transition: all .5s ease-in-out;
+                visibility: hidden;
+                width: 100%;
+            }
+        }
+    }
+
+    #question-1:checked ~ .frequent-questions--container__answer, 
+    #question-2:checked ~ .frequent-questions--container__answer,
+    #question-3:checked ~ .frequent-questions--container__answer,
+    #question-4:checked ~ .frequent-questions--container__answer{
+        height: 50px;
+        visibility: visible;
     }
 }
 
@@ -463,6 +494,9 @@ html, body {
         margin-right: 0;
         &--item {
             margin-right: 25px;
+            &__link {
+                font-size: 1.3rem;
+            }
         }
     }
 
@@ -486,10 +520,6 @@ html, body {
             &__button {
                 margin: 15px 0;
             }
-        }
-
-        &--image__container {
-            // width: auto;
         }
 
         &--text-container {
@@ -522,7 +552,7 @@ html, body {
             height: 2px;
             left: 0;
             position: absolute;
-            top: 25px;
+            top: 28px;
             transition: width 0.3s ease-in-out;
             transition-property: width;
             transition-duration: 0.3s;
@@ -556,31 +586,64 @@ html, body {
 
     .hero {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
+
         &--img-container {
-            width: 75%;
+            height: 80vh;
+            width: 100%;
         }
 
         &--content {
             align-items: center;
             display: flex;
-            position: relative;
+            position: absolute;
             justify-content: center;
 
             &__title,
             &__text {
-                color: $black;
+                color: $bgc;
+                font-size: 2rem;
             }
 
             &__title {
                 font-size: 4rem;
                 margin: 50px 0 0 0;
             }
+
+            &__phrase {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 3.2rem;
+                font-weight: lighter;
+                margin: 15px 0;
+            }
         }
 
         &--buttons {
             flex-direction: row;
+            width: 450px;
+        }
+    }
+
+    .home {
+        &--services {
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: center;
+            margin: 50px 100px;
+
+            & > div {
+                width: 600px;
+            }
+
+            &__text {
+                font-size: 1.5rem;
+                text-align: justify;
+
+                & h2 {
+                    margin-top: 0;
+                }
+            }
         }
     }
 
@@ -594,5 +657,12 @@ html, body {
 }
 
 @media screen and (min-width: 1200px) {
-    
+    .home {
+        &--services {
+            margin: 50px 100px;
+            & img {
+                width: 100%;
+            }
+        }
+    }
 }

@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import WhatsappLogo from './components/WhatsappLogo/WhatsappLogo';
 import Footer from './components/Footer/Footer';
 // React Router Dom
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 // Pages
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -14,6 +14,7 @@ import About from './pages/About';
 import { CheckButtonsProvider } from './contexts/CheckButtonsContext';
 
 const BrusiPropiedades = () => {
+
   return (
     <div className='brusi-propiedades'>
         <CheckButtonsProvider>
@@ -23,7 +24,7 @@ const BrusiPropiedades = () => {
               <Route path='/brusi-propiedades/servicios' element={<Services />}/>
               <Route path='/brusi-propiedades/propiedades' element={<Properties />}/>
               <Route path='/brusi-propiedades/nosotros' element={<About />}/>
-              {/* <Route path='/brusi-propiedades/contacto-whatsapp' element={}/> */}
+              <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
           </Routes>
           <WhatsappLogo />
           <Footer />

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import whatsapp from '../../images/whatsapp (3).png';
 
 const WhatsappLogo = () => {
   return (
-    <Link to={'/brusi-propiedades/contacto-whatsapp'} className="whatsapp">
-        <img className="whatsapp--image" src={whatsapp} alt='Link a whatsapp'/>
-    </Link>
+    <a href={'https://api.whatsapp.com/send/?phone=26517362&text&app_absent=0'} target={'_blank'} rel={"noreferrer"}>
+      <img className="whatsapp--image" src={whatsapp} alt='Link a whatsapp'/>
+    </a>
   )
 }
 
