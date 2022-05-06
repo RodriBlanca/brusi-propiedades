@@ -3,7 +3,7 @@ import React from 'react';
 const FrequentQuestions = () => {
   return (
     <div className='frequent-questions'>
-      <h3>Preguntas Frecuentes</h3>
+      <h3 className='frequent-questions--title'>Preguntas Frecuentes</h3>
         <div className='frequent-questions--container'>
             <input 
                 type='checkbox' 

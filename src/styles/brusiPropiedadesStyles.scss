@@ -46,6 +46,7 @@ html, body {
         // Logo
         &--brand {
             &__img {
+                height: 75px;
                 margin-left: 25px;
                 width: 150px;
             }
@@ -168,6 +169,7 @@ html, body {
             justify-content: center;
 
             & img {
+                height: 100%;
                 width: 100%;
             }
 
@@ -179,6 +181,17 @@ html, body {
 
                 & h2 {
                     font-family: 'Montserrat', sans-serif;
+                }
+
+                & button {
+                    background-color: $aqua;
+                    border: none;
+                    color: $bgc;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    height: 40px;
+                    margin-bottom: 25px;
+                    width: 150px;
                 }
             }
         }
@@ -253,20 +266,29 @@ html, body {
 
     // About
     .about {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
         &--image-container {
+            align-items: center;
             display: flex;
             justify-content: center;
         }
 
         &--content {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
 
             &__img {
+                height: 75%;
                 width: 75%;
             }
 
             &__title {
                 font-family: 'Montserrat', sans-serif;
-                font-size: 2rem;
+                font-size: 1.7rem;
                 margin: 10px 25px;
             }
 
@@ -281,7 +303,7 @@ html, body {
                 background-color: $aqua;
                 border: none;
                 height: 50px;
-                margin: 0 25px 50px 25px;
+                margin: 0 25px;
                 width: 200px;
             }
 
@@ -292,6 +314,29 @@ html, body {
                 text-decoration: none;
             }
         }
+
+        &--social-media {
+            margin-bottom: 25px;
+            &__title {
+                font-family: 'Montserrat', sans-serif;
+                text-align: center;
+            }
+
+            &__container {
+                align-items: center;
+                display: flex;
+                justify-content: space-evenly;
+
+                & img {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+    }
+
+    .purpose, .view {
+        flex-direction: column-reverse;
     }
 
     .featured-properties {
@@ -358,7 +403,7 @@ html, body {
                 }
 
                 & p {
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                     margin: 15px 0;
                 }
     
@@ -397,22 +442,69 @@ html, body {
         justify-content: center;
         margin: 0 25px 25px 25px;
 
+        &--title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.7rem;
+            text-align: center;
+        }
+
         &--container {
-            &__question {
-                & p:hover {
-                    background-color: red;
-                }
-            }
+            align-items: center;
+            border: 1px solid $bgc2;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            justify-content: center;
+            margin: 5px 0;
+            width: 100%;
 
             &__answer {
-                background-color: red;
                 height: 0;
                 overflow: hidden;
                 transition: all .5s ease-in-out;
                 visibility: hidden;
                 width: 100%;
+
+                & p {
+                    margin: 0 15px;
+                }
+            }
+
+            &__label {
+                display: block;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1rem;
+                margin: 10px 0 10px 15px;
+                position: relative;
+                width: 100%;
+
+                &::after {
+                    background-color: $black;
+                    content: '';
+                    height: 10px;
+                    position: absolute;
+                    right: 19px;
+                    top: 5px;
+                    transition: all .2s ease-in-out;
+                    width: 2px;
+                }
+
+                &::before {
+                    background-color: $black;
+                    content: '';
+                    height: 2px;
+                    position: absolute;
+                    right: 15px;
+                    top: 9px;
+                    transition: all .2s ease-in-out;
+                    width: 10px;
+                }
             }
         }
+    }
+
+    #question-1, #question-2, #question-3, #question-4 {
+        display: none;
     }
 
     #question-1:checked ~ .frequent-questions--container__answer, 
@@ -422,13 +514,36 @@ html, body {
         height: 50px;
         visibility: visible;
     }
+
+    #question-1:checked ~ .frequent-questions--container__label::after,
+    #question-2:checked ~ .frequent-questions--container__label::after,
+    #question-3:checked ~ .frequent-questions--container__label::after,
+    #question-4:checked ~ .frequent-questions--container__label::after {
+        opacity: 0;
+    }
+
+    #question-1:checked ~ .frequent-questions--container__label::before,
+    #question-2:checked ~ .frequent-questions--container__label::before,
+    #question-3:checked ~ .frequent-questions--container__label::before,
+    #question-4:checked ~ .frequent-questions--container__label::before {
+        background-color: $aqua;
+    }
+
+    #question-1:checked ~ .frequent-questions--container__label,
+    #question-2:checked ~ .frequent-questions--container__label,
+    #question-3:checked ~ .frequent-questions--container__label,
+    #question-4:checked ~ .frequent-questions--container__label {
+        color: $aqua;
+        font-weight: bold;
+    }
 }
 
 @media screen and (min-width: 480px) {
     .about {
         &--content {
             &__img {
-                width: 60%;
+                height: 40%;
+                width: 40%;
             }
         }
     }
@@ -477,9 +592,16 @@ html, body {
 
     .about {
         &--content {
+            width: 100%;
             &__img {
-                width: 45%;
+                height: 30%;
+                width: 30%;
             }
+        }
+
+        &--image-container {
+            height: 300px;
+            width: 300px;
         }
     }
 
@@ -503,9 +625,12 @@ html, body {
     .about {
         margin: 0 25px;
         &--content {
+            align-items: center;
             display: flex;
+            justify-content: center;
 
             &__img {
+                height: 100%;
                 width: 100%;
             }
 
@@ -525,7 +650,7 @@ html, body {
         &--text-container {
             margin-bottom: 25px;
             margin-left: 25px;
-            width: 600px;
+            width: 800px;
         }
     }
 }
@@ -643,6 +768,10 @@ html, body {
                 & h2 {
                     margin-top: 0;
                 }
+
+                & button {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -652,6 +781,27 @@ html, body {
 
         &--links__link:hover {
             color: $aqua;
+        }
+    }
+
+    .frequent-questions {
+        width: 700px;
+
+        &--container__label {
+            cursor: pointer;
+        }
+    }
+
+    .about {
+        &--social-media {
+            & img {
+                cursor: pointer;
+                transition: all .1s ease-in-out;
+            }
+
+            & img:hover {
+                transform: scale(0.95);
+            }
         }
     }
 }
