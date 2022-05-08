@@ -10,9 +10,9 @@ const FrequentQuestions = () => {
                 className='frequent-questions--container__input' 
                 id='question-1'
             />
-            <label className='frequent-questions--container__label' htmlFor='question-1'>1 - ¿Realizan tasaciones reales?</label>
+            <label className='frequent-questions--container__label' htmlFor='question-1'>1 - ¿Para qué sirve una tasación?</label>
             <div className='frequent-questions--container__answer'>
-              <p>Si, realizamos un estudio antes de llevar a cabo una tasación</p>
+              <p>La tasación le da información útil acerca de la propiedad. Describe lo que la hace valiosa y puede mostrar cómo se compara con otras propiedades en el vecindario. Una tasación de propiedad ayuda a asegurarle a usted un precio justo en el mercado.</p>
             </div>
         </div>
         <div className='frequent-questions--container'>

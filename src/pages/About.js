@@ -6,9 +6,8 @@ import mission from '../images/undraw_select_house_qbag.svg';
 import view from '../images/undraw_stepping_up_g6oo.svg';
 import tiktokIcon from '../images/tiktok.png';
 import whatsappIcon from '../images/whatsapp-icon.png';
-import facebookIcon from '../images/facebook-icon.png';
 import instagramIcon from '../images/instagram-icon.png';
-
+import youtubeIcon from '../images/youtube-icon.png';
 
 const About = () => {
   return (
@@ -60,25 +59,25 @@ const About = () => {
            <div className='about--social-media__container'>
              {/* Instagram */}
              <div>
-               <a href='#'>
+               <a href='https://www.instagram.com/jonathanbrusi/?igshid=YmMyMTA2M2Y=' target={'_blank'} rel={"noreferrer"}>
                  <img src={instagramIcon} alt="link a instagram"/>
+               </a>
+             </div>
+             {/* Youtube */}
+             <div>
+               <a href='https://www.youtube.com/channel/UCHGu6Bbln9NheEQVyAmYveA' target={'_blank'} rel={"noreferrer"}>
+                 <img src={youtubeIcon} alt="link a youtube"/>
                </a>
              </div>
              {/* Whatsapp */}
              <div>
-               <a>
+               <a href={'https://api.whatsapp.com/send/?phone=26517362&text&app_absent=0'} target={'_blank'} rel={"noreferrer"}>
                  <img src={whatsappIcon} alt="link a whatsapp"/>
-               </a>
-             </div>
-             {/* Facebook */}
-             <div>
-               <a>
-                 <img src={facebookIcon} alt="link a facebook"/>
                </a>
              </div>
              {/* Tik tok */}
              <div>
-               <a>
+               <a href='https://www.tiktok.com/@brusipropiedades?_d=secCgYIASAHKAESPgo8r6Q6faUHyuojDGe%2FQa48CRSLnkI42ubUuEh712RvKs6vxo2G%2F056KP7I35oTECeLfEZgBZpUsM2jX7gvGgA%3D&_r=1&checksum=87b44e810b738d2d13088eee1e4ee650c70a0d0b17e3a04d3a60ef89586cad2e&language=es&sec_uid=MS4wLjABAAAAbRm1i2s8vyqa86JAXk-mt4XcEhPX3OwJ-1u53QuIrFZb74uQHi12jUtpTZ-X_V0E&sec_user_id=MS4wLjABAAAAbRm1i2s8vyqa86JAXk-mt4XcEhPX3OwJ-1u53QuIrFZb74uQHi12jUtpTZ-X_V0E&share_app_id=1233&share_author_id=6726375007339693062&share_link_id=3E29E94D-3273-47F2-9272-6AACFBA88C29&source=h5_m&tt_from=copy&u_code=d7lbjcl9l2d4li&user_id=6726375007339693062&utm_campaign=client_share&utm_medium=ios&utm_source=copy' target={'_blank'} rel={"noreferrer"}>
                  <img src={tiktokIcon} alt="link a tik tok"/>
                </a>
              </div>
