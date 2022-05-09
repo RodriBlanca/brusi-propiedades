@@ -15,8 +15,16 @@ const About = () => {
       {/* NOSOTROS */}
         <div>
           <div></div>
-          <div>
-            <h1>Nosotros</h1>
+          <div className='about--content'>
+            <h1 >Nosotros</h1>
+            <div className='about--text-container'>
+              <h2 className='about--content__title'>Jonathan Brusi</h2>
+              <p className='about--content__text'>Mi nombre es Jonathan Brusi, tengo 27 años y soy corredor matriculado en Lomas De Zamora. Estudié 3 años en el <a href='https://www.isel.edu.ar/' target={'_blank'}>Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>, realicé dos cursos de tasaciones y luego me certifiqué en <a href='https://www.nar.realtor/' target={'_blank'}>CRS (Certified  Residential Specialist)</a>. Me matriculé para ejercer esta hermosa profesión junto a mi socio y juntos formamos un gran equipo de trabajo.</p>
+            </div>
+            <div className='about--text-container'>
+              <h2 className='about--content__title'>Gustavo Seneca</h2>
+              <p className='about--content__text'>Mi nombre es Gustavo Seneca, tengo 31 años, estudié junto a Jonathan y nos recibimos en el <a href='https://www.isel.edu.ar/' target={'_blank'}>Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>. Buscamos crecer, seguir mejorando la profesión y amamos lo que hacemos, es por eso, que decidimos empezar con este proyecto con mi socio. .</p>
+            </div>
           </div>
         </div>
         {/* NUESTRO PROPÓSITO */}

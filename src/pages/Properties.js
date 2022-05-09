@@ -1,9 +1,14 @@
 import React from 'react';
+import PropertiesContainer from '../components/PropertiesContainer/PropertiesContainer';
+import PropertiesFilters from '../components/PropertiesFilters/PropertiesFilters';
 
 const Properties = () => {
   return (
     <main className='properties'>
-        Propiedades
+        <div>
+          <PropertiesFilters />
+          <PropertiesContainer />
+        </div>
     </main>
   )
 }

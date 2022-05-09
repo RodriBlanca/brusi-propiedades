@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav className='navbar'>
         <ul>
             <li className='navbar--item'>
-                <Link className='navbar--item__link' to={'/'}>Inicio</Link>
+                <Link className='navbar--item__link' to={'/brusi-propiedades'}>Inicio</Link>
             </li>
             <li className='navbar--item'>
                 <Link className='navbar--item__link' to={'/brusi-propiedades/servicios'}>Servicios</Link>
