@@ -2,6 +2,7 @@ import React from 'react';
 // Components
 import Header from './components/Header/Header';
 import WhatsappLogo from './components/WhatsappLogo/WhatsappLogo';
+import PropertyDetailContainer from './components/PropertyDetailContainer/PropertyDetailContainer';
 import Footer from './components/Footer/Footer';
 // React Router Dom
 import { Routes, Route, Navigate } from 'react-router-dom';
@@ -25,6 +26,7 @@ const BrusiPropiedades = () => {
               <Route path='/brusi-propiedades/propiedades' element={<Properties />}/>
               <Route path='/brusi-propiedades/nosotros' element={<About />}/>
               <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
+              <Route path='/brusi-propiedades/propiedades/propiedad:id' element={<PropertyDetailContainer />}/>
           </Routes>
           <WhatsappLogo />
           <Footer />

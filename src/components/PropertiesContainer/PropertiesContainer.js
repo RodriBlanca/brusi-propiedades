@@ -5,6 +5,7 @@ const PropertiesContainer = () => {
   return (
     <div className='properties-container'>
         <Property />
+        <Property />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropertiesContainer from '../PropertiesContainer/PropertiesContainer';
 
 const HomeFeaturedProperties = () => {
   return (
@@ -6,6 +7,7 @@ const HomeFeaturedProperties = () => {
         <h2 className='featured-properties--title'>¿Estás interesado en comprar?</h2>
         <p className='featured-properties--text'>Conocé alguna de nuestras propiedades</p>
         {/* Componente contenedor de los productos */}
+        <PropertiesContainer />
     </div>
   )
 }
