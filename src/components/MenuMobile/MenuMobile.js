@@ -27,7 +27,7 @@ const MenuMobile = () => {
         <nav className='menu-container'>
           <ul>
               <li>
-                  <Link className='menu-container__link' to={'/'} onClick={closeMenu}>Inicio</Link>
+                  <Link className='menu-container__link' to={'/brusi-propiedades'} onClick={closeMenu}>Inicio</Link>
               </li>
               <li>
                   <Link className='menu-container__link' to={'/brusi-propiedades/servicios'} onClick={closeMenu}>Servicios</Link>
