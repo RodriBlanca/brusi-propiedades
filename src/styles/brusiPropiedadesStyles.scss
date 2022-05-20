@@ -271,8 +271,10 @@ body {
   // About
   .about {
     &--title__text {
+      color: $aqua;
       font-family: 'Montserrat', sans-serif;
-      margin-left: 25px;
+      font-size: 2.2rem;
+      text-align: center;
     }
 
     &--content {
@@ -343,6 +345,7 @@ body {
 
     &__title {
       font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
       text-align: center;
     }
   }
@@ -569,8 +572,10 @@ body {
   .buy {
     &--title {
       &__text {
+        color: $aqua;
         font-family: 'Montserrat', sans-serif;
-        margin-left: 25px;
+        font-size: 2.2rem;
+        text-align: center;
       }
     }
 
@@ -580,7 +585,12 @@ body {
       &__title,
       &__subtitle {
         font-family: 'Montserrat', sans-serif;
+        text-align: center;
       }
+    }
+
+    &--sell {
+      margin: 0 25px 100px 25px;
     }
   }
 
@@ -606,6 +616,17 @@ body {
       margin: 25px 0;
       width: 50%;
     }
+  }
+
+  .services--button button {
+    background-color: $aqua;
+    border: none;
+    color: $bgc;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    height: 50px;
+    margin-bottom: 15px;
+    width: 100%;
   }
 }
 

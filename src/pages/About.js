@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FrequentQuestions from '../components/FrequentQuestions/FrequentQuestions';
 import purpose from '../images/undraw_shared_goals_re_jvqd (1).svg';
 import mission from '../images/undraw_select_house_qbag.svg';
 import view from '../images/undraw_stepping_up_g6oo.svg';
@@ -75,7 +74,6 @@ const About = () => {
                 </p>
             </div>
         </div>
-        <FrequentQuestions />
         {/* SOCIAL MEDIA */}
         <div className='about--social'>
             <h3 className='about--social__title'>Podés conocer más sobre nosotros siguiéndonos en nuestras redes</h3>

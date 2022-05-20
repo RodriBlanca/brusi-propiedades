@@ -290,8 +290,10 @@ body {
     background-color: #000000;
   }
   .about--title__text {
+    color: #01d3b7;
     font-family: 'Montserrat', sans-serif;
-    margin-left: 25px;
+    font-size: 2.2rem;
+    text-align: center;
   }
   .about--content {
     margin: 0 25px 50px 25px;
@@ -371,6 +373,7 @@ body {
   }
   .about--social__title {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
     text-align: center;
   }
   .social-media {
@@ -613,8 +616,10 @@ body {
   }
   .services--title__text,
   .buy--title__text {
+    color: #01d3b7;
     font-family: 'Montserrat', sans-serif;
-    margin-left: 25px;
+    font-size: 2.2rem;
+    text-align: center;
   }
   .services--sell, .services--buy,
   .buy--sell,
@@ -627,6 +632,11 @@ body {
   .buy--buy__title,
   .buy--buy__subtitle {
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+  .services--sell,
+  .buy--sell {
+    margin: 0 25px 100px 25px;
   }
   .sell,
   .buy {
@@ -659,6 +669,16 @@ body {
   .buy img {
     margin: 25px 0;
     width: 50%;
+  }
+  .services--button button {
+    background-color: #01d3b7;
+    border: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    height: 50px;
+    margin-bottom: 15px;
+    width: 100%;
   }
 }
 
