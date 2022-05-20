@@ -14,7 +14,7 @@ const HomeServices = () => {
         <p>Realizamos fotos profesionales, videos a pie de toda la propiedad, tour virtual 360°, fotos y videos con drone para vistas aéreas de la propiedad, planos digitales y más para mostrar tu casa de la mejor manera.</p>
         <p>No dudes en visitar nuestra página de servicios para saber más sobre ellos.</p>
         <Link to={'/brusi-propiedades/servicios'}>
-          <button>Servicios</button>
+          <button>Nuestros Servicios</button>
         </Link> 
       </div>
     </div>

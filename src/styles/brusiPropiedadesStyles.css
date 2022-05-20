@@ -200,11 +200,11 @@ body {
     background-color: #01d3b7;
     border: none;
     color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: bold;
-    height: 40px;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    height: 50px;
     margin-bottom: 25px;
-    width: 150px;
+    width: 100%;
   }
   .hero {
     -webkit-box-align: center;
@@ -258,6 +258,7 @@ body {
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
+    font-weight: bolder;
     text-align: center;
   }
   .hero--buttons {
@@ -272,16 +273,17 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 100%;
   }
   .hero--buttons__button {
     border: 0;
     color: #ffffff;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     height: 50px;
-    width: 200px;
+    width: 100%;
   }
   #sell {
     background-color: #01d3b7;
@@ -312,12 +314,12 @@ body {
   .about--paragraph__button {
     background-color: #01d3b7;
     border: none;
-    height: 40px;
-    width: 150px;
+    height: 50px;
+    width: 100%;
   }
   .about--paragraph__button .about--button__link {
     color: #ffffff;
-    font-size: .9rem;
+    font-size: 1.4rem;
     font-weight: bolder;
     text-decoration: none;
   }
@@ -780,6 +782,17 @@ body {
   .about--picture .purpose--img,
   .about--picture .mission--img {
     width: 40%;
+  }
+  .hero--buttons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero button {
+    width: 250px;
+  }
+  .home--services button {
+    width: 250px;
   }
 }
 

@@ -190,11 +190,11 @@ body {
           background-color: $aqua;
           border: none;
           color: $bgc;
-          font-size: 1.1rem;
-          font-weight: bold;
-          height: 40px;
+          font-size: 1.4rem;
+          font-weight: bolder;
+          height: 50px;
           margin-bottom: 25px;
-          width: 150px;
+          width: 100%;
         }
       }
     }
@@ -237,6 +237,7 @@ body {
         color: $bgc;
         font-family: "Montserrat", sans-serif;
         font-size: 1.4rem;
+        font-weight: bolder;
         text-align: center;
       }
     }
@@ -246,16 +247,17 @@ body {
       flex-direction: column;
       height: 120px;
       justify-content: space-between;
+      width: 100%;
 
       &__button {
         border: 0;
         color: $bgc;
         cursor: pointer;
         font-family: "Montserrat", sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: bold;
         height: 50px;
-        width: 200px;
+        width: 100%;
       }
     }
   }
@@ -299,12 +301,12 @@ body {
       &__button {
         background-color: $aqua;
         border: none;
-        height: 40px;
-        width: 150px;
+        height: 50px;
+        width: 100%;
 
         & .about--button__link {
           color: $bgc;
-          font-size: .9rem;
+          font-size: 1.4rem;
           font-weight: bolder;
           text-decoration: none;
         }
@@ -736,6 +738,24 @@ body {
     .purpose--img,
     .mission--img {
       width: 40%;
+    }
+  }
+
+  .hero {
+    &--buttons {
+      align-items: center;
+    }
+
+    & button {
+      width: 250px;
+    }
+  }
+
+  .home {
+    &--services {
+      button {
+        width: 250px;
+      }
     }
   }
 }
