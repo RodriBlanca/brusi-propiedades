@@ -16,6 +16,7 @@ import proffesional from '../images/undraw_certificate_re_yadi.svg';
 import present from '../images/undraw_for_sale_re_egkk.svg';
 import drone from '../images/undraw_follow_me_drone_kn76.svg';
 import architect from '../images/undraw_designer_girl_re_h54c.svg';
+import tour from '../images/undraw_video_files_fu10.svg';
 
 const Services = () => {
   return (
@@ -88,7 +89,7 @@ const Services = () => {
               </li>
             </div>
             <div>
-              <img />
+              <img src={tour} alt="Icono del servicio de tour 360°"/>
               <li>Realizamos tour 360° para efectivizar las vistas del inmueble.
               </li>
             </div>
@@ -111,7 +112,7 @@ const Services = () => {
             <div>
               <img src={phone} alt="Icono de contacto"/>
               <li>
-                Si te interesó alguna propiedad.
+                Respondemos en periodo de tiempo muy corto cualquier consulta que nos realices por alguna propiedad.
               </li>
             </div>
             <div>

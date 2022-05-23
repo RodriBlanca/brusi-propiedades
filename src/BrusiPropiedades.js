@@ -13,23 +13,26 @@ import Properties from './pages/Properties';
 import About from './pages/About';
 // Contexts
 import { CheckButtonsProvider } from './contexts/CheckButtonsContext';
+import { MenuSectionsProvider } from './contexts/MenuSectionsContext';
 
 const BrusiPropiedades = () => {
 
   return (
     <div className='brusi-propiedades'>
         <CheckButtonsProvider>
-          <Header/>
-          <Routes>
-              <Route path='/brusi-propiedades' element={<Home />}/>
-              <Route path='/brusi-propiedades/servicios' element={<Services />}/>
-              <Route path='/brusi-propiedades/propiedades' element={<Properties />}/>
-              <Route path='/brusi-propiedades/nosotros' element={<About />}/>
-              <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
-              <Route path='/brusi-propiedades/propiedades/propiedad:id' element={<PropertyDetailContainer />}/>
-          </Routes>
-          <WhatsappLogo />
-          <Footer />
+          <MenuSectionsProvider>
+            <Header/>
+            <Routes>
+                <Route path='/brusi-propiedades' element={<Home />}/>
+                <Route path='/brusi-propiedades/servicios' element={<Services />}/>
+                <Route path='/brusi-propiedades/propiedades' element={<Properties />}/>
+                <Route path='/brusi-propiedades/nosotros' element={<About />}/>
+                <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
+                <Route path='/brusi-propiedades/propiedades/propiedad:id' element={<PropertyDetailContainer />}/>
+            </Routes>
+            <WhatsappLogo />
+            <Footer />
+          </MenuSectionsProvider>
         </CheckButtonsProvider>
     </div>
   )
