@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import backgroundVideo from '../../videos/_Don Bosco - video.mp4';
 
 const Hero = () => {
   return (
     <div className='hero'>
       <div className='hero--img-container'>
-        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/7ViaLlx8nk8?start=5" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+        <video loop autoPlay muted>
+          <source src={backgroundVideo} type="video/mp4"/>
+        </video>
       </div>
       <div className='hero--content'>
         <h1 className='hero--content__title'>Bienvenido a <br/>Brusi Propiedades</h1>

@@ -10,6 +10,12 @@ body {
   min-height: 100vh;
 }
 
+video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media screen and (min-width: 320px) {
   .brusi-propiedades {
     display: -ms-grid;
@@ -223,11 +229,6 @@ body {
             justify-content: center;
   }
   .hero--img-container {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/Barrio Brickland-63.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Barrio Brickland-63.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 500px;
     width: 100%;
   }
@@ -1064,6 +1065,8 @@ body {
   .hero--img-container {
     height: calc(100vh - 70px);
     width: 100%;
+    position: relative;
+    overflow: hidden;
   }
   .hero--content {
     -webkit-box-align: center;
@@ -1079,13 +1082,39 @@ body {
   }
   .hero--content__title, .hero--content__text {
     color: #ffffff;
-    font-size: 2rem;
+  }
+  .hero--content__text {
+    -webkit-animation: show-text;
+            animation: show-text;
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+    font-size: 3rem;
+    margin: 25px 0;
+  }
+  @-webkit-keyframes show-text {
+    0% {
+      opacity: 0;
+    }
+    99% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes show-text {
+    0% {
+      opacity: 0;
+    }
+    99% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .hero--content__title {
-    font-size: 7rem !important;
-  }
-  .hero--content__title {
-    font-size: 4rem;
+    font-size: 7rem;
     margin: 50px 0 0 0;
   }
   .hero--content__phrase {
@@ -1099,6 +1128,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-top: 35px;
     width: 450px;
   }
   .hero--buttons__button {

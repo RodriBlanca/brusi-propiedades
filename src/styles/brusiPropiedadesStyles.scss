@@ -21,10 +21,10 @@ body {
   min-height: 100vh;
 }
 
-// iframe {
-//   height: 93vh;
-//   width: 100%;
-// }
+video {
+  width: 100%;
+  object-fit: cover;
+}
 
 // MOBILE
 @media screen and (min-width: 320px) {
@@ -214,11 +214,11 @@ body {
     justify-content: center;
 
     &--img-container {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("../images/Barrio Brickland-63.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      // background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      //   url("../images/Barrio Brickland-63.jpg");
+      // background-position: center;
+      // background-repeat: no-repeat;
+      // background-size: cover;
       height: 500px;
       width: 100%;
     }
@@ -666,7 +666,6 @@ body {
       margin-bottom: 25px;
 
       & label {
-        // color: $bgc;
         font-family: 'Montserrat', sans-serif;
         font-size: 1.5rem;
       }
@@ -974,6 +973,8 @@ body {
     &--img-container {
       height: calc(100vh - 70px);
       width: 100%;
+      position: relative;
+      overflow: hidden;
     }
 
     &--content {
@@ -985,15 +986,31 @@ body {
       &__title,
       &__text {
         color: $bgc;
-        font-size: 2rem;
+      }
+
+      &__text {
+        animation: show-text;
+        animation-duration: 6s;
+        font-size: 3rem;
+        margin: 25px 0;
+      }
+
+      @keyframes show-text {
+        0% {
+          opacity: 0;
+        }
+
+        99% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
       }
 
       &__title {
-        font-size: 7rem !important;
-      }
-
-      &__title {
-        font-size: 4rem;
+        font-size: 7rem;
         margin: 50px 0 0 0;
       }
 
@@ -1007,6 +1024,7 @@ body {
 
     &--buttons {
       flex-direction: row;
+      margin-top: 35px;
       width: 450px;
 
       &__button {
