@@ -5,7 +5,7 @@ const Property = () => {
   return (
     <div className='property'>
       <div className='property--image'>
-        <img className='property--image__pic'/>
+        <img className='property--image__pic' alt='propiedad'/>
         <p className='property--image__title'>Laprida 1785, Lomas de Zamora</p>
       </div>
       <div className='property--details'>

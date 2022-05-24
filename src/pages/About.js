@@ -26,7 +26,7 @@ const About = () => {
                 <div className='about--paragraph'>
                     <h2 className='about--paragraph__title'>Jonathan Brusi</h2>
                     <hr/>
-                    <p className='about--paragraph__text'>Mi nombre es Jonathan Brusi, tengo 27 años y soy corredor matriculado en Lomas De Zamora. Estudié tres años en el <a href='https://www.isel.edu.ar/' target={'_blank'}>Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>, realicé dos cursos de tasaciones y luego me certifiqué en <a href='https://www.nar.realtor/' target={'_blank'}>CRS (Certified  Residential Specialist)</a>. Me matriculé para ejercer esta hermosa profesión junto a mi socio y juntos formamos un gran equipo de trabajo.
+                    <p className='about--paragraph__text'>Mi nombre es Jonathan Brusi, tengo 27 años y soy corredor matriculado en Lomas De Zamora. Estudié tres años en el <a href='https://www.isel.edu.ar/' target={'_blank'} rel="noreferrer">Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>, realicé dos cursos de tasaciones y luego me certifiqué en <a href='https://www.nar.realtor/' target={'_blank'} rel="noreferrer">CRS (Certified  Residential Specialist)</a>. Me matriculé para ejercer esta hermosa profesión junto a mi socio y juntos formamos un gran equipo de trabajo.
                     </p>
                 </div>
             </div>
@@ -35,7 +35,7 @@ const About = () => {
                 <div className='about--paragraph'>
                     <h2 className='about--paragraph__title'>Gustavo Seneca</h2>
                     <hr/>
-                    <p className='about--paragraph__text'>Mi nombre es Gustavo Seneca, tengo 31 años, estudié junto a Jonathan y nos recibimos en el <a href='https://www.isel.edu.ar/' target={'_blank'}>Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>. Buscamos crecer, seguir mejorando la profesión y amamos lo que hacemos, es por eso, que decidimos empezar con este proyecto con mi socio.</p>
+                    <p className='about--paragraph__text'>Mi nombre es Gustavo Seneca, tengo 31 años, estudié junto a Jonathan y nos recibimos en el <a href='https://www.isel.edu.ar/' target={'_blank'} rel="noreferrer">Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>. Buscamos crecer, seguir mejorando la profesión y amamos lo que hacemos, es por eso, que decidimos empezar con este proyecto con mi socio.</p>
                 </div>
                 <div className='about--picture'>
                     <img src={gustavo} alt="Gustavo Seneca" className='about--picture__img estate-agent--img'/>
