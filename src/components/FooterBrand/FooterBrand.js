@@ -1,5 +1,5 @@
 import React from 'react';
-import footerLogo from '../../images/LOGO BRUSI BLANCO.png';
+import footerLogo from '../../images/logo-brusi-propiedades-blanco.png';
 import { Link } from 'react-router-dom';
 
 const FooterBrand = () => {

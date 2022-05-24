@@ -1,5 +1,6 @@
 // GOOGLE FONTS
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&family=Montserrat:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 // VARIABLES
 
@@ -19,6 +20,11 @@ body {
 #root {
   min-height: 100vh;
 }
+
+// iframe {
+//   height: 93vh;
+//   width: 100%;
+// }
 
 // MOBILE
 @media screen and (min-width: 320px) {
@@ -221,22 +227,31 @@ body {
       align-items: center;
       display: flex;
       flex-direction: column;
+      font-family: 'Raleway', sans-serif;
       justify-content: center;
       margin: 0 25px;
       position: absolute;
 
       &__title {
         color: $bgc;
-        font-family: "Montserrat", sans-serif;
         font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
         margin: 0;
+        text-align: center;
+        animation: hero 2s;
+      }
+
+      @keyframes hero {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
       }
 
       &__text {
         color: $bgc;
-        font-family: "Montserrat", sans-serif;
         font-size: 1.4rem;
         font-weight: bolder;
         text-align: center;
@@ -254,7 +269,6 @@ body {
         border: 0;
         color: $bgc;
         cursor: pointer;
-        font-family: "Montserrat", sans-serif;
         font-size: 1.4rem;
         font-weight: bold;
         height: 50px;
@@ -368,6 +382,10 @@ body {
     & div .social-media--link__img:active {
       transform: scale(0.9);
     }
+  }
+
+  hr {
+    border: 1px solid darken($bgc2, 5);
   }
 
   .featured-properties {
@@ -631,6 +649,42 @@ body {
     margin-bottom: 15px;
     width: 100%;
   }
+
+  .form {
+    align-items: center;
+    background-color: $aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 25px;
+
+    & div {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 25px;
+
+      & label {
+        // color: $bgc;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+      }
+
+      & input {
+        background-color: $aqua;
+        border: none;
+        border-bottom: 1px solid $black;
+        font-size: 1.5rem;
+        height: 35px;
+        width: 300px;
+
+        &::placeholder {
+          color: darken($aqua, 25);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -689,6 +743,21 @@ body {
 
   .about--picture .estate-agent--img {
     width: 50%;
+  }
+
+  .sell,
+  .buy {
+    & div {
+      margin: 50px;
+
+      & li {
+        width: 450px;
+      }
+
+      & img {
+        width: 30%;
+      }
+    }
   }
 }
 
@@ -759,36 +828,75 @@ body {
       }
     }
   }
+
+  .services--button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    & button {
+      width: 500px;
+    }
+  }
 }
 
 @media screen and (min-width: 900px) {
   .about {
-    &--content,
-    &--invert {
-      align-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--container {
       display: flex;
-      flex-direction: row;
-      margin: 25px 100px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1400px;
     }
 
-    &--paragraph {
-      width: 66%;
+    &--content,
+    &--invert {
+      display: flex;
+      flex-direction: column;
+      margin: 25px;
+      width: 400px;
+    }
+
+    &--invert {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
     }
 
     &--picture {
+      align-items: flex-start;
+      display: flex;
+      height: 350px;
+      justify-content: center;
       margin: 0 15px;
-      width: 33%;
+      overflow: hidden;
+      width: 100%;
     }
 
     &--title__text {
       font-size: 2.3rem;
-      margin-left: 100px;
+      margin: 50px 0;
     }
   }
 
   .about--picture .estate-agent--img,
   .about--picture .about--picture__img {
     width: 100%;
+  }
+
+  .purpose--picture,
+  .mission--picture,
+  .view--picture {
+    height: 200px;
+  }
+
+  .purpose--img,
+  .mission--img,
+  .view--img {
+    width: 50% !important;
   }
 }
 
@@ -830,21 +938,31 @@ body {
     }
   }
 
-  #sell {
-    background-color: darken($aqua, 10);
-    transition: all 0.1s ease-in-out;
-
-    &:hover {
-      background-color: $aqua;
-    }
-  }
-
+  #sell,
   #buy {
-    background-color: lighten($black, 10);
-    transition: all 0.1s ease-in-out;
+    background-color: $aqua;
+    overflow: hidden;
+    position: relative;
 
-    &:hover {
-      background-color: $black;
+    & > span {
+      position: relative;
+      z-index: 120;
+    }
+
+    &::after {
+      border-right: 80px solid transparent;
+      border-bottom: 75px solid $black;
+      content: '';
+      height: 75px;
+      left: -350px;
+      position: absolute;
+      top: -75px;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+    }
+
+    &:hover::after {
+      left: 0;
     }
   }
 
@@ -854,7 +972,7 @@ body {
     justify-content: center;
 
     &--img-container {
-      height: 80vh;
+      height: calc(100vh - 70px);
       width: 100%;
     }
 
@@ -868,6 +986,10 @@ body {
       &__text {
         color: $bgc;
         font-size: 2rem;
+      }
+
+      &__title {
+        font-size: 7rem !important;
       }
 
       &__title {
@@ -902,7 +1024,7 @@ body {
       margin: 50px 100px;
 
       & > div {
-        width: 600px;
+        width: 650px;
       }
 
       &__text {
@@ -915,6 +1037,30 @@ body {
 
         & button {
           cursor: pointer;
+          position: relative;
+          overflow: hidden;
+
+          & > span {
+            position: relative;
+            z-index: 1000;
+          }
+          
+          &::after {
+            border-right: 80px solid transparent;
+            border-bottom: 75px solid $black;
+            content: '';
+            height: 50px;
+            left: -350px;
+            position: absolute;
+            text-align: center;
+            top: -50px;
+            transition: all .3s ease-in-out;
+            width: 100%;
+          }
+
+          &:hover::after {
+            left: 0;
+          }
         }
       }
     }
@@ -937,24 +1083,48 @@ body {
   }
 
   .about {
+    &--content,
+    &--invert {
+      width: 500px;
+    }
+  }
+
+  .about--picture .estate-agent--img,
+  .about--picture .about--picture__img {
+    width: 60%;
+  }
+
+  .services {
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-
-    &--content {
-      width: 900px;
+    justify-content: flex-start;
+    &--sell,
+    &--buy {
+      margin: 25px 100px;
     }
+  }
 
-    &--title__text {
-      font-size: 2.5rem;
-    }
+  .sell,
+  .buy {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    & div {
+      justify-content: flex-start;
+      margin: 0 1px;
+      height: 250px;
+      width: 300px;
 
-    &--picture {
+      & img {
+        height: 30%;
+        width: auto;
+      }
 
-      &__img {
-        width: 100%;
+      & li {
+        text-align: justify;
+        width: 275px;
       }
     }
   }
@@ -1037,6 +1207,27 @@ body {
       &__detail {
         margin: 10px 15px;
       }
+    }
+  }
+
+  // .about {
+  //   &--content {
+  //     width: 1100px;
+  //   }
+
+  //   &--picture {
+
+  //     &__img {
+  //       width: 80% !important;
+  //     }
+  //   }
+  // }
+
+  .sell,
+  .buy {
+    & div {
+      height: 350px;
+      width: 400px;
     }
   }
 }

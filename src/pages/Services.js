@@ -118,7 +118,7 @@ const Services = () => {
             <div>
               <img src={partners} alt="Icono de representantes en tu búsqueda"/>
               <li>
-              Si las propiedades que vas a ver no cumplen con tus expectativas de búsqueda, igual podemos ayudarte: comunícate con nosotros para que seamos tu representante en la búsqueda del inmueble que necesitas. Sabemos cómo ayudarte y te acompañaremos durante todo el proceso, defendiendo tus intereses como comprador para que logres encontrar tu casa ideal, al mejor precio y en las mejores condiciones de negociación.
+              Si las propiedades no cumplen con tus expectativas de búsqueda, igual podemos ayudarte: comunícate con nosotros para que seamos tu representante en la búsqueda del inmueble que necesitas.
               </li>
             </div>
           </ul>

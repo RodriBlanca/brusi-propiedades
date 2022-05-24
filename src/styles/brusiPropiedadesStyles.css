@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&family=Montserrat:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 html,
 body {
   margin: 0;
@@ -241,6 +242,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    font-family: 'Raleway', sans-serif;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -249,15 +251,30 @@ body {
   }
   .hero--content__title {
     color: #ffffff;
-    font-family: "Montserrat", sans-serif;
     font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
     margin: 0;
+    text-align: center;
+    -webkit-animation: hero 2s;
+            animation: hero 2s;
+  }
+  @-webkit-keyframes hero {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes hero {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .hero--content__text {
     color: #ffffff;
-    font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
     font-weight: bolder;
     text-align: center;
@@ -280,7 +297,6 @@ body {
     border: 0;
     color: #ffffff;
     cursor: pointer;
-    font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
     font-weight: bold;
     height: 50px;
@@ -399,6 +415,9 @@ body {
   .social-media div .social-media--link__img:active {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
+  }
+  hr {
+    border: 1px solid #e4e4e4;
   }
   .featured-properties {
     -webkit-box-align: center;
@@ -683,6 +702,63 @@ body {
     margin-bottom: 15px;
     width: 100%;
   }
+  .form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #01d3b7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 25px;
+  }
+  .form div {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 25px;
+  }
+  .form div label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+  }
+  .form div input {
+    background-color: #01d3b7;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: 1.5rem;
+    height: 35px;
+    width: 300px;
+  }
+  .form div input::-webkit-input-placeholder {
+    color: #005449;
+  }
+  .form div input:-ms-input-placeholder {
+    color: #005449;
+  }
+  .form div input::-ms-input-placeholder {
+    color: #005449;
+  }
+  .form div input::placeholder {
+    color: #005449;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -741,6 +817,18 @@ body {
   .about--picture .estate-agent--img {
     width: 50%;
   }
+  .sell div,
+  .buy div {
+    margin: 50px;
+  }
+  .sell div li,
+  .buy div li {
+    width: 450px;
+  }
+  .sell div img,
+  .buy div img {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -795,36 +883,101 @@ body {
   .home--services button {
     width: 250px;
   }
-}
-
-@media screen and (min-width: 900px) {
-  .about--content, .about--invert {
+  .services--button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin: 25px 100px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .about--paragraph {
-    width: 66%;
+  .services--button button {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about--container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 1400px;
+  }
+  .about--content, .about--invert {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 25px;
+    width: 400px;
+  }
+  .about--invert {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .about--picture {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 350px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 15px;
-    width: 33%;
+    overflow: hidden;
+    width: 100%;
   }
   .about--title__text {
     font-size: 2.3rem;
-    margin-left: 100px;
+    margin: 50px 0;
   }
   .about--picture .estate-agent--img,
   .about--picture .about--picture__img {
     width: 100%;
+  }
+  .purpose--picture,
+  .mission--picture,
+  .view--picture {
+    height: 200px;
+  }
+  .purpose--img,
+  .mission--img,
+  .view--img {
+    width: 50% !important;
   }
 }
 
@@ -868,21 +1021,33 @@ body {
   .navbar--item__link:hover::after {
     width: 100%;
   }
-  #sell {
-    background-color: #01a08b;
-    -webkit-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-  }
-  #sell:hover {
-    background-color: #01d3b7;
-  }
+  #sell,
   #buy {
-    background-color: #1a1a1a;
-    -webkit-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
+    background-color: #01d3b7;
+    overflow: hidden;
+    position: relative;
   }
-  #buy:hover {
-    background-color: #000000;
+  #sell > span,
+  #buy > span {
+    position: relative;
+    z-index: 120;
+  }
+  #sell::after,
+  #buy::after {
+    border-right: 80px solid transparent;
+    border-bottom: 75px solid #000000;
+    content: '';
+    height: 75px;
+    left: -350px;
+    position: absolute;
+    top: -75px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+  }
+  #sell:hover::after,
+  #buy:hover::after {
+    left: 0;
   }
   .hero {
     display: -webkit-box;
@@ -897,7 +1062,7 @@ body {
             justify-content: center;
   }
   .hero--img-container {
-    height: 80vh;
+    height: calc(100vh - 70px);
     width: 100%;
   }
   .hero--content {
@@ -915,6 +1080,9 @@ body {
   .hero--content__title, .hero--content__text {
     color: #ffffff;
     font-size: 2rem;
+  }
+  .hero--content__title {
+    font-size: 7rem !important;
   }
   .hero--content__title {
     font-size: 4rem;
@@ -951,7 +1119,7 @@ body {
     margin: 50px 100px;
   }
   .home--services > div {
-    width: 600px;
+    width: 650px;
   }
   .home--services__text {
     font-size: 1.5rem;
@@ -962,6 +1130,28 @@ body {
   }
   .home--services__text button {
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .home--services__text button > span {
+    position: relative;
+    z-index: 1000;
+  }
+  .home--services__text button::after {
+    border-right: 80px solid transparent;
+    border-bottom: 75px solid #000000;
+    content: '';
+    height: 50px;
+    left: -350px;
+    position: absolute;
+    text-align: center;
+    top: -50px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    width: 100%;
+  }
+  .home--services__text button:hover::after {
+    left: 0;
   }
   .footer {
     -ms-grid-column: 1;
@@ -977,7 +1167,14 @@ body {
   .frequent-questions--container__label {
     cursor: pointer;
   }
-  .about {
+  .about--content, .about--invert {
+    width: 500px;
+  }
+  .about--picture .estate-agent--img,
+  .about--picture .about--picture__img {
+    width: 60%;
+  }
+  .services {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -988,18 +1185,42 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  .about--content {
-    width: 900px;
+  .services--sell, .services--buy {
+    margin: 25px 100px;
   }
-  .about--title__text {
-    font-size: 2.5rem;
-  }
-  .about--picture__img {
+  .sell,
+  .buy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
+  }
+  .sell div,
+  .buy div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0 1px;
+    height: 250px;
+    width: 300px;
+  }
+  .sell div img,
+  .buy div img {
+    height: 30%;
+    width: auto;
+  }
+  .sell div li,
+  .buy div li {
+    text-align: justify;
+    width: 275px;
   }
 }
 
@@ -1090,6 +1311,11 @@ body {
   }
   .property--details__detail {
     margin: 10px 15px;
+  }
+  .sell div,
+  .buy div {
+    height: 350px;
+    width: 400px;
   }
 }
 /*# sourceMappingURL=brusiPropiedadesStyles.css.map */

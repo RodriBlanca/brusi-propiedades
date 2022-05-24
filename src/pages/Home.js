@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from '../components/Hero/Hero';
 import HomeServices from '../components/HomeServices/HomeServices';
 import HomeFeaturedProperties from '../components/HomeFeaturedProperties/HomeFeaturedProperties';
+import Contact from '../components/Contact/Contact';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <HomeServices />
       <HomeFeaturedProperties />
+      <Contact />
     </main>
   )
 }
