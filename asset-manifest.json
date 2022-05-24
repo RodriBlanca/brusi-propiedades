@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/brusi-propiedades/static/css/main.38b96d0e.css",
-    "main.js": "/brusi-propiedades/static/js/main.23ab68cf.js",
+    "main.js": "/brusi-propiedades/static/js/main.7c9cece0.js",
     "static/media/video-background.mov": "/brusi-propiedades/static/media/video-background.2ed572dd98d9dcec53c8.mov",
     "static/media/Barrio Brickland-53.jpg": "/brusi-propiedades/static/media/Barrio Brickland-53.f33f7fcee701ca5b135a.jpg",
     "static/media/jonathan-brusi.jpeg": "/brusi-propiedades/static/media/jonathan-brusi.cade7f55a04cfaef3587.jpeg",
@@ -33,10 +33,10 @@
     "static/media/undraw_stepping_up_g6oo.svg": "/brusi-propiedades/static/media/undraw_stepping_up_g6oo.9a0cb2d8391068abe1b83a3202503bde.svg",
     "index.html": "/brusi-propiedades/index.html",
     "main.38b96d0e.css.map": "/brusi-propiedades/static/css/main.38b96d0e.css.map",
-    "main.23ab68cf.js.map": "/brusi-propiedades/static/js/main.23ab68cf.js.map"
+    "main.7c9cece0.js.map": "/brusi-propiedades/static/js/main.7c9cece0.js.map"
   },
   "entrypoints": [
     "static/css/main.38b96d0e.css",
-    "static/js/main.23ab68cf.js"
+    "static/js/main.7c9cece0.js"
   ]
 }
