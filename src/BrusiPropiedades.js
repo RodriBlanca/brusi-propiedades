@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Properties from './pages/Properties';
 import About from './pages/About';
+import NotFoundPage from './pages/NotFoundPage';
 // Contexts
 import { CheckButtonsProvider } from './contexts/CheckButtonsContext';
 import { MenuSectionsProvider } from './contexts/MenuSectionsContext';
@@ -23,6 +24,7 @@ const BrusiPropiedades = () => {
           <MenuSectionsProvider>
             <Header/>
             <Routes>
+                <Route path='*' element={<NotFoundPage />}/>
                 <Route path='/brusi-propiedades' element={<Home />}/>
                 <Route path='/brusi-propiedades/servicios' element={<Services />}/>
                 <Route path='/brusi-propiedades/propiedades' element={<Properties />}/>
