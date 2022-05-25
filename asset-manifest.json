@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/brusi-propiedades/static/css/main.cd31db11.css",
-    "main.js": "/brusi-propiedades/static/js/main.8b6c4b3d.js",
+    "main.css": "/brusi-propiedades/static/css/main.600c389a.css",
+    "main.js": "/brusi-propiedades/static/js/main.750e47bc.js",
     "static/media/video-background.mp4": "/brusi-propiedades/static/media/video-background.956b17999f35c1d1def8.mp4",
     "static/media/Barrio Brickland-53.jpg": "/brusi-propiedades/static/media/Barrio Brickland-53.f33f7fcee701ca5b135a.jpg",
     "static/media/jonathan-brusi.jpeg": "/brusi-propiedades/static/media/jonathan-brusi.cade7f55a04cfaef3587.jpeg",
@@ -25,7 +25,6 @@
     "static/media/undraw_abstract_re_l9xy.svg": "/brusi-propiedades/static/media/undraw_abstract_re_l9xy.100d0399d27cec941144ba3e30470197.svg",
     "static/media/undraw_secure_files_re_6vdh.svg": "/brusi-propiedades/static/media/undraw_secure_files_re_6vdh.ed65a494d634676fb7e9b05a9d24029f.svg",
     "static/media/undraw_business_plan_re_0v81.svg": "/brusi-propiedades/static/media/undraw_business_plan_re_0v81.fdae524422f309f371aa4e43e4132f5c.svg",
-    "static/media/undraw_for_sale_re_egkk.svg": "/brusi-propiedades/static/media/undraw_for_sale_re_egkk.9147632159f0a63606bf9c882d25de65.svg",
     "static/media/undraw_video_files_fu10.svg": "/brusi-propiedades/static/media/undraw_video_files_fu10.b2e268f598585b2a698809ed31528742.svg",
     "static/media/undraw_select_house_qbag.svg": "/brusi-propiedades/static/media/undraw_select_house_qbag.a6eb8bf1792feef1c699688ca00c9faa.svg",
     "static/media/undraw_security_on_re_e491.svg": "/brusi-propiedades/static/media/undraw_security_on_re_e491.81bb60590b74a7d0cebfde3ff0f40d97.svg",
@@ -33,11 +32,11 @@
     "static/media/undraw_stepping_up_g6oo.svg": "/brusi-propiedades/static/media/undraw_stepping_up_g6oo.9a0cb2d8391068abe1b83a3202503bde.svg",
     "static/media/undraw_notify_re_65on.svg": "/brusi-propiedades/static/media/undraw_notify_re_65on.373ff3a2a3403572a27e2689b561bab1.svg",
     "index.html": "/brusi-propiedades/index.html",
-    "main.cd31db11.css.map": "/brusi-propiedades/static/css/main.cd31db11.css.map",
-    "main.8b6c4b3d.js.map": "/brusi-propiedades/static/js/main.8b6c4b3d.js.map"
+    "main.600c389a.css.map": "/brusi-propiedades/static/css/main.600c389a.css.map",
+    "main.750e47bc.js.map": "/brusi-propiedades/static/js/main.750e47bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd31db11.css",
-    "static/js/main.8b6c4b3d.js"
+    "static/css/main.600c389a.css",
+    "static/js/main.750e47bc.js"
   ]
 }
