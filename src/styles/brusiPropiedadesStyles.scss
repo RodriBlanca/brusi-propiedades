@@ -215,12 +215,7 @@ video {
     justify-content: center;
 
     &--img-container {
-      // background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      //   url("../images/Barrio Brickland-63.jpg");
-      // background-position: center;
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      height: 500px;
+      height: 90vh;
       width: 100%;
 
       & video {
@@ -239,7 +234,7 @@ video {
 
       &__title {
         color: $bgc;
-        font-size: 2rem;
+        font-size: 2.4rem;
         margin: 0;
         text-align: center;
         animation: hero 2s;
@@ -257,7 +252,7 @@ video {
 
       &__text {
         color: $bgc;
-        font-size: 1.4rem;
+        font-size: 1.9rem;
         font-weight: bolder;
         text-align: center;
       }
@@ -266,7 +261,7 @@ video {
     &--buttons {
       display: flex;
       flex-direction: column;
-      height: 120px;
+      height: 200px;
       justify-content: space-between;
       width: 100%;
 
@@ -278,6 +273,14 @@ video {
         font-weight: bold;
         height: 50px;
         width: 100%;
+      }
+
+      &__text {
+        color: $bgc;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin: 15px 0;
+        text-align: center;
       }
     }
   }
@@ -294,7 +297,7 @@ video {
   .about {
     &--title__text {
       color: $aqua;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Raleway", sans-serif;
       font-size: 2.2rem;
       text-align: center;
     }
@@ -599,7 +602,7 @@ video {
     &--title {
       &__text {
         color: $aqua;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Raleway", sans-serif;
         font-size: 2.2rem;
         text-align: center;
       }
@@ -749,6 +752,74 @@ video {
       }
     }
   }
+
+  .properties {
+    &--title__text {
+      color: $aqua;
+      font-family: "Raleway", sans-serif;
+      font-size: 2.2rem;
+      text-align: center;
+    }
+
+    &--content {
+      margin: 0 25px 50px 25px;
+    }
+
+    &--container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+
+  .property {
+    background-color: $bgc2;
+    font-family: "Raleway", sans-serif;
+    font-weight: bolder;
+    margin: 0 0 25px 0;
+    width: 100%;
+    &--image {
+      margin: 10px 0;
+      position: relative;
+      &__pic {
+        width: 100%;
+      }
+      &__title {
+        margin-left: 10px;
+      }
+    }
+
+    &--details {
+      margin: 0 10px;
+
+      & div {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      &__price {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      &__button {
+        background-color: $aqua;
+        border: none;
+        color: $bgc;
+        font-size: 1rem;
+        height: 35px;
+        width: 100px;
+      }
+    }
+  }
+
+  .filters {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -823,6 +894,28 @@ video {
       }
     }
   }
+
+  .properties {
+    &--content {
+      display: flex;
+      flex-direction: column;
+    }
+    &--container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .property {
+    margin: 15px 5px;
+    width: 48%;
+
+    &--details__price {
+      font-size: 1.4rem;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -834,20 +927,6 @@ video {
         font-size: 1.3rem;
       }
     }
-  }
-
-  .properties {
-    & div {
-      display: flex;
-    }
-  }
-
-  .filters {
-    background-color: $aqua;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 200px;
   }
 
   .about {
@@ -876,8 +955,21 @@ video {
   }
 
   .hero {
+    &--content {
+      &__title {
+        font-size: 5rem;
+      }
+
+      &__text {
+        font-size: 2.5rem;
+      }
+    }
+
     &--buttons {
       align-items: center;
+      &__text {
+        font-size: 2.3rem;
+      }
     }
 
     & button {
@@ -913,7 +1005,8 @@ video {
     &--container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
+      margin: 0 25px;
       max-width: 1400px;
     }
 
@@ -921,8 +1014,8 @@ video {
     &--invert {
       display: flex;
       flex-direction: column;
-      margin: 25px;
-      width: 400px;
+      margin: 50px 0;
+      width: 48%;
     }
 
     &--invert {
@@ -933,7 +1026,7 @@ video {
     &--picture {
       align-items: flex-start;
       display: flex;
-      height: 350px;
+      height: 375px;
       justify-content: center;
       margin: 0 15px;
       overflow: hidden;
@@ -961,6 +1054,10 @@ video {
   .mission--img,
   .view--img {
     width: 50% !important;
+  }
+
+  .property {
+    width: 32%;
   }
 }
 
@@ -1056,7 +1153,7 @@ video {
       &__text {
         animation: show-text;
         animation-duration: 6s;
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin: 25px 0;
       }
 
@@ -1075,8 +1172,8 @@ video {
       }
 
       &__title {
-        font-size: 7rem;
-        margin: 50px 0 0 0;
+        font-size: 5rem;
+        margin: 35px 0 0 0;
       }
 
       &__phrase {
@@ -1088,13 +1185,22 @@ video {
     }
 
     &--buttons {
-      flex-direction: row;
-      margin-top: 35px;
-      width: 450px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 500px;
 
-      &__button {
+      & div {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        .hero--buttons__button {
           height: 50px;
           width: 200px;
+      }
       }
     }
   }
@@ -1174,6 +1280,10 @@ video {
     &--invert {
       width: 500px;
     }
+
+    &--title__text {
+      font-size: 4rem;
+    }
   }
 
   .about--picture .estate-agent--img,
@@ -1192,7 +1302,6 @@ video {
 
       &__title,
       &__subtitle {
-        font-family: "Raleway", sans-serif;
         font-size: 2.7rem;
       }
 
@@ -1207,7 +1316,7 @@ video {
     }
 
     &--button {
-      margin-top: 75px;
+      padding-top: 75px;
 
       & button {
         cursor: pointer;
@@ -1248,7 +1357,7 @@ video {
     width: 100%;
     & div {
       justify-content: flex-start;
-      margin: 0 1px;
+      margin: 50px 5px;
       height: 250px;
       width: 300px;
 
@@ -1260,6 +1369,79 @@ video {
       & li {
         text-align: justify;
         width: 275px;
+      }
+    }
+  }
+
+  .filters {
+    background-color: $aqua;
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    height: auto;
+    margin-right: 20px;
+    width: 250px;
+
+    & div {
+      margin-left: 10px;
+
+      & .filters--title {
+        font-size: 1.3rem;
+      }
+
+      & ul {
+        padding: 0;
+        & li {
+          list-style: none;
+        }
+      }
+    }
+  }
+
+  .properties {
+    &--content {
+      flex-direction: row;
+    }
+
+    &--container {
+      align-items: flex-start;
+    }
+
+    &--title__text {
+      font-size: 4rem;
+    }
+  }
+
+  .property {
+    margin: 0 5px 15px 5px;
+
+    &--details {
+      & div button {
+        cursor: pointer;
+          position: relative;
+          overflow: hidden;
+
+          & > span {
+            position: relative;
+            z-index: 1000;
+          }
+          
+          &::after {
+            border-right: 80px solid transparent;
+            border-bottom: 75px solid $black;
+            content: '';
+            height: 50px;
+            left: -140px;
+            position: absolute;
+            text-align: center;
+            top: -50px;
+            transition: all .3s ease-in-out;
+            width: 100%;
+          }
+
+          &:hover::after {
+            left: 0;
+          }
       }
     }
   }
@@ -1276,72 +1458,24 @@ video {
   }
 
   .hero {
-      &--buttons {
-        width: 550px;
-        
-          &__button {
-            font-size: 1.6rem;
-            height: 75px;
-            width: 250px;
-          }
+    &--content {
+      &__title {
+        font-size: 7rem;
       }
-  }
-
-  .properties-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 100px;
-    width: 1200px;
-  }
-
-  .property {
-    box-shadow: 3px 3px 6px darken($bgc2, 30);
-    display: flex;
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    height: 400px;
-    width: 48%;
-
-    &--image {
-      background-color: blue;
-      height: 300px;
-      width: 100%;
     }
 
-    &--details {
-      background-color: $bgc;
-      display: flex;
-      flex-direction: column;
-      height: 100px;
-      justify-content: space-between;
-      width: 100%;
-
-      &__price {
-        font-size: 1.5rem;
-        margin: 0;
-      }
+    &--buttons {
+      width: 550px;
 
       & div {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        margin: 0 15px 15px 15px;
+        width: 100%;
 
-        & button {
-          background-color: $aqua;
-          border: none;
-          color: $bgc;
-          cursor: pointer;
-          font-size: 1.1rem;
-          font-weight: bold;
-          height: 40px;
-          width: 150px;
+        .hero--buttons__button {
+          font-size: 1.6rem;
+          height: 75px;
+          width: 250px;
         }
-      }
-
-      &__detail {
-        margin: 10px 15px;
-      }
+      }    
     }
   }
 
@@ -1358,6 +1492,18 @@ video {
 
     & div {
       width: 300px;
+    }
+  }
+
+  .property {
+    width: 48%;
+
+    &--image {
+      align-items: center;
+      display: flex;
+      height: 300px;
+      margin: 0;
+      overflow: hidden;
     }
   }
 }

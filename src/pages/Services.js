@@ -16,8 +16,14 @@ import proffesional from '../images/undraw_certificate_re_yadi.svg';
 import drone from '../images/undraw_follow_me_drone_kn76.svg';
 import architect from '../images/undraw_designer_girl_re_h54c.svg';
 import tour from '../images/undraw_video_files_fu10.svg';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
+
+  const scrollToTop = () => {
+    window.scroll(0, 0);
+  }
+
   return (
     <main className='services'>
         <div className='services--title'>
@@ -133,7 +139,9 @@ const Services = () => {
             </div>
           </ul>
           <div className='services--button'>
-            <button><span>Nuestras Propiedades</span></button>
+            <Link to={'/brusi-propiedades/propiedades'} onClick={scrollToTop}>
+              <button><span>Nuestras Propiedades</span></button>
+            </Link>
           </div>
         </div>
         <FrequentQuestions />

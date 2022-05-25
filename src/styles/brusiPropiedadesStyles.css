@@ -230,7 +230,7 @@ video {
             justify-content: center;
   }
   .hero--img-container {
-    height: 500px;
+    height: 90vh;
     width: 100%;
   }
   .hero--img-container video {
@@ -256,7 +256,7 @@ video {
   }
   .hero--content__title {
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin: 0;
     text-align: center;
     -webkit-animation: hero 2s;
@@ -280,7 +280,7 @@ video {
   }
   .hero--content__text {
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     font-weight: bolder;
     text-align: center;
   }
@@ -292,7 +292,7 @@ video {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 120px;
+    height: 200px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -307,6 +307,13 @@ video {
     height: 50px;
     width: 100%;
   }
+  .hero--buttons__text {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 15px 0;
+    text-align: center;
+  }
   #sell {
     background-color: #01d3b7;
   }
@@ -315,7 +322,7 @@ video {
   }
   .about--title__text {
     color: #01d3b7;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 2.2rem;
     text-align: center;
   }
@@ -644,7 +651,7 @@ video {
   .services--title__text,
   .buy--title__text {
     color: #01d3b7;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 2.2rem;
     text-align: center;
   }
@@ -842,6 +849,78 @@ video {
       top: 110px;
     }
   }
+  .properties--title__text {
+    color: #01d3b7;
+    font-family: "Raleway", sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .properties--content {
+    margin: 0 25px 50px 25px;
+  }
+  .properties--container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  .property {
+    background-color: #f1f1f1;
+    font-family: "Raleway", sans-serif;
+    font-weight: bolder;
+    margin: 0 0 25px 0;
+    width: 100%;
+  }
+  .property--image {
+    margin: 10px 0;
+    position: relative;
+  }
+  .property--image__pic {
+    width: 100%;
+  }
+  .property--image__title {
+    margin-left: 10px;
+  }
+  .property--details {
+    margin: 0 10px;
+  }
+  .property--details div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .property--details__price {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .property--details__button {
+    background-color: #01d3b7;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    height: 35px;
+    width: 100px;
+  }
+  .filters {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -912,6 +991,34 @@ video {
   .buy div img {
     width: 30%;
   }
+  .properties--content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .properties--container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .property {
+    margin: 15px 5px;
+    width: 48%;
+  }
+  .property--details__price {
+    font-size: 1.4rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -923,23 +1030,6 @@ video {
   }
   .navbar--item__link {
     font-size: 1.3rem;
-  }
-  .properties div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .filters {
-    background-color: #01d3b7;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: auto;
-    width: 200px;
   }
   .about--content, .about--invert {
     margin: 25px 50px;
@@ -955,10 +1045,19 @@ video {
   .about--picture .mission--img {
     width: 40%;
   }
+  .hero--content__title {
+    font-size: 5rem;
+  }
+  .hero--content__text {
+    font-size: 2.5rem;
+  }
   .hero--buttons {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .hero--buttons__text {
+    font-size: 2.3rem;
   }
   .hero button {
     width: 250px;
@@ -1004,9 +1103,10 @@ video {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 25px;
     max-width: 1400px;
   }
   .about--content, .about--invert {
@@ -1017,8 +1117,8 @@ video {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 25px;
-    width: 400px;
+    margin: 50px 0;
+    width: 48%;
   }
   .about--invert {
     -webkit-box-orient: vertical;
@@ -1036,7 +1136,7 @@ video {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 350px;
+    height: 375px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1061,6 +1161,9 @@ video {
   .mission--img,
   .view--img {
     width: 50% !important;
+  }
+  .property {
+    width: 32%;
   }
 }
 
@@ -1170,7 +1273,7 @@ video {
             animation: show-text;
     -webkit-animation-duration: 6s;
             animation-duration: 6s;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 25px 0;
   }
   @-webkit-keyframes show-text {
@@ -1196,8 +1299,8 @@ video {
     }
   }
   .hero--content__title {
-    font-size: 7rem;
-    margin: 50px 0 0 0;
+    font-size: 5rem;
+    margin: 35px 0 0 0;
   }
   .hero--content__phrase {
     font-family: "Montserrat", sans-serif;
@@ -1206,14 +1309,33 @@ video {
     margin: 15px 0;
   }
   .hero--buttons {
-    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-top: 35px;
-    width: 450px;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 500px;
   }
-  .hero--buttons__button {
+  .hero--buttons div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  .hero--buttons div .hero--buttons__button {
     height: 50px;
     width: 200px;
   }
@@ -1285,6 +1407,9 @@ video {
   .about--content, .about--invert {
     width: 500px;
   }
+  .about--title__text {
+    font-size: 4rem;
+  }
   .about--picture .estate-agent--img,
   .about--picture .about--picture__img {
     width: 60%;
@@ -1308,7 +1433,6 @@ video {
     margin: 0 100px 25px 100px;
   }
   .services--sell__title, .services--sell__subtitle, .services--buy__title, .services--buy__subtitle {
-    font-family: "Raleway", sans-serif;
     font-size: 2.7rem;
   }
   .services--sell__subtitle, .services--buy__subtitle {
@@ -1319,7 +1443,7 @@ video {
     font-size: 4rem;
   }
   .services--button {
-    margin-top: 75px;
+    padding-top: 75px;
   }
   .services--button button {
     cursor: pointer;
@@ -1363,7 +1487,7 @@ video {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin: 0 1px;
+    margin: 50px 5px;
     height: 250px;
     width: 300px;
   }
@@ -1377,6 +1501,74 @@ video {
     text-align: justify;
     width: 275px;
   }
+  .filters {
+    background-color: #01d3b7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    height: auto;
+    margin-right: 20px;
+    width: 250px;
+  }
+  .filters div {
+    margin-left: 10px;
+  }
+  .filters div .filters--title {
+    font-size: 1.3rem;
+  }
+  .filters div ul {
+    padding: 0;
+  }
+  .filters div ul li {
+    list-style: none;
+  }
+  .properties--content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .properties--container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .properties--title__text {
+    font-size: 4rem;
+  }
+  .property {
+    margin: 0 5px 15px 5px;
+  }
+  .property--details div button {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .property--details div button > span {
+    position: relative;
+    z-index: 1000;
+  }
+  .property--details div button::after {
+    border-right: 80px solid transparent;
+    border-bottom: 75px solid #000000;
+    content: '';
+    height: 50px;
+    left: -140px;
+    position: absolute;
+    text-align: center;
+    top: -50px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    width: 100%;
+  }
+  .property--details div button:hover::after {
+    left: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1386,86 +1578,19 @@ video {
   .home--services img {
     width: 100%;
   }
+  .hero--content__title {
+    font-size: 7rem;
+  }
   .hero--buttons {
     width: 550px;
   }
-  .hero--buttons__button {
+  .hero--buttons div {
+    width: 100%;
+  }
+  .hero--buttons div .hero--buttons__button {
     font-size: 1.6rem;
     height: 75px;
     width: 250px;
-  }
-  .properties-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 50px 100px;
-    width: 1200px;
-  }
-  .property {
-    -webkit-box-shadow: 3px 3px 6px #a5a5a5;
-            box-shadow: 3px 3px 6px #a5a5a5;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    height: 400px;
-    width: 48%;
-  }
-  .property--image {
-    background-color: blue;
-    height: 300px;
-    width: 100%;
-  }
-  .property--details {
-    background-color: #ffffff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
-  }
-  .property--details__price {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-  .property--details div {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 0 15px 15px 15px;
-  }
-  .property--details div button {
-    background-color: #01d3b7;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: bold;
-    height: 40px;
-    width: 150px;
-  }
-  .property--details__detail {
-    margin: 10px 15px;
   }
   .sell div,
   .buy div {
@@ -1477,6 +1602,20 @@ video {
   }
   .sell div {
     width: 300px;
+  }
+  .property {
+    width: 48%;
+  }
+  .property--image {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 300px;
+    margin: 0;
+    overflow: hidden;
   }
 }
 /*# sourceMappingURL=brusiPropiedadesStyles.css.map */

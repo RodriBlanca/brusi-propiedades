@@ -25,7 +25,6 @@ const About = () => {
                 </div>
                 <div className='about--paragraph'>
                     <h2 className='about--paragraph__title'>Jonathan Brusi</h2>
-                    <hr/>
                     <p className='about--paragraph__text'>Mi nombre es Jonathan Brusi, tengo 27 años y soy corredor matriculado en Lomas De Zamora. Estudié tres años en el <a href='https://www.isel.edu.ar/' target={'_blank'} rel="noreferrer">Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>, realicé dos cursos de tasaciones y luego me certifiqué en <a href='https://www.nar.realtor/' target={'_blank'} rel="noreferrer">CRS (Certified  Residential Specialist)</a>. Me matriculé para ejercer esta hermosa profesión junto a mi socio y juntos formamos un gran equipo de trabajo.
                     </p>
                 </div>
@@ -34,7 +33,6 @@ const About = () => {
             <div className='about--content about--invert'>
                 <div className='about--paragraph'>
                     <h2 className='about--paragraph__title'>Gustavo Seneca</h2>
-                    <hr/>
                     <p className='about--paragraph__text'>Mi nombre es Gustavo Seneca, tengo 31 años, estudié junto a Jonathan y nos recibimos en el <a href='https://www.isel.edu.ar/' target={'_blank'} rel="noreferrer">Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>. Buscamos crecer, seguir mejorando la profesión y amamos lo que hacemos, es por eso, que decidimos empezar con este proyecto con mi socio.</p>
                 </div>
                 <div className='about--picture'>
@@ -48,7 +46,6 @@ const About = () => {
                 </div>
                 <div className='about--paragraph'>
                     <h2 className='about--paragraph__title'>Nuestro Propósito</h2>
-                    <hr/>
                     <p className='about--paragraph__text'>Es hacer que el proceso, muchas veces estresante de comprar o vender una propiedad, se convierta en uno de los momento más felices de tu vida.<br/>Es por eso, que acompañamos y aconsejamos a nuestros clientes como quisiéramos que lo hicieran con nosotros brindándoles a través de nuestros servicios una experiencia única al momento de comprar o vender
                     </p>
                     <button className='about--paragraph__button'>
@@ -60,7 +57,6 @@ const About = () => {
             <div className='about--content about--invert'>
                 <div className='about--paragraph'>
                     <h2 className='about--paragraph__title'>Misión</h2>
-                    <hr/>
                     <p className='about--paragraph__text'>Ayudar a nuestros clientes a tomar la decisión más adecuada en sus operaciones inmobiliarias, facilitando la compra o venta de inmuebles en el menor tiempo posible, protegiendo legalmente el patrimonio de las partes, con transparencia, confiabilidad, responsabilidad y compromiso, haciendo uso de tecnología moderna para la mejor comercialización.
                     </p>
                 </div>
@@ -75,7 +71,6 @@ const About = () => {
                 </div>
                 <div className='about--paragraph'>
                     <h2 className='about--paragraph__title'>Visión</h2>
-                    <hr/>
                     <p className='about--paragraph__text'>Trabajar con profesionalismo hacia el camino de la excelencia, creciendo en equipo con nuestros clientes y colegas, trabajando sobre la base de la confianza y la seriedad, ejerciendo la profesión con pasión y dedicación, dejando el mejor legado posible para futuras generaciones.
                     </p>
                 </div>

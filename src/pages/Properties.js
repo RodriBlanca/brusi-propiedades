@@ -5,8 +5,10 @@ import PropertiesFilters from '../components/PropertiesFilters/PropertiesFilters
 const Properties = () => {
   return (
     <main className='properties'>
-      <h1>Nuestras Propiedades</h1>
-      <div>
+      <div className='properties--title'>
+        <h1 className='properties--title__text'>Propiedades</h1>
+      </div>
+      <div className='properties--content'>
         <PropertiesFilters />
         <PropertiesContainer />
       </div>
