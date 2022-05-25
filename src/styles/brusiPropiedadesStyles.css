@@ -233,6 +233,9 @@ video {
     height: 500px;
     width: 100%;
   }
+  .hero--img-container video {
+    height: 100%;
+  }
   .hero--content {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -541,7 +544,7 @@ video {
     margin: 0 25px 25px 25px;
   }
   .frequent-questions--title {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 1.7rem;
     text-align: center;
   }
@@ -657,6 +660,11 @@ video {
   .buy--buy__subtitle {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+  }
+  .services--sell h4, .services--buy h4,
+  .buy--sell h4,
+  .buy--buy h4 {
+    font-size: 1.3rem;
   }
   .services--sell,
   .buy--sell {
@@ -1268,6 +1276,9 @@ video {
   .frequent-questions {
     width: 700px;
   }
+  .frequent-questions--title {
+    font-size: 2.3rem;
+  }
   .frequent-questions--container__label {
     cursor: pointer;
   }
@@ -1294,7 +1305,47 @@ video {
             justify-content: flex-start;
   }
   .services--sell, .services--buy {
-    margin: 25px 100px;
+    margin: 0 100px 25px 100px;
+  }
+  .services--sell__title, .services--sell__subtitle, .services--buy__title, .services--buy__subtitle {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.7rem;
+  }
+  .services--sell__subtitle, .services--buy__subtitle {
+    font-size: 2.3rem;
+  }
+  .services--title__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 4rem;
+  }
+  .services--button {
+    margin-top: 75px;
+  }
+  .services--button button {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+  }
+  .services--button button > span {
+    position: relative;
+    z-index: 1000;
+  }
+  .services--button button::after {
+    border-right: 80px solid transparent;
+    border-bottom: 75px solid #000000;
+    content: '';
+    height: 50px;
+    left: -475px;
+    position: absolute;
+    text-align: center;
+    top: -50px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    width: 100%;
+  }
+  .services--button button:hover::after {
+    left: 0;
   }
   .sell,
   .buy {
@@ -1420,6 +1471,12 @@ video {
   .buy div {
     height: 350px;
     width: 400px;
+  }
+  .sell {
+    max-width: 1500px;
+  }
+  .sell div {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=brusiPropiedadesStyles.css.map */

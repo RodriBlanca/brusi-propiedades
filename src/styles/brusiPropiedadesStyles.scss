@@ -222,6 +222,10 @@ video {
       // background-size: cover;
       height: 500px;
       width: 100%;
+
+      & video {
+        height: 100%;
+      }
     }
 
     &--content {
@@ -492,7 +496,7 @@ video {
     margin: 0 25px 25px 25px;
 
     &--title {
-      font-family: "Montserrat", sans-serif;
+      font-family: "Raleway", sans-serif;
       font-size: 1.7rem;
       text-align: center;
     }
@@ -608,6 +612,10 @@ video {
       &__subtitle {
         font-family: 'Montserrat', sans-serif;
         text-align: center;
+      }
+
+      & h4 {
+        font-size: 1.3rem;
       }
     }
 
@@ -1152,6 +1160,10 @@ video {
   .frequent-questions {
     width: 700px;
 
+    &--title {
+      font-size: 2.3rem;
+    }
+
     &--container__label {
       cursor: pointer;
     }
@@ -1176,7 +1188,55 @@ video {
     justify-content: flex-start;
     &--sell,
     &--buy {
-      margin: 25px 100px;
+      margin: 0 100px 25px 100px ;
+
+      &__title,
+      &__subtitle {
+        font-family: "Raleway", sans-serif;
+        font-size: 2.7rem;
+      }
+
+      &__subtitle {
+        font-size: 2.3rem;
+      }
+    }
+
+    &--title__text {
+      font-family: "Raleway", sans-serif;
+      font-size: 4rem;
+    }
+
+    &--button {
+      margin-top: 75px;
+
+      & button {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        width: 400px;
+
+        & > span {
+          position: relative;
+          z-index: 1000;
+        }
+        
+        &::after {
+          border-right: 80px solid transparent;
+          border-bottom: 75px solid $black;
+          content: '';
+          height: 50px;
+          left: -475px;
+          position: absolute;
+          text-align: center;
+          top: -50px;
+          transition: all .3s ease-in-out;
+          width: 100%;
+        }
+
+        &:hover::after {
+          left: 0;
+        }
+      }
     }
   }
 
@@ -1285,24 +1345,19 @@ video {
     }
   }
 
-  // .about {
-  //   &--content {
-  //     width: 1100px;
-  //   }
-
-  //   &--picture {
-
-  //     &__img {
-  //       width: 80% !important;
-  //     }
-  //   }
-  // }
-
   .sell,
   .buy {
     & div {
       height: 350px;
       width: 400px;
+    }
+  }
+
+  .sell {
+    max-width: 1500px;
+
+    & div {
+      width: 300px;
     }
   }
 }
