@@ -820,6 +820,17 @@ video {
   .filters {
     display: none;
   }
+
+  // .slider {
+  //   & div {
+  //     height: 500px;
+  //     overflow: hidden;
+  //     width: 100%;
+  //     img {
+  //       width: 100%;
+  //     }
+  //   }
+  // }
 }
 
 @media screen and (min-width: 480px) {

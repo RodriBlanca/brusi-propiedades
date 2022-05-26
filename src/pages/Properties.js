@@ -2,7 +2,7 @@ import React from 'react';
 import PropertiesContainer from '../components/PropertiesContainer/PropertiesContainer';
 import PropertiesFilters from '../components/PropertiesFilters/PropertiesFilters';
 
-const Properties = () => {
+const Properties = ({properties}) => {
   return (
     <main className='properties'>
       <div className='properties--title'>
@@ -10,7 +10,7 @@ const Properties = () => {
       </div>
       <div className='properties--content'>
         <PropertiesFilters />
-        <PropertiesContainer />
+        <PropertiesContainer properties={properties}/>
       </div>
     </main>
   )
