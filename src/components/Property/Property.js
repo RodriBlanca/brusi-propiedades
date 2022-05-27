@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import imgTest from '../../images/Barrio Brickland-63.jpg';
 import Slider from '../Slider/Slider';
 
-const Property = ({direccion, precio, localidad, baños, dormitorios, superficie, fotos}) => {
+const Property = ({direccion, precio, localidad, baños, dormitorios, superficie, fotos, properties}) => {
   return (
     <div className='property'>
       <div className='property--image'>
-        {/* <img className='property--image__pic' alt='propiedad' src={imgTest}/> */}
-        <Slider fotos={fotos}/>
-        <p className='property--image__title'>{`${direccion}, ${localidad}`}</p>
+        <Slider properties={properties}/>
+        <div className='property--image__title'>
+          <p>{`${direccion}, ${localidad}`}</p>
+        </div>
       </div>
       <div className='property--details'>
         <p className='property--details__detail'>

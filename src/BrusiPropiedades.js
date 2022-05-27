@@ -31,7 +31,6 @@ const BrusiPropiedades = () => {
         querySnapshot.forEach((doc) => {
             docs.push({...doc.data(), id: doc.id});
             setProperties(docs);
-            console.log(properties)
         });
     };
     getProperties();

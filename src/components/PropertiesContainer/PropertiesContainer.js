@@ -7,17 +7,16 @@ const PropertiesContainer = ({properties}) => {
         {
           properties.map(property => {
             return(
-              // <Property 
-              //   key={property.id}
-              //   precio={property.precio}
-              //   direccion={property.direccion}
-              //   localidad={property.localidad}
-              //   baños={property.baños}
-              //   dormitorios={property.dormitorios}
-              //   superficie={property.superficietotal}
-              //   fotos={property.fotos[0].fotos}
-              // />
-              <Property />
+              <Property 
+                key={property.id}
+                precio={property.precio}
+                direccion={property.direccion}
+                localidad={property.localidad}
+                baños={property.baños}
+                dormitorios={property.dormitorios}
+                superficie={property.superficietotal}
+                properties={properties}
+              />
             );
           })
         }

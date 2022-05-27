@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
+import leftArrow from '../../images/left-chevron.png';
+import rightArrow from '../../images/right-chevron.png';
 
-const Slider = ({fotos}) => {
+const Slider = ({properties}) => {
+
+    console.log(properties)
     
     const [imageNumber, setImageNumber] = useState(0);
 
@@ -26,22 +30,19 @@ const Slider = ({fotos}) => {
 
   return (
     <div className='slider'>
-        <div>{fotos.map(foto => {
+        <div className='slider--images'>{properties.map(property => {
             return (
                 <img 
-                    key={foto.id}
-                    src={foto}
-                    // alt={property.direccion}
-                    alt="nombre"
+                    key={property.id}
+                    src={property.fotos[0].fotos[imageNumber]}
+                    alt={property.direccion}
                 />
             );
-            // console.log(foto)
         })}
         </div>
-        <div>
-            <button onClick={prevImg}>-</button>
-            <p>{imageNumber}</p>
-            <button onClick={nextImg}>+</button>
+        <div className='slider--arrows'>
+            <button className='slider--arrows__left' onClick={prevImg}><img src={leftArrow} alt="left arrow"/></button>
+            <button className='slider--arrows__right' onClick={nextImg}><img src={rightArrow} alt="right arrow"/></button>
         </div>
     </div>
   )

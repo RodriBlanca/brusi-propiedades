@@ -298,6 +298,19 @@ video {
             justify-content: space-between;
     width: 100%;
   }
+  .hero--buttons div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 120px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .hero--buttons__button {
     border: 0;
     color: #ffffff;
@@ -883,13 +896,14 @@ video {
   }
   .property--image {
     margin: 10px 0;
+    overflow: hidden;
     position: relative;
   }
-  .property--image__pic {
-    width: 100%;
-  }
   .property--image__title {
+    color: #ffffff;
+    position: absolute;
     margin-left: 10px;
+    top: 80%;
   }
   .property--details {
     margin: 0 10px;
@@ -920,6 +934,64 @@ video {
   }
   .filters {
     display: none;
+  }
+  .slider {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    position: relative;
+    width: 100%;
+  }
+  .slider--images {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .slider--images img {
+    width: 100%;
+  }
+  .slider--arrows {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    top: 50%;
+    left: 0px;
+    width: 100%;
+  }
+  .slider--arrows__left, .slider--arrows__right {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    margin-left: 5px;
+    width: 35px;
+  }
+  .slider--arrows__left__right, .slider--arrows__right__right {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+  .slider--arrows__left img, .slider--arrows__right img {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    width: 100%;
   }
 }
 
