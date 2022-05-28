@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 import leftArrow from '../../images/left-chevron.png';
 import rightArrow from '../../images/right-chevron.png';
 
-const Slider = ({properties}) => {
+const Slider = ({fotos, direccion}) => {
 
-    console.log(properties)
+    console.log(fotos.length)
     
     const [imageNumber, setImageNumber] = useState(0);
 
     const nextImg = () => {
-        if(imageNumber - 1 === 2 - 1) {
+        if(imageNumber - 1 === fotos.length - 2) {
             setImageNumber(0);
             console.log(0)
         } else {
@@ -30,15 +30,8 @@ const Slider = ({properties}) => {
 
   return (
     <div className='slider'>
-        <div className='slider--images'>{properties.map(property => {
-            return (
-                <img 
-                    key={property.id}
-                    src={property.fotos[0].fotos[imageNumber]}
-                    alt={property.direccion}
-                />
-            );
-        })}
+        <div className='slider--images'>
+            <img src={fotos[imageNumber]} alt={direccion}/>
         </div>
         <div className='slider--arrows'>
             <button className='slider--arrows__left' onClick={prevImg}><img src={leftArrow} alt="left arrow"/></button>

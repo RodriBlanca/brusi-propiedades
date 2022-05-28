@@ -181,6 +181,7 @@ video {
       & img {
         height: 100%;
         width: 100%;
+        display: block;
       }
 
       &__text {
@@ -405,10 +406,10 @@ video {
 
   .featured-properties {
     align-items: center;
-    background-color: $bgc2;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin: 0 15px;
 
     &--title {
       font-family: "Montserrat", sans-serif;
@@ -788,15 +789,15 @@ video {
     margin: 0 0 25px 0;
     width: 100%;
     &--image {
-      margin: 10px 0;
       overflow: hidden;
       position: relative;
 
       &__title {
         color: $bgc;
-        position: absolute;
+        font-size: 1.3rem;
         margin-left: 10px;
-        top: 80%;
+        position: absolute;
+        top: 75%;
       }
     }
 
@@ -834,6 +835,7 @@ video {
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: 300px;
     justify-content: flex-start;
     position: relative;
     width: 100%;
@@ -843,7 +845,7 @@ video {
       position: relative;
       width: 100%;
       img {
-        width: 100%;
+        height: 100%;
       }
     }
 
@@ -853,7 +855,7 @@ video {
       display: flex;
       position: absolute;
       justify-content: space-between;
-      top: 50%;
+      top: 48%;
       left: 0px;
       width: 100%;
 
@@ -883,6 +885,24 @@ video {
 @media screen and (min-width: 480px) {
   .about--picture .estate-agent--img {
     width: 60%;
+  }
+
+  .slider {
+    height: 250px;
+    &--images {
+      & img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .property {
+    &--image {
+      &__title {
+        top: 70%;
+      }
+    }
   }
 }
 
@@ -972,6 +992,22 @@ video {
 
     &--details__price {
       font-size: 1.4rem;
+    }
+
+    &--image {
+      &__title {
+        top: 75%;
+      }
+    }
+  }
+
+  .slider {
+    height: 300px;
+    &--images {
+      & img {
+        height: 100%;
+        width: auto;
+      }
     }
   }
 }
@@ -1115,7 +1151,7 @@ video {
   }
 
   .property {
-    width: 32%;
+    width: 48%;
   }
 }
 
@@ -1252,6 +1288,7 @@ video {
       & div {
         align-items: center;
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         width: 100%;
 
@@ -1269,10 +1306,6 @@ video {
       flex-direction: row;
       justify-content: center;
       margin: 50px 100px;
-
-      & > div {
-        width: 650px;
-      }
 
       &__text {
         font-size: 1.5rem;
@@ -1311,6 +1344,10 @@ video {
         }
       }
     }
+  }
+
+  .featured-properties {
+    margin: 0 100px;
   }
 
   .footer {
@@ -1505,6 +1542,28 @@ video {
   }
 }
 
+@media screen and (min-width: 1124px) {
+  .property {
+    &--image {
+      height: 200px;
+      &__title {
+        top: 63%;
+      }
+    }
+  }
+
+  .slider {
+    height: 280px;
+    &--images {
+      & img {
+        height: auto;
+        transform: translateY(-15%);
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .home {
     &--services {
@@ -1554,14 +1613,59 @@ video {
   }
 
   .property {
-    width: 48%;
-
     &--image {
-      align-items: center;
+      align-items: flex-start;
       display: flex;
       height: 300px;
       margin: 0;
       overflow: hidden;
+      &__title {
+        top: 73%;
+      }
     }
+  }
+
+  .slider {
+    height: 350px;
+    &--images {
+      & img {
+        height: 100%;
+        transform: translateY(-15%);
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1368px) {
+  .property {
+    &--image {
+      height: 270px;
+    }
+  }
+
+  .slider {
+    height: 300px;
+    &--images {
+      & img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .property {
+    &--image {
+      height: 375px;
+      &__title {
+        top: 80%;
+      }
+    }
+  }
+
+  .slider {
+    height: 375px;
   }
 }

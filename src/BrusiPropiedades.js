@@ -12,6 +12,7 @@ import Services from './pages/Services';
 import Properties from './pages/Properties';
 import About from './pages/About';
 import NotFoundPage from './pages/NotFoundPage';
+import PropertyDetails from './pages/PropertyDetails';
 // Contexts
 import { CheckButtonsProvider } from './contexts/CheckButtonsContext';
 import { MenuSectionsProvider } from './contexts/MenuSectionsContext';
@@ -48,6 +49,7 @@ const BrusiPropiedades = () => {
                 <Route path='/brusi-propiedades/propiedades' element={<Properties properties={properties}/>}/>
                 <Route path='/brusi-propiedades/nosotros' element={<About />}/>
                 <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
+                <Route path='/brusi-propiedades/propiedad:id' element={<PropertyDetails />}/>
                 <Route path='/brusi-propiedades/propiedades/propiedad:id' element={<PropertyDetailContainer />}/>
             </Routes>
             <WhatsappLogo />

@@ -194,6 +194,7 @@ video {
   .home--services img {
     height: 100%;
     width: 100%;
+    display: block;
   }
   .home--services__text {
     margin: 0 25px;
@@ -448,7 +449,6 @@ video {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #f1f1f1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -459,6 +459,7 @@ video {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    margin: 0 15px;
   }
   .featured-properties--title {
     font-family: "Montserrat", sans-serif;
@@ -895,15 +896,15 @@ video {
     width: 100%;
   }
   .property--image {
-    margin: 10px 0;
     overflow: hidden;
     position: relative;
   }
   .property--image__title {
     color: #ffffff;
-    position: absolute;
+    font-size: 1.3rem;
     margin-left: 10px;
-    top: 80%;
+    position: absolute;
+    top: 75%;
   }
   .property--details {
     margin: 0 10px;
@@ -946,6 +947,7 @@ video {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 300px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -958,7 +960,7 @@ video {
     width: 100%;
   }
   .slider--images img {
-    width: 100%;
+    height: 100%;
   }
   .slider--arrows {
     -webkit-box-align: center;
@@ -972,7 +974,7 @@ video {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    top: 50%;
+    top: 48%;
     left: 0px;
     width: 100%;
   }
@@ -998,6 +1000,16 @@ video {
 @media screen and (min-width: 480px) {
   .about--picture .estate-agent--img {
     width: 60%;
+  }
+  .slider {
+    height: 250px;
+  }
+  .slider--images img {
+    height: auto;
+    width: 100%;
+  }
+  .property--image__title {
+    top: 70%;
   }
 }
 
@@ -1090,6 +1102,16 @@ video {
   }
   .property--details__price {
     font-size: 1.4rem;
+  }
+  .property--image__title {
+    top: 75%;
+  }
+  .slider {
+    height: 300px;
+  }
+  .slider--images img {
+    height: 100%;
+    width: auto;
   }
 }
 
@@ -1235,7 +1257,7 @@ video {
     width: 50% !important;
   }
   .property {
-    width: 32%;
+    width: 48%;
   }
 }
 
@@ -1403,6 +1425,10 @@ video {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 100%;
@@ -1423,9 +1449,6 @@ video {
         -ms-flex-pack: center;
             justify-content: center;
     margin: 50px 100px;
-  }
-  .home--services > div {
-    width: 650px;
   }
   .home--services__text {
     font-size: 1.5rem;
@@ -1458,6 +1481,9 @@ video {
   }
   .home--services__text button:hover::after {
     left: 0;
+  }
+  .featured-properties {
+    margin: 0 100px;
   }
   .footer {
     -ms-grid-column: 1;
@@ -1643,6 +1669,24 @@ video {
   }
 }
 
+@media screen and (min-width: 1124px) {
+  .property--image {
+    height: 200px;
+  }
+  .property--image__title {
+    top: 63%;
+  }
+  .slider {
+    height: 280px;
+  }
+  .slider--images img {
+    height: auto;
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .home--services {
     margin: 50px 100px;
@@ -1675,19 +1719,53 @@ video {
   .sell div {
     width: 300px;
   }
-  .property {
-    width: 48%;
-  }
   .property--image {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 300px;
     margin: 0;
     overflow: hidden;
+  }
+  .property--image__title {
+    top: 73%;
+  }
+  .slider {
+    height: 350px;
+  }
+  .slider--images img {
+    height: 100%;
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1368px) {
+  .property--image {
+    height: 270px;
+  }
+  .slider {
+    height: 300px;
+  }
+  .slider--images img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .property--image {
+    height: 375px;
+  }
+  .property--image__title {
+    top: 80%;
+  }
+  .slider {
+    height: 375px;
   }
 }
 /*# sourceMappingURL=brusiPropiedadesStyles.css.map */
