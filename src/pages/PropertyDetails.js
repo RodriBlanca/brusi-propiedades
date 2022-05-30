@@ -3,10 +3,10 @@ import PropertyDetailContainer from '../components/PropertyDetailContainer/Prope
 
 const PropertyDetails = () => {
   return (
-    <main>
+    <main className='properties-detail'>
         <PropertyDetailContainer />
     </main>
-  )
+  );
 }
 
 export default PropertyDetails;

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 // Components
 import Header from './components/Header/Header';
 import WhatsappLogo from './components/WhatsappLogo/WhatsappLogo';
-import PropertyDetailContainer from './components/PropertyDetailContainer/PropertyDetailContainer';
 import Footer from './components/Footer/Footer';
 // React Router Dom
 import { Routes, Route, Navigate } from 'react-router-dom';
@@ -16,6 +15,7 @@ import PropertyDetails from './pages/PropertyDetails';
 // Contexts
 import { CheckButtonsProvider } from './contexts/CheckButtonsContext';
 import { MenuSectionsProvider } from './contexts/MenuSectionsContext';
+import { PropertyProvider } from './contexts/PropertyContext';
 // Firebase
 import { db } from './firebase/firebaseConfig';
 import { collection, query, getDocs } from "firebase/firestore";
@@ -41,19 +41,21 @@ const BrusiPropiedades = () => {
     <div className='brusi-propiedades'>
         <CheckButtonsProvider>
           <MenuSectionsProvider>
-            <Header/>
-            <Routes>
-                <Route path='*' element={<NotFoundPage />}/>
-                <Route path='/brusi-propiedades' element={<Home properties={properties}/>}/>
-                <Route path='/brusi-propiedades/servicios' element={<Services />}/>
-                <Route path='/brusi-propiedades/propiedades' element={<Properties properties={properties}/>}/>
-                <Route path='/brusi-propiedades/nosotros' element={<About />}/>
-                <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
-                <Route path='/brusi-propiedades/propiedad:id' element={<PropertyDetails />}/>
-                <Route path='/brusi-propiedades/propiedades/propiedad:id' element={<PropertyDetailContainer />}/>
-            </Routes>
-            <WhatsappLogo />
-            <Footer />
+            <PropertyProvider>
+              <Header/>
+              <Routes>
+                  <Route path='*' element={<NotFoundPage />}/>
+                  <Route path='/brusi-propiedades' element={<Home properties={properties}/>}/>
+                  <Route path='/brusi-propiedades/servicios' element={<Services />}/>
+                  <Route path='/brusi-propiedades/propiedades' element={<Properties properties={properties}/>}/>
+                  <Route path='/brusi-propiedades/nosotros' element={<About />}/>
+                  <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
+                  <Route path='/brusi-propiedades/propiedad:id' element={<PropertyDetails />}/>
+                  <Route path='/brusi-propiedades/propiedades/propiedad:id' element={<PropertyDetails />}/>
+              </Routes>
+              <WhatsappLogo />
+              <Footer />
+            </PropertyProvider>
           </MenuSectionsProvider>
         </CheckButtonsProvider>
     </div>

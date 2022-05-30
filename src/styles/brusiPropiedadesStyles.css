@@ -166,7 +166,8 @@ video {
   .about,
   .services,
   .properties,
-  .not-found {
+  .not-found,
+  .properties-detail {
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
     grid-column: 1/5;
@@ -994,6 +995,22 @@ video {
     -webkit-filter: invert(1);
             filter: invert(1);
     width: 100%;
+  }
+  .property-detail {
+    font-family: 'Raleway', sans-serif;
+  }
+  .property-detail--content {
+    margin: 0 25px 50px 25px;
+  }
+  .property-detail--feature ul {
+    padding: 0;
+  }
+  .property-detail--feature ul li {
+    list-style: none;
+  }
+  .property-detail--information h1,
+  .property-detail--information h2 {
+    margin-left: 25px;
   }
 }
 

@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import leftArrow from '../../images/left-chevron.png';
 import rightArrow from '../../images/right-chevron.png';
+import { Link } from 'react-router-dom';
 
-const Slider = ({fotos, direccion}) => {
+const Slider = ({fotos, direccion, id}) => {
 
     console.log(fotos.length)
     
@@ -31,7 +32,9 @@ const Slider = ({fotos, direccion}) => {
   return (
     <div className='slider'>
         <div className='slider--images'>
-            <img src={fotos[imageNumber]} alt={direccion}/>
+            <Link to={`/brusi-propiedades/propiedades/propiedad:${id}`}>
+                <img src={fotos[imageNumber]} alt={direccion}/>
+            </Link>
         </div>
         <div className='slider--arrows'>
             <button className='slider--arrows__left' onClick={prevImg}><img src={leftArrow} alt="left arrow"/></button>

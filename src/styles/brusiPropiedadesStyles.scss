@@ -163,7 +163,8 @@ video {
   .about,
   .services,
   .properties,
-  .not-found {
+  .not-found,
+  .properties-detail {
     grid-column: 1/5;
     grid-row: 2/4;
     min-height: 100vh;
@@ -877,6 +878,29 @@ video {
           filter: invert(1);
           width: 100%;
         }
+      }
+    }
+  }
+
+  .property-detail {
+    font-family: 'Raleway', sans-serif;
+    &--content {
+      margin: 0 25px 50px 25px;
+    }
+
+    &--feature {
+      & ul {
+        padding: 0;
+        & li {
+          list-style: none;
+        }
+      }
+    }
+
+    &--information {
+      & h1,
+      & h2 {
+        margin-left: 25px;
       }
     }
   }
