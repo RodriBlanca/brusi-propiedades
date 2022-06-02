@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 html,
 body {
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -20,7 +21,6 @@ video {
   .brusi-propiedades {
     display: -ms-grid;
     display: grid;
-    font-family: "Crimson Pro", serif;
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: 100px, (1fr)[2], 500px;
@@ -126,7 +126,6 @@ video {
     opacity: 0;
   }
   .menu-container ul li {
-    font-family: "Montserrat", sans-serif;
     list-style: none;
   }
   .menu-container__link {
@@ -191,6 +190,7 @@ video {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 25px;
   }
   .home--services img {
     height: 100%;
@@ -199,12 +199,8 @@ video {
   }
   .home--services__text {
     margin: 0 25px;
-    text-align: justify;
-    font-family: "Crimson Pro", serif;
+    text-align: left;
     font-size: 1.3rem;
-  }
-  .home--services__text h2 {
-    font-family: "Montserrat", sans-serif;
   }
   .home--services__text button {
     background-color: #01d3b7;
@@ -249,7 +245,6 @@ video {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-family: 'Raleway', sans-serif;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -337,7 +332,6 @@ video {
   }
   .about--title__text {
     color: #01d3b7;
-    font-family: "Raleway", sans-serif;
     font-size: 2.2rem;
     text-align: center;
   }
@@ -345,7 +339,6 @@ video {
     margin: 0 25px 50px 25px;
   }
   .about--paragraph__title {
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
   }
   .about--paragraph__text {
@@ -418,7 +411,6 @@ video {
     margin: 0 25px 25px 25px;
   }
   .about--social__title {
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     text-align: center;
   }
@@ -463,8 +455,12 @@ video {
     margin: 0 15px;
   }
   .featured-properties--title {
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
+    text-align: left;
+    font-size: 1.9rem;
+    margin-bottom: 0;
+  }
+  .featured-properties--text {
+    font-size: 1.3rem;
   }
   .footer {
     -webkit-box-align: center;
@@ -478,7 +474,6 @@ video {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-family: "Montserrat", sans-serif;
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
     grid-column: 1/5;
@@ -566,7 +561,6 @@ video {
     margin: 0 25px 25px 25px;
   }
   .frequent-questions--title {
-    font-family: "Raleway", sans-serif;
     font-size: 1.7rem;
     text-align: center;
   }
@@ -602,7 +596,6 @@ video {
   }
   .frequent-questions--container__label {
     display: block;
-    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: bolder;
     margin: 10px 0 10px 15px;
@@ -666,7 +659,6 @@ video {
   .services--title__text,
   .buy--title__text {
     color: #01d3b7;
-    font-family: "Raleway", sans-serif;
     font-size: 2.2rem;
     text-align: center;
   }
@@ -680,7 +672,6 @@ video {
   .buy--sell__subtitle,
   .buy--buy__title,
   .buy--buy__subtitle {
-    font-family: 'Montserrat', sans-serif;
     text-align: center;
   }
   .services--sell h4, .services--buy h4,
@@ -768,7 +759,6 @@ video {
     margin-bottom: 25px;
   }
   .form div label {
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
   }
   .form div input {
@@ -866,7 +856,6 @@ video {
   }
   .properties--title__text {
     color: #01d3b7;
-    font-family: "Raleway", sans-serif;
     font-size: 2.2rem;
     text-align: center;
   }
@@ -891,7 +880,6 @@ video {
   }
   .property {
     background-color: #f1f1f1;
-    font-family: "Raleway", sans-serif;
     font-weight: bolder;
     margin: 0 0 25px 0;
     width: 100%;
@@ -996,9 +984,6 @@ video {
             filter: invert(1);
     width: 100%;
   }
-  .property-detail {
-    font-family: 'Raleway', sans-serif;
-  }
   .property-detail--content {
     margin: 0 25px 50px 25px;
   }
@@ -1011,6 +996,10 @@ video {
   .property-detail--information h1,
   .property-detail--information h2 {
     margin-left: 25px;
+  }
+  iframe {
+    height: 250px;
+    width: 100%;
   }
 }
 
@@ -1058,7 +1047,6 @@ video {
   }
   .navbar--item__link {
     color: #000000;
-    font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
     position: relative;
     text-decoration: none;
@@ -1414,7 +1402,6 @@ video {
     margin: 35px 0 0 0;
   }
   .hero--content__phrase {
-    font-family: "Montserrat", sans-serif;
     font-size: 3.2rem;
     font-weight: lighter;
     margin: 15px 0;
@@ -1554,7 +1541,6 @@ video {
     font-size: 2.3rem;
   }
   .services--title__text {
-    font-family: "Raleway", sans-serif;
     font-size: 4rem;
   }
   .services--button {
@@ -1625,7 +1611,6 @@ video {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-family: "Raleway", sans-serif;
     height: auto;
     margin-right: 20px;
     width: 250px;

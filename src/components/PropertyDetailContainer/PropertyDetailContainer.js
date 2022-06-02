@@ -4,7 +4,7 @@ import PropertyDetail from '../PropertyDetail/PropertyDetail';
 const PropertyDetailContainer = () => {
   return (
     <div>
-        <PropertyDetail />
+      <PropertyDetail/>
     </div>
   )
 }

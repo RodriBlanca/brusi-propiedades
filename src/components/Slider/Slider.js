@@ -3,7 +3,7 @@ import leftArrow from '../../images/left-chevron.png';
 import rightArrow from '../../images/right-chevron.png';
 import { Link } from 'react-router-dom';
 
-const Slider = ({fotos, direccion, id}) => {
+const Slider = ({fotos, direccion, id, handleProperty, property}) => {
 
     console.log(fotos.length)
     
@@ -32,9 +32,7 @@ const Slider = ({fotos, direccion, id}) => {
   return (
     <div className='slider'>
         <div className='slider--images'>
-            <Link to={`/brusi-propiedades/propiedades/propiedad:${id}`}>
-                <img src={fotos[imageNumber]} alt={direccion}/>
-            </Link>
+            <img src={fotos[imageNumber]} alt={direccion} onChange={handleProperty}/>
         </div>
         <div className='slider--arrows'>
             <button className='slider--arrows__left' onClick={prevImg}><img src={leftArrow} alt="left arrow"/></button>

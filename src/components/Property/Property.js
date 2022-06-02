@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import { PropertyContext } from '../../contexts/PropertyContext';
 import Slider from '../Slider/Slider';
 
-const Property = ({/* direccion, precio, localidad, baños, dormitorios, superficie, fotos, id */ property}) => {
+const Property = ({property}) => {
 
   const [propertyDetail, setPropertyDetail] = useContext(PropertyContext);
 
   console.log(property)
 
-  const handleProperty = (e) => {
-    // e.preventDefault();
-
+  const handleProperty = () => {
     setPropertyDetail(property);
+    window.localStorage.setItem('propiedad', JSON.stringify(property))
+    window.scroll(0, 0);
   }
   console.log(propertyDetail)
   
@@ -30,7 +30,7 @@ const Property = ({/* direccion, precio, localidad, baños, dormitorios, superfi
         </p>
         <div>
           <p className='property--details__price'>{`USD ${property.precio}`}</p>
-          <Link to={`/brusi-propiedades/propiedades/propiedad:${property.id}`}>
+          <Link to={`/brusi-propiedades/propiedad:${property.id}`}>
             <button className='property--details__button' onClick={handleProperty}><span>Ver más</span></button>
           </Link>
         </div>
