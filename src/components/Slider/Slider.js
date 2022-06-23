@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
 import leftArrow from '../../images/left-chevron.png';
 import rightArrow from '../../images/right-chevron.png';
-import { Link } from 'react-router-dom';
 
-const Slider = ({fotos, direccion, id, handleProperty, property}) => {
-
-    console.log(fotos.length)
+const Slider = ({fotos, direccion, handleProperty}) => {
     
     const [imageNumber, setImageNumber] = useState(0);
 

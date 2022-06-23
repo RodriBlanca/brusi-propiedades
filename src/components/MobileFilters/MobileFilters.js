@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
-// import CheckBox from '../CheckBox/CheckBox';
+import MobileFiltersModal from '../MobileFiltersModal/MobileFiltersModal';
 // Filters
 import TipoDePropiedad from '../Filters/TipoDePropiedad/TipoDePropiedad';
 import Ambientes from '../Filters/Ambientes/Ambientes';
 import Dormitorios from '../Filters/Dormitorios/Dormitorios';
-import {Precio} from '../Filters/Precio/Precio';
 // Firebase
 import { db } from '../../firebase/firebaseConfig';
 import { collection, query, getDocs } from "firebase/firestore";
 
-const PropertiesFilters = ({properties, setProperties}) => {
-  
-  const [checked, setChecked] = useState([]);
+const MobileFilters = ({properties, setProperties}) => {
+
+    const [modal, setModal] = useState(false);
+
+    const handleModal = () => {
+        setModal(!modal);
+    }
+
+    const [checked, setChecked] = useState([]);
   const [checkboxChecked, setCheckboxChecked] = useState(false);
 
   const [ambientesList, setAmbientesList] = useState([
@@ -189,54 +194,57 @@ const PropertiesFilters = ({properties, setProperties}) => {
   }, [ambientesList, tipoDePropiedadList, dormitoriosList]);
 
   return (
-    <div className='filters'>
-      <div>
-        <h3>Precio</h3>
-      </div>
-      <div>
-        <h3>Tipo de propiedad</h3>
-        {tipoDePropiedadList.map(typeFilter => {
-          return(
-            <TipoDePropiedad 
-              key={typeFilter.id}
-              type={typeFilter.type}
-              id={typeFilter.id}
-              checked={typeFilter.checked}
-              handleTipoDePropiedad={()=>handleTipoDePropiedad(typeFilter.id)}
-            />
-          );
-        })}
-      </div>
-      <div>
-        <h3>Ambientes</h3>
-        {ambientesList.map(typeFilter => {
-          return(
-            <Ambientes 
-              key={typeFilter.id}
-              type={typeFilter.type}
-              id={typeFilter.id}
-              checked={typeFilter.checked}
-              handleAmbientes={()=>handleAmbientes(typeFilter.id)}
-            />
-          );
-        })}
-      </div>
-      <div>
-        <h3>Dormitorios</h3>
-        {dormitoriosList.map(typeFilter => {
-          return(
-            <Dormitorios 
-              key={typeFilter.id}
-              type={typeFilter.type}
-              id={typeFilter.id}
-              checked={typeFilter.checked}
-              handleDormitorios={()=>handleDormitorios(typeFilter.id)}
-            />
-          )
-        })}
-      </div>
+    <div className="mobile-filters">
+        <button className="mobile-filters--button" onClick={handleModal}>Filtros</button>
+        <MobileFiltersModal modal={modal} setModal={setModal} handleModal={handleModal}>
+            <div>
+                <h3>Precio</h3>
+            </div>
+            <div>
+                <h3>Tipo de propiedad</h3>
+                {tipoDePropiedadList.map(typeFilter => {
+                return(
+                    <TipoDePropiedad 
+                    key={typeFilter.id}
+                    type={typeFilter.type}
+                    id={typeFilter.id}
+                    checked={typeFilter.checked}
+                    handleTipoDePropiedad={()=>handleTipoDePropiedad(typeFilter.id)}
+                    />
+                );
+                })}
+            </div>
+            <div>
+                <h3>Ambientes</h3>
+                {ambientesList.map(typeFilter => {
+                return(
+                    <Ambientes 
+                    key={typeFilter.id}
+                    type={typeFilter.type}
+                    id={typeFilter.id}
+                    checked={typeFilter.checked}
+                    handleAmbientes={()=>handleAmbientes(typeFilter.id)}
+                    />
+                );
+                })}
+            </div>
+            <div>
+                <h3>Dormitorios</h3>
+                {dormitoriosList.map(typeFilter => {
+                return(
+                    <Dormitorios 
+                    key={typeFilter.id}
+                    type={typeFilter.type}
+                    id={typeFilter.id}
+                    checked={typeFilter.checked}
+                    handleDormitorios={()=>handleDormitorios(typeFilter.id)}
+                    />
+                )
+                })}
+            </div>
+        </MobileFiltersModal>
     </div>
   )
 }
 
-export default PropertiesFilters;
+export default MobileFilters;

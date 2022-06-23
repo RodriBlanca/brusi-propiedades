@@ -10,7 +10,7 @@ const Properties = ({properties, setProperties}) => {
       </div>
       <div className='properties--content'>
         <PropertiesFilters properties={properties} setProperties={setProperties}/>
-        <PropertiesContainer properties={properties}/>
+        <PropertiesContainer properties={properties} setProperties={setProperties}/>
       </div>
     </main>
   )

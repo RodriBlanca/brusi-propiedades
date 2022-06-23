@@ -24,8 +24,8 @@ const FooterLinks = () => {
         <div className='footer--links__section'>
             <p>Contacto</p>
             <ul>
-                <li>Mail</li>
-                <li>Número de teléfono</li>
+                <li className='footer--mail'>brusipropiedades@gmail.com</li>
+                <li className='footer--phone'>11 3635 6829</li>
             </ul>
         </div>
         <div className='footer--links__section'>

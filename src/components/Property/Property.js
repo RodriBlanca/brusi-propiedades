@@ -5,16 +5,15 @@ import Slider from '../Slider/Slider';
 
 const Property = ({property}) => {
 
-  const [propertyDetail, setPropertyDetail] = useContext(PropertyContext);
+  const [ , setPropertyDetail] = useContext(PropertyContext);
 
-  console.log(property)
+  console.log(property.recursos.fotos)
 
   const handleProperty = () => {
     setPropertyDetail(property);
     window.localStorage.setItem('propiedad', JSON.stringify(property))
     window.scroll(0, 0);
   }
-  console.log(propertyDetail)
   
   return (
     <div className='property'>

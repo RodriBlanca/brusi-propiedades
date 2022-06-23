@@ -1,17 +1,12 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { PropertyContext } from '../../contexts/PropertyContext';
 import Slider from '../Slider/Slider';
 
 const PropertyDetail = () => {
 
-  const [savedProperty, setSavedProperty] = useState({});
-  const [propertyDetail, setPropertyDetail] = useContext(PropertyContext);
+  const [propertyDetail, ] = useContext(PropertyContext);
 
-  
-  
-
-
-  console.log(propertyDetail);
+  console.log(propertyDetail)
 
   return (
     <div className='property-detail'>
@@ -88,12 +83,18 @@ const PropertyDetail = () => {
         {/* Descripción */}
         <div className='property-detail--feature'>
           <h3>Descripción</h3>
-          <p>{
+          <div>
+            {
               propertyDetail.descripcion ? 
-              propertyDetail.descripcion
+              propertyDetail.descripcion.map(desc => {
+                return(
+                  <p key={desc.id}>{desc}</p>
+                );
+              })
               :
               <span></span>
-            }</p>
+            }
+          </div>
           <hr/>
         </div>
         {/* Servicios */}
@@ -150,22 +151,29 @@ const PropertyDetail = () => {
       </div>
       {/* Video */}
       <div className='property-detail--feature'>
-        <h3>Video</h3>
+        <h3 className='property-detail--feature__title'>Video</h3>
         {
           propertyDetail.recursos ?
-          <iframe 
-          src={`${propertyDetail.recursos.videos}`}
-          frameBorder='0'
-          allow='autoplay; encrypted-media'
-          allowFullScreen
-          title='video'>
-          </iframe>
+          <>
+            <iframe 
+              src={`${propertyDetail.recursos.videos}`}
+              frameBorder='0'
+              allow='autoplay; encrypted-media'
+              allowFullScreen
+              title='video'>
+            </iframe>
+            <hr/>
+          </>
           :
           <div></div>
         }
       </div>
       {/* Tour 360° */}
-      <div></div>
+      <div className='property-detail--tour'>
+        <h3>Tour 360°</h3>
+        <iframe src='https://kuula.co/share/NDcpN/collection/7vpMT'></iframe>
+        <hr/>
+      </div>
       {/* Ubicación */}
       <div>
         Mapa

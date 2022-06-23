@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckButtonsContext } from '../../contexts/CheckButtonsContext';
-import { MenuSectionsContext } from '../../contexts/MenuSectionsContext';
+// import { MenuSectionsContext } from '../../contexts/MenuSectionsContext';
 
 const MenuMobile = () => {
 
     const [checkButtons, setCheckButtons] = useContext(CheckButtonsContext);
-    const [menuSection, setMenuSection] = useContext(MenuSectionsContext);
+    // const [menuSection, ] = useContext(MenuSectionsContext);
 
     const closeMenu = () => {
         setCheckButtons({...checkButtons, menu: false});
@@ -14,27 +14,27 @@ const MenuMobile = () => {
     }
 
     const handleMenuButton = () => {
-        setCheckButtons({...checkButtons, menu: !checkButtons.menu})
+        setCheckButtons({...checkButtons, menu: !checkButtons.menu});
     }
 
-    const currentSection = () => {
-        switch (menuSection) {
-            case 'Inicio':
-                console.log('Inicio');
-                break;
-            case 'Servicios':
-                console.log('Servicios');
-                break;
-            case 'Propiedades':
-                console.log('Propiedades');
-                break;
-            case 'Nosotros':
-                console.log('Nosotros');
-                break;
-            default:
-                break;
-        }
-    }
+    // const currentSection = () => {
+    //     switch (menuSection) {
+    //         case 'Inicio':
+    //             console.log('Inicio');
+    //             break;
+    //         case 'Servicios':
+    //             console.log('Servicios');
+    //             break;
+    //         case 'Propiedades':
+    //             console.log('Propiedades');
+    //             break;
+    //         case 'Nosotros':
+    //             console.log('Nosotros');
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // }
 
     const sectionSelected = (e) => {
         console.log(e.target.value);
