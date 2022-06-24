@@ -12,9 +12,6 @@ const MobileFiltersModal = ({children, modal, setModal, handleModal}) => {
                 <hr/>
                 <button className="modal--button" onClick={handleModal}></button>
                 {children}
-                <div className="modal--filters">
-                    <button className="modal--filters__button">Aplicar Filtros</button>
-                </div>
             </div>
         </div>
         }

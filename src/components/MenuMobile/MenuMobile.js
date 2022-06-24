@@ -17,30 +17,6 @@ const MenuMobile = () => {
         setCheckButtons({...checkButtons, menu: !checkButtons.menu});
     }
 
-    // const currentSection = () => {
-    //     switch (menuSection) {
-    //         case 'Inicio':
-    //             console.log('Inicio');
-    //             break;
-    //         case 'Servicios':
-    //             console.log('Servicios');
-    //             break;
-    //         case 'Propiedades':
-    //             console.log('Propiedades');
-    //             break;
-    //         case 'Nosotros':
-    //             console.log('Nosotros');
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    // }
-
-    const sectionSelected = (e) => {
-        console.log(e.target.value);
-        // setMenuSection(menuSection = )
-    }
-
   return (
     <>
         <input 
@@ -54,7 +30,7 @@ const MenuMobile = () => {
         <nav className='menu-container'>
           <ul>
               <li>
-                  <Link className='menu-container__link' to={'/brusi-propiedades'} onClick={() => {closeMenu(); sectionSelected();}}>Inicio</Link>
+                  <Link className='menu-container__link' to={'/brusi-propiedades'} onClick={closeMenu}>Inicio</Link>
               </li>
               <li>
                   <Link className='menu-container__link' to={'/brusi-propiedades/servicios'} onClick={closeMenu}>Servicios</Link>

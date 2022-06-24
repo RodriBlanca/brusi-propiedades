@@ -1,4 +1,5 @@
 import React from 'react';
+import MobileFilters from '../components/MobileFilters/MobileFilters';
 import PropertiesContainer from '../components/PropertiesContainer/PropertiesContainer';
 import PropertiesFilters from '../components/PropertiesFilters/PropertiesFilters';
 
@@ -9,7 +10,8 @@ const Properties = ({properties, setProperties}) => {
         <h1 className='properties--title__text'>Propiedades</h1>
       </div>
       <div className='properties--content'>
-        <PropertiesFilters properties={properties} setProperties={setProperties}/>
+        <PropertiesFilters setProperties={setProperties}/>
+        <MobileFilters setProperties={setProperties}/>
         <PropertiesContainer properties={properties} setProperties={setProperties}/>
       </div>
     </main>

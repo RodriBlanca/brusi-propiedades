@@ -6,8 +6,6 @@ const PropertyDetail = () => {
 
   const [propertyDetail, ] = useContext(PropertyContext);
 
-  console.log(propertyDetail)
-
   return (
     <div className='property-detail'>
       {/* Imagenes */}
@@ -153,7 +151,7 @@ const PropertyDetail = () => {
       <div className='property-detail--feature'>
         <h3 className='property-detail--feature__title'>Video</h3>
         {
-          propertyDetail.recursos ?
+          propertyDetail.recursos.videos !== undefined || !propertyDetail.recursos.videos &&
           <>
             <iframe 
               src={`${propertyDetail.recursos.videos}`}
@@ -164,8 +162,6 @@ const PropertyDetail = () => {
             </iframe>
             <hr/>
           </>
-          :
-          <div></div>
         }
       </div>
       {/* Tour 360° */}

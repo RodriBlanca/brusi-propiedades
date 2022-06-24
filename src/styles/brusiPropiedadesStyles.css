@@ -1120,27 +1120,34 @@ video {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     left: 0;
+    min-height: 100%;
+    min-width: 100vw;
+    overflow: scroll;
     position: fixed;
     top: 0;
-    width: 100vw;
     z-index: 150000;
   }
   .modal--container {
     background-color: #ffffff;
-    height: 97vh;
-    overflow: hidden;
+    height: 100%;
     overflow: scroll;
+    position: fixed;
+    width: 100vw;
+  }
+  .modal--container div {
+    margin-left: 20px;
     position: relative;
-    width: 95vw;
+    overflow: auto;
+  }
+  .modal--container div div {
+    margin: 5px 0;
   }
   .modal--container hr {
     margin: 0 20px 15px 20px;
@@ -1159,7 +1166,6 @@ video {
   .modal--title__text {
     font-size: 1.3rem;
     font-weight: bolder;
-    margin-left: 20px;
   }
   .modal--button {
     background-color: #000000;
@@ -1909,8 +1915,14 @@ video {
     margin-right: 20px;
     width: 250px;
   }
+  .filters div input {
+    margin-left: 0;
+  }
   .filters div .filters--title {
     font-size: 1.3rem;
+  }
+  .filters > div {
+    margin: 0 10px;
   }
   .filters label {
     cursor: pointer;
@@ -2001,6 +2013,18 @@ video {
   }
   .mobile-filters {
     display: none;
+  }
+  .price-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+  }
+  .price-filter input {
+    width: 65px;
   }
 }
 

@@ -1001,23 +1001,31 @@ video {
 
   .modal {
     align-items: center;
-    background-color: rgba(0, 0,0 ,.5);
     display: flex;
-    height: 100vh;
-    justify-content: center;
+    justify-content: flex-start;
     left: 0;
+    min-height: 100%;
+    min-width: 100vw;
+    overflow: scroll;
     position: fixed;
     top: 0;
-    width: 100vw;
     z-index: 150000;
 
     &--container {
       background-color: $bgc;
-      height: 97vh;
-      overflow: hidden;
+      height: 100%;
       overflow: scroll;
-      position: relative;
-      width: 95vw;
+      position: fixed;
+      width: 100vw;
+      
+      & div {
+        margin-left: 20px;
+        position:relative;
+        overflow:auto;
+        & div {
+          margin: 5px 0;
+        }
+      }
 
       & hr {
         margin: 0 20px 15px 20px;
@@ -1032,7 +1040,6 @@ video {
       &__text {
         font-size: 1.3rem;
         font-weight: bolder;
-        margin-left: 20px;
       }
     }
 
@@ -1776,9 +1783,16 @@ video {
     width: 250px;
 
     & div {
+      & input {
+        margin-left: 0;
+      }
       & .filters--title {
         font-size: 1.3rem;
       }
+    }
+
+    & > div {
+      margin: 0 10px;
     }
 
     & label {
@@ -1881,6 +1895,15 @@ video {
 
   .mobile-filters {
     display: none;
+  }
+
+  .price-filter {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    & input {
+      width: 65px;
+    }
   }
 }
 

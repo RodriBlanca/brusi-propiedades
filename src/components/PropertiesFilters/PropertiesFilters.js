@@ -4,15 +4,15 @@ import React, { useState, useEffect } from 'react';
 import TipoDePropiedad from '../Filters/TipoDePropiedad/TipoDePropiedad';
 import Ambientes from '../Filters/Ambientes/Ambientes';
 import Dormitorios from '../Filters/Dormitorios/Dormitorios';
-import {Precio} from '../Filters/Precio/Precio';
+import Precio from '../Filters/Precio/Precio';
 // Firebase
 import { db } from '../../firebase/firebaseConfig';
 import { collection, query, getDocs } from "firebase/firestore";
 
-const PropertiesFilters = ({properties, setProperties}) => {
-  
-  const [checked, setChecked] = useState([]);
-  const [checkboxChecked, setCheckboxChecked] = useState(false);
+const PropertiesFilters = ({setProperties}) => {
+
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
 
   const [ambientesList, setAmbientesList] = useState([
     {
@@ -135,7 +135,6 @@ const PropertiesFilters = ({properties, setProperties}) => {
     const changeCheckedTipoDePropiedad = tipoDePropiedadStateList.map((propiedad) => propiedad.id === id ? {...propiedad, checked: !propiedad.checked}:propiedad);
     setTipoDePropiedadList(changeCheckedTipoDePropiedad);
   }
-  console.log(tipoDePropiedadList)
 
   const handleAmbientes = (id) => {
     const ambientesStateList = ambientesList;
@@ -148,12 +147,24 @@ const PropertiesFilters = ({properties, setProperties}) => {
     const changeCheckedDormitorio = dormitoriosStateList.map((dormitorio) => dormitorio.id === id ? {...dormitorio, checked: !dormitorio.checked}:dormitorio);
     setDormitoriosList(changeCheckedDormitorio);
   }
+
+  const handleMaxPrice = (e) => {
+    setMaxPrice(e.target.value);
+  }
+
+  const handleMinPrice = (e) => {
+    setMinPrice(e.target.value);
+  }
   
   const filterFunction = (data) => {
     let updatedProperties = data;
     const ambientesChecked = ambientesList.filter(ambientes => ambientes.checked).map(ambientes => ambientes.value);
     const tiposDePropiedadChecked = tipoDePropiedadList.filter(tipo => tipo.checked).map(tipo => tipo.type.toLowerCase());
     const dormitoriosChecked = dormitoriosList.filter(dormitorios => dormitorios.checked).map(dormitorios => dormitorios.value);
+    const priceRange = {
+      min: minPrice,
+      max: maxPrice
+    }
 
     // Ambientes
     if(ambientesChecked.length) {
@@ -168,6 +179,11 @@ const PropertiesFilters = ({properties, setProperties}) => {
     // Dormitorios
     if(dormitoriosChecked.length) {
       updatedProperties = updatedProperties.filter(property => dormitoriosChecked.includes(property.dormitorios));
+    }
+
+    // Precio
+    if(priceRange.min && priceRange.max) {
+      updatedProperties = updatedProperties.filter(property => priceRange.min <= property.precio && priceRange.max >= property.precio);
     }
 
     setProperties(updatedProperties);
@@ -186,12 +202,13 @@ const PropertiesFilters = ({properties, setProperties}) => {
     };
 
     getProperties();
-  }, [ambientesList, tipoDePropiedadList, dormitoriosList]);
+  }, [ambientesList, tipoDePropiedadList, dormitoriosList, minPrice, maxPrice]);
 
   return (
     <div className='filters'>
       <div>
         <h3>Precio</h3>
+        <Precio minPrice={minPrice} maxPrice={maxPrice} handleMaxPrice={handleMaxPrice} handleMinPrice={handleMinPrice}/>
       </div>
       <div>
         <h3>Tipo de propiedad</h3>

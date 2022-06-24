@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import MobileFiltersModal from '../MobileFiltersModal/MobileFiltersModal';
 // Filters
-import TipoDePropiedad from '../Filters/TipoDePropiedad/TipoDePropiedad';
-import Ambientes from '../Filters/Ambientes/Ambientes';
-import Dormitorios from '../Filters/Dormitorios/Dormitorios';
+import TipoDePropiedadMobile from '../Filters/TipoDePropiedadMobile/TipoDePropiedadMobile';
+import AmbientesMobile from '../Filters/AmbientesMobile/AmbientesMobile';
+import DormitoriosMobile from '../Filters/DormitoriosMobile/DormitoriosMobile';
+import Precio from '../Filters/Precio/Precio';
 // Firebase
 import { db } from '../../firebase/firebaseConfig';
 import { collection, query, getDocs } from "firebase/firestore";
 
-const MobileFilters = ({properties, setProperties}) => {
+const MobileFilters = ({setProperties}) => {
 
-    const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(false);
 
-    const handleModal = () => {
-        setModal(!modal);
-    }
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
 
-    const [checked, setChecked] = useState([]);
-  const [checkboxChecked, setCheckboxChecked] = useState(false);
+  const handleModal = () => {
+      setModal(!modal);
+      window.scroll(0, 0);
+  }
 
   const [ambientesList, setAmbientesList] = useState([
     {
@@ -153,12 +155,24 @@ const MobileFilters = ({properties, setProperties}) => {
     const changeCheckedDormitorio = dormitoriosStateList.map((dormitorio) => dormitorio.id === id ? {...dormitorio, checked: !dormitorio.checked}:dormitorio);
     setDormitoriosList(changeCheckedDormitorio);
   }
+
+  const handleMaxPrice = (e) => {
+    setMaxPrice(e.target.value);
+  }
+
+  const handleMinPrice = (e) => {
+    setMinPrice(e.target.value);
+  }
   
   const filterFunction = (data) => {
     let updatedProperties = data;
     const ambientesChecked = ambientesList.filter(ambientes => ambientes.checked).map(ambientes => ambientes.value);
     const tiposDePropiedadChecked = tipoDePropiedadList.filter(tipo => tipo.checked).map(tipo => tipo.type.toLowerCase());
     const dormitoriosChecked = dormitoriosList.filter(dormitorios => dormitorios.checked).map(dormitorios => dormitorios.value);
+    const priceRange = {
+      min: minPrice,
+      max: maxPrice
+    }
 
     // Ambientes
     if(ambientesChecked.length) {
@@ -173,6 +187,11 @@ const MobileFilters = ({properties, setProperties}) => {
     // Dormitorios
     if(dormitoriosChecked.length) {
       updatedProperties = updatedProperties.filter(property => dormitoriosChecked.includes(property.dormitorios));
+    }
+
+    // Precio
+    if(priceRange.min && priceRange.max) {
+      updatedProperties = updatedProperties.filter(property => priceRange.min <= property.precio && priceRange.max >= property.precio);
     }
 
     setProperties(updatedProperties);
@@ -191,7 +210,7 @@ const MobileFilters = ({properties, setProperties}) => {
     };
 
     getProperties();
-  }, [ambientesList, tipoDePropiedadList, dormitoriosList]);
+  }, [ambientesList, tipoDePropiedadList, dormitoriosList, minPrice, maxPrice]);
 
   return (
     <div className="mobile-filters">
@@ -199,12 +218,13 @@ const MobileFilters = ({properties, setProperties}) => {
         <MobileFiltersModal modal={modal} setModal={setModal} handleModal={handleModal}>
             <div>
                 <h3>Precio</h3>
+                <Precio minPrice={minPrice} maxPrice={maxPrice} handleMaxPrice={handleMaxPrice} handleMinPrice={handleMinPrice}/>
             </div>
             <div>
                 <h3>Tipo de propiedad</h3>
                 {tipoDePropiedadList.map(typeFilter => {
                 return(
-                    <TipoDePropiedad 
+                    <TipoDePropiedadMobile 
                     key={typeFilter.id}
                     type={typeFilter.type}
                     id={typeFilter.id}
@@ -218,7 +238,7 @@ const MobileFilters = ({properties, setProperties}) => {
                 <h3>Ambientes</h3>
                 {ambientesList.map(typeFilter => {
                 return(
-                    <Ambientes 
+                    <AmbientesMobile 
                     key={typeFilter.id}
                     type={typeFilter.type}
                     id={typeFilter.id}
@@ -232,7 +252,7 @@ const MobileFilters = ({properties, setProperties}) => {
                 <h3>Dormitorios</h3>
                 {dormitoriosList.map(typeFilter => {
                 return(
-                    <Dormitorios 
+                    <DormitoriosMobile 
                     key={typeFilter.id}
                     type={typeFilter.type}
                     id={typeFilter.id}

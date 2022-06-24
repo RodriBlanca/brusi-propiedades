@@ -11,6 +11,11 @@ import jonathan from '../images/jonathan-brusi.jpeg';
 import gustavo from '../images/gustavo-seneca.jpeg';
 
 const About = () => {
+
+    const scrollToTop = () => {
+        window.scroll(0, 0);
+    }
+
   return (
     <main className='about'>
         {/* NOSOTROS */}
@@ -48,7 +53,7 @@ const About = () => {
                     <h2 className='about--paragraph__title'>Nuestro Propósito</h2>
                     <p className='about--paragraph__text'>Es hacer que el proceso, muchas veces estresante de comprar o vender una propiedad, se convierta en uno de los momento más felices de tu vida.<br/>Es por eso, que acompañamos y aconsejamos a nuestros clientes como quisiéramos que lo hicieran con nosotros brindándoles a través de nuestros servicios una experiencia única al momento de comprar o vender
                     </p>
-                    <button className='about--paragraph__button'>
+                    <button className='about--paragraph__button' onClick={scrollToTop}>
                         <Link to={'/brusi-propiedades/servicios'} className="about--button__link">Nuestros Servicios</Link>
                     </button>
                 </div>

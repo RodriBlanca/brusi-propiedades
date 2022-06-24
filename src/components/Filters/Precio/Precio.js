@@ -1,10 +1,13 @@
 import React from 'react';
 
-export const Precio = () => {
+const Precio = ({minPrice, maxPrice, handleMaxPrice, handleMinPrice}) => {
   return (
-    <div>
-      <input type={'text'} placeholder={'Mínimo'}/>
-      <input type={'text'} placeholder={'Máximo'}/>
+    <div className='price-filter'>
+      <input type={'text'} placeholder={'Mínimo'} value={minPrice} onChange={handleMinPrice}/>
+      <span>hasta</span>
+      <input type={'text'} placeholder={'Máximo'} value={maxPrice} onChange={handleMaxPrice}/>
     </div>
   )
 }
+
+export default Precio;

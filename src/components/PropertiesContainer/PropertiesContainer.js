@@ -1,11 +1,9 @@
 import React from 'react';
 import Property from '../Property/Property';
-import MobileFilters from '../MobileFilters/MobileFilters';
 
-const PropertiesContainer = ({properties, setProperties}) => {
+const PropertiesContainer = ({properties}) => {
   return (
     <div className='properties--container'>
-        <MobileFilters properties={properties} setProperties={setProperties}/>
         {
           properties.map(property => {
             return(
