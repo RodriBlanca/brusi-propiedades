@@ -1,7 +1,7 @@
 {
-  "main.css": "/brusi-propiedades/static/css/main.d81ac3b8.chunk.css",
-  "main.js": "/brusi-propiedades/static/js/main.4decea7b.chunk.js",
-  "main.js.map": "/brusi-propiedades/static/js/main.4decea7b.chunk.js.map",
+  "main.css": "/brusi-propiedades/static/css/main.b728b498.chunk.css",
+  "main.js": "/brusi-propiedades/static/js/main.321f1299.chunk.js",
+  "main.js.map": "/brusi-propiedades/static/js/main.321f1299.chunk.js.map",
   "static/js/1.960b210e.chunk.js": "/brusi-propiedades/static/js/1.960b210e.chunk.js",
   "static/js/1.960b210e.chunk.js.map": "/brusi-propiedades/static/js/1.960b210e.chunk.js.map",
   "runtime~main.js": "/brusi-propiedades/static/js/runtime~main.72581ee2.js",
@@ -35,8 +35,8 @@
   "static/media/jonathan-brusi.jpeg": "/brusi-propiedades/static/media/jonathan-brusi.e03e93e3.jpeg",
   "static/media/gustavo-seneca.jpeg": "/brusi-propiedades/static/media/gustavo-seneca.1d0549ea.jpeg",
   "static/media/undraw_notify_re_65on.svg": "/brusi-propiedades/static/media/undraw_notify_re_65on.2b208315.svg",
-  "static/css/main.d81ac3b8.chunk.css.map": "/brusi-propiedades/static/css/main.d81ac3b8.chunk.css.map",
+  "static/css/main.b728b498.chunk.css.map": "/brusi-propiedades/static/css/main.b728b498.chunk.css.map",
   "index.html": "/brusi-propiedades/index.html",
-  "precache-manifest.c4d15a00033a68923428be917cc416a7.js": "/brusi-propiedades/precache-manifest.c4d15a00033a68923428be917cc416a7.js",
+  "precache-manifest.5058b651eef8a56e6cdb5b7f2b871f95.js": "/brusi-propiedades/precache-manifest.5058b651eef8a56e6cdb5b7f2b871f95.js",
   "service-worker.js": "/brusi-propiedades/service-worker.js"
 }
