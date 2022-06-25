@@ -1221,6 +1221,22 @@ video {
     position: relative;
     width: 90%;
   }
+  .price-filter {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 95%;
+  }
+  .price-filter input {
+    height: 30px;
+    width: 37%;
+  }
 }
 
 @media screen and (min-width: 480px) {

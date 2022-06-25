@@ -1093,6 +1093,17 @@ video {
       }
     }
   }
+
+  .price-filter {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    & input {
+      height: 30px;
+      width: 37%;
+    }
+  }
 }
 
 @media screen and (min-width: 480px) {
