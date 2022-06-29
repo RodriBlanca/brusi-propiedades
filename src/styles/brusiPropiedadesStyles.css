@@ -766,11 +766,11 @@ video {
   }
   .form textarea {
     background-color: #01d3b7;
-    border: none;
-    border-bottom: 1px solid #000000;
+    border: 1px solid #000000;
     font-family: "Arial";
     font-size: 1.2rem;
     font-weight: lighter;
+    height: 200px;
     resize: none;
     width: 100%;
   }
@@ -797,11 +797,11 @@ video {
   .form div label {
     font-size: 1.5rem;
     font-weight: bolder;
+    margin-bottom: 5px;
   }
   .form div input {
     background-color: #01d3b7;
-    border: none;
-    border-bottom: 1px solid #000000;
+    border: 1px solid #000000;
     font-size: 1.2rem;
     height: 35px;
     width: 100%;
@@ -822,7 +822,22 @@ video {
     color: #005449;
     font-weight: lighter;
   }
+  .form div input:invalid[focused="true"] {
+    border: 2px solid #ff0000;
+    color: #ff0000;
+  }
+  .form div input:invalid[focused="true"] ~ span {
+    display: block;
+  }
+  .form div span {
+    color: #ff0000;
+    display: none;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin-top: 5px;
+  }
   .form--contact {
+    margin: 0 25px;
     width: 100%;
   }
   .form--contact div {
@@ -2040,6 +2055,7 @@ video {
     margin: 0;
   }
   .price-filter input {
+    height: 15px;
     width: 65px;
   }
 }

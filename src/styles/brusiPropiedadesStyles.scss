@@ -9,6 +9,7 @@ $black: #000000;
 $aqua: #01d3b7;
 $bgc: #ffffff;
 $bgc2: #f1f1f1;
+$error: #ff0000;
 
 // GENERAL STYLES
 html,
@@ -685,11 +686,11 @@ video {
 
     & textarea {
       background-color: #01d3b7;
-      border: none;
-      border-bottom: 1px solid $black;
+      border: 1px solid $black;
       font-family: "Arial";
       font-size: 1.2rem;
       font-weight:lighter;
+      height: 200px;
       resize: none;
       width: 100%;
 
@@ -712,12 +713,12 @@ video {
       & label {
         font-size: 1.5rem;
         font-weight: bolder;
+        margin-bottom: 5px;
       }
 
       & input {
         background-color: $aqua;
-        border: none;
-        border-bottom: 1px solid $black;
+        border: 1px solid $black;
         font-size: 1.2rem;
         height: 35px;
         width: 100%;
@@ -726,10 +727,28 @@ video {
           color: darken($aqua, 25);
           font-weight:lighter;
         }
+
+        &:invalid[focused="true"] {
+          border: 2px solid $error;
+          color: $error;
+        }
+
+        &:invalid[focused="true"] ~ span {
+          display: block;
+        }
+      }
+
+      & span {
+        color: $error;
+        display: none;
+        font-size: 1.1rem;
+        font-weight: bolder;
+        margin-top: 5px;
       }
     }
 
     &--contact {
+      margin: 0 25px;
       width: 100%;
       & div {
         align-items: flex-start;
@@ -1913,6 +1932,7 @@ video {
     justify-content: space-between;
     margin: 0;
     & input {
+      height: 15px;
       width: 65px;
     }
   }
