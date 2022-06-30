@@ -50,8 +50,8 @@ const BrusiPropiedades = () => {
                   <Route path='/brusi-propiedades/propiedades' element={<Properties properties={properties} setProperties={setProperties}/>}/>
                   <Route path='/brusi-propiedades/nosotros' element={<About />}/>
                   <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
-                  <Route path='/brusi-propiedades/propiedad:id' element={<PropertyDetails />}/>
-                  <Route path='/brusi-propiedades/propiedades/propiedad:id' element={<PropertyDetails />}/>
+                  <Route path='/brusi-propiedades/propiedad:id' element={<PropertyDetails setProperties={setProperties} properties={properties}/>}/>
+                  <Route path='/brusi-propiedades/propiedades/propiedad:id' element={<PropertyDetails setProperties={setProperties} properties={properties}/>}/>
               </Routes>
               <WhatsappLogo />
               <Footer />

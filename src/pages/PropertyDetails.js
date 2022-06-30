@@ -3,7 +3,7 @@ import PropertyDetailContainer from '../components/PropertyDetailContainer/Prope
 import { Link } from 'react-router-dom';
 import { PropertyContext } from '../contexts/PropertyContext';
 
-const PropertyDetails = () => {
+const PropertyDetails = ({setProperties, properties}) => {
 
   const [propertyDetail, setPropertyDetail] = useContext(PropertyContext);
 
@@ -22,7 +22,7 @@ const PropertyDetails = () => {
     <main className='properties-detail'>
         {
           propertyDetail !== {} ?
-          <PropertyDetailContainer/> :
+          <PropertyDetailContainer setProperties={setProperties} properties={properties}/> :
           <Link to={'/*'}/>
         }
     </main>

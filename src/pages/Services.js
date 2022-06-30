@@ -17,6 +17,8 @@ import drone from '../images/undraw_follow_me_drone_kn76.svg';
 import architect from '../images/undraw_designer_girl_re_h54c.svg';
 import tour from '../images/undraw_video_files_fu10.svg';
 import { Link } from 'react-router-dom';
+// React-helmet
+import { Helmet } from 'react-helmet';
 
 const Services = () => {
 
@@ -25,7 +27,12 @@ const Services = () => {
   }
 
   return (
-    <main className='services'>
+    <>
+      <Helmet>
+        <title>Servicios - Brusi Propiedades</title>
+        <meta name='description' content='Conocé nuestros principales servicios para ayudarte a comprar o vender tu propiedad de la mejor manera. Realizamos tasaciónes reales, fotos profesionales de la propiedad, , tour 360° del inmueble y filmaciones con drone, asesoramos a nuestros clientes durante todo el proceso y más. Ingresá a nuestra página de servicios para poder conocer cómo trabajamos.'></meta>
+      </Helmet>
+      <main className='services'>
         <div className='services--title'>
           <h1 className='services--title__text'>Servicios</h1>
         </div>
@@ -145,7 +152,8 @@ const Services = () => {
           </div>
         </div>
         <FrequentQuestions />
-    </main>
+      </main>
+    </>
   )
 }
 

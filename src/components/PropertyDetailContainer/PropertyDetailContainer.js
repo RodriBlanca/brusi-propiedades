@@ -1,10 +1,10 @@
 import React from 'react';
 import PropertyDetail from '../PropertyDetail/PropertyDetail';
 
-const PropertyDetailContainer = () => {
+const PropertyDetailContainer = ({setProperties, properties}) => {
   return (
     <div>
-      <PropertyDetail/>
+      <PropertyDetail setProperties={setProperties} properties={properties}/>
     </div>
   )
 }
