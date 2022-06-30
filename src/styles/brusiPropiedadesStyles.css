@@ -786,6 +786,16 @@ video {
   .form textarea::placeholder {
     color: #005449;
   }
+  .form textarea:invalid[focused="true"] {
+    border: 2px solid #ff0000;
+    color: #ff0000;
+  }
+  .form textarea:invalid[focused="true"] ~ span {
+    display: block;
+  }
+  .form div button {
+    cursor: pointer;
+  }
   .form div h3 {
     font-size: 1.9rem;
     text-align: left;
@@ -803,7 +813,7 @@ video {
     background-color: #01d3b7;
     border: 1px solid #000000;
     font-size: 1.2rem;
-    height: 35px;
+    height: 40px;
     width: 100%;
   }
   .form div input::-webkit-input-placeholder {
@@ -875,11 +885,20 @@ video {
     font-size: 1.4rem;
     font-weight: bolder;
     height: 50px;
+    margin-bottom: 15px;
     width: 100%;
   }
   .form--contact .form--button__btn:active {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
+  }
+  .form--success-message {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    color: #01d3b7;
+    font-weight: bolder;
+    padding: 10px;
+    text-align: center;
   }
   .not-found {
     -webkit-box-align: center;

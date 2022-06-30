@@ -4,11 +4,6 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
 
   const form = useRef();
-
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const subjectInput = document.getElementById('subject');
-
   const [nameValue, setNameValue] = useState('');
   const [emailValue, setEmailValue] = useState('');
   const [subjectValue, setSubjectValue] = useState('');

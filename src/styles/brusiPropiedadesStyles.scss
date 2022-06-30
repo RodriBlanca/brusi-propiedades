@@ -10,6 +10,7 @@ $aqua: #01d3b7;
 $bgc: #ffffff;
 $bgc2: #f1f1f1;
 $error: #ff0000;
+$success: #4bb543;
 
 // GENERAL STYLES
 html,
@@ -697,9 +698,28 @@ video {
       &::placeholder {
         color: darken($aqua, 25);
       }
+
+      // &:required[focused="true"] {
+      //   border: 2px solid $error;
+      //   color: $error;
+      // }
+
+      &:invalid[focused="true"] {
+        border: 2px solid $error;
+        color: $error;
+      }
+
+      &:invalid[focused="true"] ~ span{
+        display: block;
+      }
     }
 
     & div {
+
+      & button {
+        cursor: pointer;
+      }
+
       & h3 {
         font-size: 1.9rem;
         text-align: left;
@@ -720,7 +740,7 @@ video {
         background-color: $aqua;
         border: 1px solid $black;
         font-size: 1.2rem;
-        height: 35px;
+        height: 40px;
         width: 100%;
 
         &::placeholder {
@@ -733,7 +753,7 @@ video {
           color: $error;
         }
 
-        &:invalid[focused="true"] ~ span {
+        &:invalid[focused="true"] ~ span{
           display: block;
         }
       }
@@ -770,6 +790,7 @@ video {
           font-size: 1.4rem;
           font-weight: bolder;
           height: 50px;
+          margin-bottom: 15px;
           width: 100%;
 
           &:active {
@@ -777,6 +798,15 @@ video {
           }
         }
       }
+    }
+
+    &--success-message {
+      background-color: $bgc;
+      border: 2px solid $black;
+      color: $aqua;
+      font-weight: bolder;
+      padding: 10px;
+      text-align: center;
     }
   }
 
