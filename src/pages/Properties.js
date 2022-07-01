@@ -2,10 +2,12 @@ import React from 'react';
 import MobileFilters from '../components/MobileFilters/MobileFilters';
 import PropertiesContainer from '../components/PropertiesContainer/PropertiesContainer';
 import PropertiesFilters from '../components/PropertiesFilters/PropertiesFilters';
+
 // React-helmet
 import { Helmet } from 'react-helmet';
+import LoadingSpinner from '../components/LoadingSpinner/LoadingSpinner';
 
-const Properties = ({properties, setProperties}) => {
+const Properties = ({properties, setProperties, loading, setLoading}) => {
 
   return (
     <>
@@ -20,7 +22,12 @@ const Properties = ({properties, setProperties}) => {
         <div className='properties--content'>
           <PropertiesFilters setProperties={setProperties}/>
           <MobileFilters setProperties={setProperties}/>
-          <PropertiesContainer properties={properties} setProperties={setProperties}/>
+          {
+            loading ? 
+            <LoadingSpinner />
+            :
+            <PropertiesContainer properties={properties}/>
+          }
         </div>
       </main>
     </>

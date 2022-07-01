@@ -7,7 +7,7 @@ import Form from '../components/Form/Form';
 // React-helmet
 import { Helmet } from 'react-helmet';
 
-const Home = ({properties}) => {
+const Home = ({properties, loading}) => {
   return (
     <>
       <Helmet>
@@ -17,7 +17,7 @@ const Home = ({properties}) => {
       <main className='home'>
         <Hero />
         <HomeServices />
-        <HomeFeaturedProperties properties={properties}/>
+        <HomeFeaturedProperties properties={properties} loading={loading}/>
         <Form />
       </main>
     </>

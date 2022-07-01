@@ -1153,6 +1153,14 @@ video {
       width: 37%;
     }
   }
+
+  .spinner--container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 480px) {

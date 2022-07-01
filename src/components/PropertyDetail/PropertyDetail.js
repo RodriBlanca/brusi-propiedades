@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { PropertyContext } from '../../contexts/PropertyContext';
 import Slider from '../Slider/Slider';
+import MapView from '../MapView/MapView';
 // Firebase
 import { db } from '../../firebase/firebaseConfig';
 import { collection, query, getDocs } from "firebase/firestore";
@@ -209,7 +210,7 @@ const PropertyDetail = ({setProperties, properties}) => {
         </div>
         {/* Ubicación */}
         <div>
-          Mapa
+          <MapView />
         </div>
       </div>
     </>

@@ -22,9 +22,11 @@ import { collection, query, getDocs } from "firebase/firestore";
 
 const BrusiPropiedades = () => {
 
-  const [properties, setProperties] = useState([])
+  const [properties, setProperties] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     const getProperties = async() => {
         const q = query(collection(db, "propiedades"));
         const docs = [];
@@ -32,6 +34,7 @@ const BrusiPropiedades = () => {
         querySnapshot.forEach((doc) => {
             docs.push({...doc.data(), id: doc.id});
             setProperties(docs);
+            setLoading(false);
         });
     };
     getProperties();
@@ -45,9 +48,9 @@ const BrusiPropiedades = () => {
               <Header/>
               <Routes>
                   <Route path='*' element={<NotFoundPage />}/>
-                  <Route path='/brusi-propiedades' element={<Home properties={properties}/>}/>
+                  <Route path='/brusi-propiedades' element={<Home properties={properties} loading={loading}/>}/>
                   <Route path='/brusi-propiedades/servicios' element={<Services />}/>
-                  <Route path='/brusi-propiedades/propiedades' element={<Properties properties={properties} setProperties={setProperties}/>}/>
+                  <Route path='/brusi-propiedades/propiedades' element={<Properties properties={properties} setProperties={setProperties} loading={loading} setLoading={setLoading} />}/>
                   <Route path='/brusi-propiedades/nosotros' element={<About />}/>
                   <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
                   <Route path='/brusi-propiedades/propiedad:id' element={<PropertyDetails setProperties={setProperties} properties={properties}/>}/>

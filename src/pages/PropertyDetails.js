@@ -22,7 +22,7 @@ const PropertyDetails = ({setProperties, properties}) => {
     <main className='properties-detail'>
         {
           propertyDetail !== {} ?
-          <PropertyDetailContainer setProperties={setProperties} properties={properties}/> :
+          <PropertyDetailContainer setProperties={setProperties} properties={properties} /> :
           <Link to={'/*'}/>
         }
     </main>
