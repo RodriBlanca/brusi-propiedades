@@ -1,9 +1,9 @@
 {
-  "main.css": "/brusi-propiedades/static/css/main.b728b498.chunk.css",
-  "main.js": "/brusi-propiedades/static/js/main.321f1299.chunk.js",
-  "main.js.map": "/brusi-propiedades/static/js/main.321f1299.chunk.js.map",
-  "static/js/1.960b210e.chunk.js": "/brusi-propiedades/static/js/1.960b210e.chunk.js",
-  "static/js/1.960b210e.chunk.js.map": "/brusi-propiedades/static/js/1.960b210e.chunk.js.map",
+  "main.css": "/brusi-propiedades/static/css/main.469cc14e.chunk.css",
+  "main.js": "/brusi-propiedades/static/js/main.038c89cd.chunk.js",
+  "main.js.map": "/brusi-propiedades/static/js/main.038c89cd.chunk.js.map",
+  "static/js/1.df046f28.chunk.js": "/brusi-propiedades/static/js/1.df046f28.chunk.js",
+  "static/js/1.df046f28.chunk.js.map": "/brusi-propiedades/static/js/1.df046f28.chunk.js.map",
   "runtime~main.js": "/brusi-propiedades/static/js/runtime~main.72581ee2.js",
   "runtime~main.js.map": "/brusi-propiedades/static/js/runtime~main.72581ee2.js.map",
   "static/media/logo-brusi-propiedades-blanco.png": "/brusi-propiedades/static/media/logo-brusi-propiedades-blanco.b78f03f4.png",
@@ -35,8 +35,8 @@
   "static/media/jonathan-brusi.jpeg": "/brusi-propiedades/static/media/jonathan-brusi.e03e93e3.jpeg",
   "static/media/gustavo-seneca.jpeg": "/brusi-propiedades/static/media/gustavo-seneca.1d0549ea.jpeg",
   "static/media/undraw_notify_re_65on.svg": "/brusi-propiedades/static/media/undraw_notify_re_65on.2b208315.svg",
-  "static/css/main.b728b498.chunk.css.map": "/brusi-propiedades/static/css/main.b728b498.chunk.css.map",
+  "static/css/main.469cc14e.chunk.css.map": "/brusi-propiedades/static/css/main.469cc14e.chunk.css.map",
   "index.html": "/brusi-propiedades/index.html",
-  "precache-manifest.5058b651eef8a56e6cdb5b7f2b871f95.js": "/brusi-propiedades/precache-manifest.5058b651eef8a56e6cdb5b7f2b871f95.js",
+  "precache-manifest.7a2f82641c0714d52a22ad44df67fea3.js": "/brusi-propiedades/precache-manifest.7a2f82641c0714d52a22ad44df67fea3.js",
   "service-worker.js": "/brusi-propiedades/service-worker.js"
 }
