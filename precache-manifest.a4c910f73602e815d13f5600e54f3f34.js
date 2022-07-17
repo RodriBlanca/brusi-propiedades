@@ -1,19 +1,35 @@
 self.__precacheManifest = [
   {
-    "revision": "038c89cd76dccace39bd",
-    "url": "/brusi-propiedades/static/css/main.469cc14e.chunk.css"
+    "revision": "6030fc6d13abbd04036c",
+    "url": "/brusi-propiedades/static/css/main.16aa6da4.chunk.css"
   },
   {
-    "revision": "038c89cd76dccace39bd",
-    "url": "/brusi-propiedades/static/js/main.038c89cd.chunk.js"
+    "revision": "6030fc6d13abbd04036c",
+    "url": "/brusi-propiedades/static/js/main.6030fc6d.chunk.js"
   },
   {
-    "revision": "df046f286b8305fda662",
-    "url": "/brusi-propiedades/static/js/1.df046f28.chunk.js"
+    "revision": "226ca477388bedb99e00",
+    "url": "/brusi-propiedades/static/js/1.226ca477.chunk.js"
   },
   {
     "revision": "72581ee2a3bc6dd599a0",
     "url": "/brusi-propiedades/static/js/runtime~main.72581ee2.js"
+  },
+  {
+    "revision": "4f7cb5fbb28d0f9ddc97641f8b288735",
+    "url": "/brusi-propiedades/static/media/instagram-icon.4f7cb5fb.png"
+  },
+  {
+    "revision": "c28071fcea9742f039d0ae44468caf22",
+    "url": "/brusi-propiedades/static/media/tiktok-icon.c28071fc.png"
+  },
+  {
+    "revision": "19455d676899e370bd5cc0bab6b41c6f",
+    "url": "/brusi-propiedades/static/media/whatsapp-icon.19455d67.png"
+  },
+  {
+    "revision": "4aa43a7d58e9899c0d0bcbf516285e02",
+    "url": "/brusi-propiedades/static/media/youtube-icon.4aa43a7d.png"
   },
   {
     "revision": "b78f03f40d3786522d14ad0d0fdf053e",
@@ -104,22 +120,6 @@ self.__precacheManifest = [
     "url": "/brusi-propiedades/static/media/undraw_stepping_up_g6oo.742d9050.svg"
   },
   {
-    "revision": "c28071fcea9742f039d0ae44468caf22",
-    "url": "/brusi-propiedades/static/media/tiktok-icon.c28071fc.png"
-  },
-  {
-    "revision": "19455d676899e370bd5cc0bab6b41c6f",
-    "url": "/brusi-propiedades/static/media/whatsapp-icon.19455d67.png"
-  },
-  {
-    "revision": "4f7cb5fbb28d0f9ddc97641f8b288735",
-    "url": "/brusi-propiedades/static/media/instagram-icon.4f7cb5fb.png"
-  },
-  {
-    "revision": "4aa43a7d58e9899c0d0bcbf516285e02",
-    "url": "/brusi-propiedades/static/media/youtube-icon.4aa43a7d.png"
-  },
-  {
     "revision": "e03e93e35cc3d983ed6d5c877d2244f2",
     "url": "/brusi-propiedades/static/media/jonathan-brusi.e03e93e3.jpeg"
   },
@@ -132,7 +132,7 @@ self.__precacheManifest = [
     "url": "/brusi-propiedades/static/media/undraw_notify_re_65on.2b208315.svg"
   },
   {
-    "revision": "4027c49b8f92a79995f1981eef0009e4",
+    "revision": "1d23e945b41aca32c648c15874a0347a",
     "url": "/brusi-propiedades/index.html"
   }
 ];
