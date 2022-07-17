@@ -36,6 +36,15 @@ video {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 100px, repeat(2, 1fr), 500px;
     min-height: 100vh;
+
+    & .spinner {
+      align-items: center;
+      display: flex;
+      grid-column: 1/5;
+      grid-row: 1/5;
+      justify-content: center;
+      width: 100%;
+    }
   }
 
   .header {
@@ -235,28 +244,22 @@ video {
         font-size: 2.4rem;
         margin: 0;
         text-align: center;
-        animation: hero 2s;
-      }
-
-      @keyframes hero {
-        0% {
-          opacity: 0;
-        }
-
-        100% {
-          opacity: 1;
-        }
       }
 
       &__text {
+        animation-name: show-text;
+        animation-duration: 3s;
         color: $bgc;
         font-size: 1.9rem;
         font-weight: bolder;
+        position: relative;
         text-align: center;
       }
     }
 
     &--buttons {
+      animation-name: show-text;
+      animation-duration: 3s;
       display: flex;
       flex-direction: column;
       height: 200px;
@@ -287,6 +290,48 @@ video {
         margin: 15px 0;
         text-align: center;
       }
+    }
+  }
+
+  .name {
+    &--first {
+      animation-duration: 3s;
+      animation-name: left-title;
+      position: relative;
+    }
+
+    &--second {
+      animation-duration: 3s;
+      animation-name: right-title;
+      position: relative;
+    }
+  }
+
+  @keyframes left-title {
+    0% {
+      left: -100px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes right-title {
+    0% {
+      right: -100px;
+    }
+    100% {
+      right: 0;
+    }
+  }
+
+  @keyframes show-text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      display: block;
     }
   }
 
@@ -606,8 +651,7 @@ video {
     font-weight: bold;
   }
 
-  .services,
-  .buy {
+  .services {
     &--title {
       &__text {
         color: $aqua;
@@ -631,6 +675,34 @@ video {
 
     &--sell {
       margin: 0 25px 100px 25px;
+      &__title span {
+        position: relative;
+        &::after {
+          background-color: $aqua;
+          content: '';
+          height: 3px;
+          left: 0;
+          position: absolute;
+          top: 50px;
+          width: 100%;
+        }
+      }
+    }
+
+    &--buy {
+      margin: 0 25px 100px 25px;
+      &__title span {
+        position: relative;
+        &::after {
+          background-color: $aqua;
+          content: '';
+          height: 3px;
+          left: 0;
+          position: absolute;
+          top: 50px;
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -640,10 +712,20 @@ video {
 
     & div {
       align-items: center;
+      border: 1px solid $bgc2;
+      border-radius: 5px;
       display: flex;
       flex-direction: column;
+      height: auto;
       justify-content: center;
       margin: 50px 0;
+      padding-bottom: 15px;
+      transition: border-color, .4s ease-in-out;
+
+      &:hover {
+        border-color: $aqua;
+        box-shadow: 3px 3px 3px darken($bgc2, 4);
+      }
     }
 
     & li {
@@ -677,6 +759,15 @@ video {
     justify-content: center;
     padding-bottom: 25px;
 
+    &--information {
+      margin: 0 25px 25px 25px;
+      & div {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
     &--text {
       align-items: flex-start;
       display: flex;
@@ -686,23 +777,18 @@ video {
     }
 
     & textarea {
-      background-color: #01d3b7;
+      background-color: darken($aqua, 5);
       border: 1px solid $black;
       font-family: "Arial";
       font-size: 1.2rem;
       font-weight:lighter;
-      height: 200px;
+      height: 150px;
       resize: none;
       width: 100%;
 
       &::placeholder {
         color: darken($aqua, 25);
       }
-
-      // &:required[focused="true"] {
-      //   border: 2px solid $error;
-      //   color: $error;
-      // }
 
       &:invalid[focused="true"] {
         border: 2px solid $error;
@@ -737,7 +823,7 @@ video {
       }
 
       & input {
-        background-color: $aqua;
+        background-color: darken($aqua, 5);
         border: 1px solid $black;
         font-size: 1.2rem;
         height: 40px;
@@ -768,20 +854,28 @@ video {
     }
 
     &--contact {
-      margin: 0 25px;
       width: 100%;
       & div {
         align-items: flex-start;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0 25px 25px 25px;
+      }
+
+      &__textarea {
+        margin: 10px 25px 25px 25px;
+      }
+
+      &__input {
+        margin: 10px 0;
+        width: 100%;
       }
 
       .form--button {
         align-items: center;
         display: flex;
         justify-content: center;
+        margin: 0 25px;
         &__btn {
           background-color: $black;
           border: none;
@@ -808,6 +902,17 @@ video {
       padding: 10px;
       text-align: center;
     }
+  }
+
+  .form .form--social {
+    margin: 15px 0;
+    & .social-media {
+      justify-content: space-between;
+    }
+  }
+
+  .inputs--container {
+    margin: 0 25px;
   }
 
   .not-found {
@@ -1161,6 +1266,11 @@ video {
     margin: 50px 0;
     width: 100%;
   }
+
+  .map {
+    height: 100vh;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -1191,6 +1301,10 @@ video {
 @media screen and (min-width: 600px) {
   .brusi-propiedades {
     grid-template-columns: repeat(8, 1fr);
+
+    & .spinner {
+      grid-column: 1/9;
+    }
   }
 
   .header {
@@ -1449,34 +1563,39 @@ video {
     justify-content: center;
 
     &--container {
+      align-items: flex-start;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       margin: 0 25px;
-      max-width: 1400px;
+      max-width: 1200px;
     }
 
     &--content,
     &--invert {
+      align-items: flex-start;
       display: flex;
-      flex-direction: column;
-      margin: 50px 0;
-      width: 48%;
+      justify-content: space-between;
+      margin: 50px 25px;
     }
 
     &--invert {
-      flex-direction: column-reverse;
+      flex-direction: row;
       justify-content: flex-end;
     }
 
     &--picture {
       align-items: flex-start;
       display: flex;
-      height: 375px;
       justify-content: center;
       margin: 0 15px;
       overflow: hidden;
-      width: 100%;
+      height: 100px;
+      width: 20%;
+      & img {
+        // height: 100%;
+        width: 100%;
+      }
     }
 
     &--title__text {
@@ -1499,7 +1618,7 @@ video {
   .purpose--img,
   .mission--img,
   .view--img {
-    width: 50% !important;
+    width: 50%;
   }
 
   .property {
@@ -1533,6 +1652,10 @@ video {
 @media screen and (min-width: 1024px) {
   .brusi-propiedades {
     grid-template-columns: repeat(12, 1fr);
+
+    & .spinner {
+      grid-column: 1/13;
+    }
   }
 
   .header {
@@ -1597,6 +1720,29 @@ video {
     }
   }
 
+  .sell,
+  .buy {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    & div {
+      justify-content: flex-start;
+      margin: 50px 5px;
+      height: auto;
+      width: 300px;
+
+      & img {
+        width: 50%;
+      }
+
+      & li {
+        text-align: center;
+        width: 275px;
+      }
+    }
+  }
+
   .hero {
     display: flex;
     flex-direction: column;
@@ -1623,7 +1769,7 @@ video {
       &__text {
         animation: show-text;
         animation-duration: 6s;
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         margin: 25px 0;
       }
 
@@ -1672,6 +1818,38 @@ video {
           width: 200px;
       }
       }
+    }
+  }
+
+  .name {
+    &--first {
+      position: relative;
+      animation-name: up-word;
+      animation-duration: 3s;
+    }
+
+    &--second {
+      position: relative;
+      animation-name: down-word;
+      animation-duration: 3s;
+    }
+  }
+
+  @keyframes up-word {
+        0% {
+          top: 50px;
+        }
+        100% {
+          top: 0;
+        }
+  }
+
+  @keyframes down-word {
+    0% {
+      top: -50px;
+    }
+    100% {
+      top: 0;
     }
   }
 
@@ -1746,19 +1924,62 @@ video {
   }
 
   .about {
-    &--content,
-    &--invert {
-      width: 500px;
-    }
-
     &--title__text {
       font-size: 4rem;
     }
+
+    &--paragraph {
+      width: 65%;
+      &__title {
+        margin-top: 0;
+      }
+
+      &__button {
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        width: 300px;
+    
+        & span {
+          position: relative;
+          z-index: 125;
+        }
+    
+        &::after {
+          border-right: 80px solid transparent;
+          border-bottom: 75px solid $black;
+          content: '';
+          height: 75px;
+          left: -360px;
+          position: absolute;
+          top: -75px;
+          transition: all 0.3s ease-in-out;
+          width: 100%;
+        }
+    
+        &:hover::after {
+          left: 0;
+        }
+      }
+
+      &__joni {
+        margin-top: 45px;
+      }
+
+      &__gustavo {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .about--picture {
+    height: auto;
+    width: 25%;
   }
 
   .about--picture .estate-agent--img,
   .about--picture .about--picture__img {
-    width: 60%;
+    width: 100%;
   }
 
   .services {
@@ -1814,30 +2035,6 @@ video {
         &:hover::after {
           left: 0;
         }
-      }
-    }
-  }
-
-  .sell,
-  .buy {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-    & div {
-      justify-content: flex-start;
-      margin: 50px 5px;
-      height: 250px;
-      width: 300px;
-
-      & img {
-        height: 30%;
-        width: auto;
-      }
-
-      & li {
-        text-align: justify;
-        width: 275px;
       }
     }
   }
@@ -1947,14 +2144,6 @@ video {
   .form--button__btn {
     cursor: pointer;
     color: $bgc;
-    transition: all .5s ease-in-out;
-
-    &:hover {
-      background-color: $bgc !important;
-      border: 2px solid $black !important;
-      color: $aqua;
-      font-weight: bolder;
-    }
 
     &:active {
       transform: scale(0.9);
@@ -1972,6 +2161,40 @@ video {
     & input {
       height: 15px;
       width: 65px;
+    }
+  }
+
+  .form {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &--contact {
+      margin-top: 25px;
+
+      &__input {
+        width: 48%;
+      }
+    }
+  }
+
+  .form .inputs--container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form .form--social {
+    & .social-media {
+      justify-content: space-evenly;
+    }
+  }
+
+  .frequent-questions--container {
+    transition: border-color, .4s ease-in-out;
+    
+    &:hover {
+      border-color: $aqua;
     }
   }
 }
@@ -2032,17 +2255,13 @@ video {
 
   .sell,
   .buy {
-    & div {
-      height: 350px;
-      width: 400px;
-    }
-  }
-
-  .sell {
     max-width: 1500px;
-
     & div {
       width: 300px;
+
+      & img {
+        width: 40%;
+      }
     }
   }
 

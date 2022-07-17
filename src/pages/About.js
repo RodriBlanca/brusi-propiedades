@@ -27,7 +27,7 @@ const About = () => {
         <main className='about'>
             {/* NOSOTROS */}
             <div className='about--title'>
-                <h1 className='about--title__text'>Nosotros</h1>
+                <h1 className='about--title__text'>NOSOTROS</h1>
             </div>
             <div className='about--container'>
                 {/* Jonathan */}
@@ -35,7 +35,7 @@ const About = () => {
                     <div className='about--picture'>
                         <img src={jonathan} alt="Jonathan Brusi" className='about--picture__img estate-agent--img'/>
                     </div>
-                    <div className='about--paragraph'>
+                    <div className='about--paragraph about--paragraph__joni'>
                         <h2 className='about--paragraph__title'>Jonathan Brusi</h2>
                         <p className='about--paragraph__text'>Mi nombre es Jonathan Brusi, tengo 27 años y soy corredor matriculado en Lomas De Zamora. Estudié tres años en el <a href='https://www.isel.edu.ar/' target={'_blank'} rel="noreferrer">Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>, realicé dos cursos de tasaciones y luego me certifiqué en <a href='https://www.nar.realtor/' target={'_blank'} rel="noreferrer">CRS (Certified  Residential Specialist)</a>. Me matriculé para ejercer esta hermosa profesión junto a mi socio y juntos formamos un gran equipo de trabajo.
                         </p>
@@ -43,7 +43,7 @@ const About = () => {
                 </div>
                 {/* Gustavo */}
                 <div className='about--content about--invert'>
-                    <div className='about--paragraph'>
+                    <div className='about--paragraph about--paragraph__gustavo'>
                         <h2 className='about--paragraph__title'>Gustavo Seneca</h2>
                         <p className='about--paragraph__text'>Mi nombre es Gustavo Seneca, tengo 31 años, estudié junto a Jonathan y nos recibimos en el <a href='https://www.isel.edu.ar/' target={'_blank'} rel="noreferrer">Instituto Superior de Estudios Lomas de Zamora (ISEL)</a>. Buscamos crecer, seguir mejorando la profesión y amamos lo que hacemos, es por eso, que decidimos empezar con este proyecto con mi socio.</p>
                     </div>
@@ -61,7 +61,7 @@ const About = () => {
                         <p className='about--paragraph__text'>Es hacer que el proceso, muchas veces estresante de comprar o vender una propiedad, se convierta en uno de los momento más felices de tu vida.<br/>Es por eso, que acompañamos y aconsejamos a nuestros clientes como quisiéramos que lo hicieran con nosotros brindándoles a través de nuestros servicios una experiencia única al momento de comprar o vender
                         </p>
                         <button className='about--paragraph__button' onClick={scrollToTop}>
-                            <Link to={'/brusi-propiedades/servicios'} className="about--button__link">Nuestros Servicios</Link>
+                            <Link to={'/brusi-propiedades/servicios'} className="about--button__link"><span>Nuestros Servicios</span></Link>
                         </button>
                     </div>
                 </div>

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Map, View } from 'ol';
+import TileLayer from 'ol/layer/Tile';
+import OSM from 'ol/source/OSM';
 
 const MapView = () => {
-  return (
-    <h1>Mapa</h1>
-  )
+  return(
+    <div>
+      Map
+    </div>
+  );
 }
 
 export default MapView;

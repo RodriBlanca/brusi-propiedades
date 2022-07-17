@@ -34,10 +34,10 @@ const Services = () => {
       </Helmet>
       <main className='services'>
         <div className='services--title'>
-          <h1 className='services--title__text'>Servicios</h1>
+          <h1 className='services--title__text'>SERVICIOS</h1>
         </div>
         <div className='services--sell'>
-          <h2 className='services--sell__title'>¿Querés vender una propiedad?</h2>
+          <h2 className='services--sell__title'>¿Querés <span>vender</span> una propiedad?</h2>
           <h3 className='services--sell__subtitle'>¿Por qué vender con nosotros?</h3>
           <ul className='sell'>
             <div>
@@ -115,7 +115,7 @@ const Services = () => {
           </ul>
         </div>
         <div className='services--buy'>
-          <h2 className='services--buy__title'>¿Querés comprar una propiedad?</h2>
+          <h2 className='services--buy__title'>¿Querés <span>comprar</span> una propiedad?</h2>
           <h3 className='services--buy__subtitle'>¿Por qué comprar una propiedad que ofrecemos?</h3>
           <ul className='buy'>
             <div>

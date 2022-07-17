@@ -16,7 +16,7 @@ const Hero = () => {
         </video>
       </div>
       <div className='hero--content'>
-        <h1 className='hero--content__title'>Bienvenido a <br/>Brusi Propiedades</h1>
+        <h1 className='hero--content__title'><span className='name--first'>BRUSI</span> <span className='name--second'>PROPIEDADES</span></h1>
         <p className='hero--content__text'>Modernizamos el mercado inmobiliario</p>
         <div className='hero--buttons'>
           <p className='hero--buttons__text'>¿En qué podemos ayudarte?</p>

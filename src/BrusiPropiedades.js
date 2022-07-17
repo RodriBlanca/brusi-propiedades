@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import WhatsappLogo from './components/WhatsappLogo/WhatsappLogo';
 import Footer from './components/Footer/Footer';
+import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
 // React Router Dom
 import { Routes, Route, Navigate } from 'react-router-dom';
 // Pages
@@ -20,10 +21,19 @@ import { PropertyProvider } from './contexts/PropertyContext';
 import { db } from './firebase/firebaseConfig';
 import { collection, query, getDocs } from "firebase/firestore";
 
+
 const BrusiPropiedades = () => {
 
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('load', (e) => {
+      console.log(e);
+      setDomLoaded(true);
+    })
+  }, []);
 
   useEffect(() => {
     setLoading(true);
@@ -41,8 +51,14 @@ const BrusiPropiedades = () => {
   }, []);
 
   return (
-    <div className='brusi-propiedades'>
-        <CheckButtonsProvider>
+    <div className='brusi-propiedades'>        
+        {
+          domLoaded === false ? 
+          <div className='spinner'>
+            <LoadingSpinner />
+          </div>
+          :
+          <CheckButtonsProvider>
           <MenuSectionsProvider>
             <PropertyProvider>
               <Header/>
@@ -61,6 +77,7 @@ const BrusiPropiedades = () => {
             </PropertyProvider>
           </MenuSectionsProvider>
         </CheckButtonsProvider>
+        }
     </div>
   )
 }

@@ -17,7 +17,7 @@ const Properties = ({properties, setProperties, loading, setLoading}) => {
       </Helmet>
       <main className='properties'>
         <div className='properties--title'>
-          <h1 className='properties--title__text'>Propiedades</h1>
+          <h1 className='properties--title__text'>PROPIEDADES</h1>
         </div>
         <div className='properties--content'>
           <PropertiesFilters setProperties={setProperties}/>

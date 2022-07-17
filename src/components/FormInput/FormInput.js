@@ -16,7 +16,7 @@ const FormInput = (props) => {
   }
 
   return (
-    <div>
+    <div className={props.className}>
         <label>{props.label} *</label>
         <input placeholder={props.placeholder} name={props.name} onChange={props.onChange} value={props.value} type={props.type} required pattern={props.pattern} onBlur={handleFocus} focused={focused.toString()} ref={props.reference}/>
         <span>* {props.errorMessage}</span>
