@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6030fc6d13abbd04036c",
-    "url": "/brusi-propiedades/static/css/main.16aa6da4.chunk.css"
+    "revision": "e411dae6f25303c5180c",
+    "url": "/brusi-propiedades/static/css/main.81f2c175.chunk.css"
   },
   {
-    "revision": "6030fc6d13abbd04036c",
-    "url": "/brusi-propiedades/static/js/main.6030fc6d.chunk.js"
+    "revision": "e411dae6f25303c5180c",
+    "url": "/brusi-propiedades/static/js/main.e411dae6.chunk.js"
   },
   {
     "revision": "226ca477388bedb99e00",
@@ -132,7 +132,7 @@ self.__precacheManifest = [
     "url": "/brusi-propiedades/static/media/undraw_notify_re_65on.2b208315.svg"
   },
   {
-    "revision": "1d23e945b41aca32c648c15874a0347a",
+    "revision": "d12c04bfde5a83c10c7d7dbb39f9cf84",
     "url": "/brusi-propiedades/index.html"
   }
 ];
