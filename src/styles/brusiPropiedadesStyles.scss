@@ -683,7 +683,7 @@ video {
           height: 3px;
           left: 0;
           position: absolute;
-          top: 50px;
+          top: 28px;
           width: 100%;
         }
       }
@@ -699,7 +699,7 @@ video {
           height: 3px;
           left: 0;
           position: absolute;
-          top: 50px;
+          top: 28px;
           width: 100%;
         }
       }
@@ -2037,6 +2037,22 @@ video {
         }
       }
     }
+
+    &--sell {
+      &__title span {
+        &::after {
+          top: 50px;
+        }
+      }
+    }
+
+    &--buy {
+      &__title span {
+        &::after {
+          top: 50px;
+        }
+      }
+    }
   }
 
   .filters {
@@ -2308,6 +2324,15 @@ video {
         height: auto;
         width: 100%;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .services {
+    &--buy,
+    &--sell {
+      width: 1500px;
     }
   }
 }

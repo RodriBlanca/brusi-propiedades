@@ -761,7 +761,7 @@ video {
     height: 3px;
     left: 0;
     position: absolute;
-    top: 50px;
+    top: 28px;
     width: 100%;
   }
   .services--buy {
@@ -776,7 +776,7 @@ video {
     height: 3px;
     left: 0;
     position: absolute;
-    top: 50px;
+    top: 28px;
     width: 100%;
   }
   .sell,
@@ -2204,6 +2204,12 @@ video {
   .services--button button:hover::after {
     left: 0;
   }
+  .services--sell__title span::after {
+    top: 50px;
+  }
+  .services--buy__title span::after {
+    top: 50px;
+  }
   .filters {
     background-color: #01d3b7;
     display: -webkit-box;
@@ -2454,6 +2460,12 @@ video {
   .slider--images img {
     height: auto;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .services--buy, .services--sell {
+    width: 1500px;
   }
 }
 
