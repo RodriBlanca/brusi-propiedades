@@ -21,9 +21,9 @@ const FrequentQuestions = () => {
             className='frequent-questions--container__input' 
             id='question-2'
           />
-          <label className='frequent-questions--container__label' htmlFor='question-2'>2 - ¿Otra pregunta?</label>
+          <label className='frequent-questions--container__label' htmlFor='question-2'>2 - Aún no hay pregunta</label>
           <div className='frequent-questions--container__answer'>
-            <p>No, otra respuesta</p>
+            <p>Falta respuesta</p>
           </div>
         </div>
         <div className='frequent-questions--container'>
@@ -32,9 +32,9 @@ const FrequentQuestions = () => {
             className='frequent-questions--container__input' 
             id='question-3'
           />
-          <label className='frequent-questions--container__label' htmlFor='question-3'>3 - ¿Otra pregunta?</label>
+          <label className='frequent-questions--container__label' htmlFor='question-3'>3 - Aún no hay pregunta</label>
           <div className='frequent-questions--container__answer'>
-            <p>No, otra respuesta</p>
+            <p>Falta respuesta</p>
           </div>
         </div>
         <div className='frequent-questions--container'>
@@ -43,9 +43,9 @@ const FrequentQuestions = () => {
             className='frequent-questions--container__input' 
             id='question-4'
           />
-          <label className='frequent-questions--container__label' htmlFor='question-4'>4 - ¿Otra pregunta?</label>
+          <label className='frequent-questions--container__label' htmlFor='question-4'>4 - Aún no hay pregunta</label>
           <div className='frequent-questions--container__answer'>
-            <p>No, otra respuesta</p>
+            <p>Falta respuesta</p>
           </div>
         </div>
     </div>

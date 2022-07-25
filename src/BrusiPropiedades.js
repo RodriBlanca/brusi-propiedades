@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import logo from './images/logo-redim.png';
 // Components
 import Header from './components/Header/Header';
 import WhatsappLogo from './components/WhatsappLogo/WhatsappLogo';
@@ -55,6 +56,7 @@ const BrusiPropiedades = () => {
         {
           domLoaded === false ? 
           <div className='spinner'>
+            <img src={logo} alt='Brusi Propiedades logo'/>
             <LoadingSpinner />
           </div>
           :

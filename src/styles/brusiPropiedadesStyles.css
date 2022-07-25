@@ -34,6 +34,10 @@ video {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
     grid-column: 1/5;
@@ -663,15 +667,14 @@ video {
     width: 100%;
   }
   .frequent-questions--container__answer {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    visibility: hidden;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
     width: 100%;
   }
   .frequent-questions--container__answer p {
-    margin: 0 15px;
+    margin: 0 15px 15px 15px;
   }
   .frequent-questions--container__label {
     display: block;
@@ -713,8 +716,7 @@ video {
   #question-2:checked ~ .frequent-questions--container__answer,
   #question-3:checked ~ .frequent-questions--container__answer,
   #question-4:checked ~ .frequent-questions--container__answer {
-    height: 50px;
-    visibility: visible;
+    max-height: 500px;
   }
   #question-1:checked ~ .frequent-questions--container__label::after,
   #question-2:checked ~ .frequent-questions--container__label::after,
@@ -1414,7 +1416,7 @@ video {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 50px 0;
+    margin: 0;
     width: 100%;
   }
   .map {
@@ -1875,6 +1877,7 @@ video {
   }
   .sell div img,
   .buy div img {
+    height: 50%;
     width: 50%;
   }
   .sell div li,
@@ -2082,6 +2085,9 @@ video {
   }
   .featured-properties {
     margin: 0 100px;
+  }
+  .featured-properties--title {
+    font-size: 1.5rem;
   }
   .footer {
     -ms-grid-column: 1;
@@ -2303,11 +2309,21 @@ video {
   .check label {
     cursor: pointer;
   }
-  .form--button__btn {
-    cursor: pointer;
-    color: #ffffff;
+  .form--contact .form--button {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin: 0;
   }
-  .form--button__btn:active {
+  .form--contact .form--button__btn {
+    background-color: #1a1a1a;
+    margin-right: 19px;
+    width: 45%;
+  }
+  .form--contact .form--button__btn:hover {
+    background-color: #000000;
+  }
+  .form--contact .form--button__btn:active {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }

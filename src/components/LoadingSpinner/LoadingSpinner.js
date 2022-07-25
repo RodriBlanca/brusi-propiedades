@@ -6,7 +6,7 @@ const color = "#01d3b7";
 const LoadingSpinner = ({loading}) => {
   return (
     <div className='spinner--container'>
-        <BarLoader loading={loading} color={color} size={100} width={200} height={5}/>
+        <BarLoader loading={loading} color={color} size={100} width={250} height={5}/>
     </div>
   )
 }

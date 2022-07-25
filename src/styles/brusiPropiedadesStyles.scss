@@ -40,6 +40,7 @@ video {
     & .spinner {
       align-items: center;
       display: flex;
+      flex-direction: column;
       grid-column: 1/5;
       grid-row: 1/5;
       justify-content: center;
@@ -570,14 +571,13 @@ video {
       width: 100%;
 
       &__answer {
-        height: 0;
+        max-height: 0;
         overflow: hidden;
-        transition: all 0.5s ease-in-out;
-        visibility: hidden;
+        transition: max-height 0.5s ease-in-out;
         width: 100%;
 
         & p {
-          margin: 0 15px;
+          margin: 0 15px 15px 15px;
         }
       }
 
@@ -625,8 +625,7 @@ video {
   #question-2:checked ~ .frequent-questions--container__answer,
   #question-3:checked ~ .frequent-questions--container__answer,
   #question-4:checked ~ .frequent-questions--container__answer {
-    height: 50px;
-    visibility: visible;
+    max-height: 500px;
   }
 
   #question-1:checked ~ .frequent-questions--container__label::after,
@@ -1263,7 +1262,7 @@ video {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin: 50px 0;
+    margin: 0;
     width: 100%;
   }
 
@@ -1733,6 +1732,7 @@ video {
       width: 300px;
 
       & img {
+        height: 50%;
         width: 50%;
       }
 
@@ -1901,6 +1901,10 @@ video {
 
   .featured-properties {
     margin: 0 100px;
+
+    &--title {
+      font-size: 1.5rem;
+    }
   }
 
   .footer {
@@ -2157,14 +2161,27 @@ video {
     }
   }
 
-  .form--button__btn {
-    cursor: pointer;
-    color: $bgc;
+  .form--contact {
+    & .form--button {
+      align-items: flex-end;
+      margin: 0;
+    }
+  
+    & .form--button__btn {
+      background-color: lighten($black, 10);
+      margin-right: 19px;
+      width: 45%;
 
-    &:active {
-      transform: scale(0.9);
+      &:hover {
+        background-color: $black;
+      }
+  
+      &:active {
+        transform: scale(0.9);
+      }
     }
   }
+
 
   .mobile-filters {
     display: none;
