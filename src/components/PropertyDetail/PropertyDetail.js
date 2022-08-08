@@ -192,7 +192,7 @@ const PropertyDetail = ({setProperties, properties}) => {
             propertyDetail.recursos &&
             <>
               <iframe 
-                src={`${propertyDetail.recursos.videos}`}
+                src={`${propertyDetail.recursos.video}`}
                 frameBorder='0'
                 allow='autoplay; encrypted-media'
                 allowFullScreen
@@ -205,7 +205,7 @@ const PropertyDetail = ({setProperties, properties}) => {
         {/* Tour 360° */}
         <div className='property-detail--tour'>
           <h3>Tour 360°</h3>
-          <iframe src='https://kuula.co/share/NDcpN/collection/7vpMT'></iframe>
+          <iframe src={propertyDetail.recursos.tour}></iframe>
           <hr/>
         </div>
         {/* Ubicación */}

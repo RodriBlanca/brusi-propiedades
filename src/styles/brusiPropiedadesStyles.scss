@@ -1,6 +1,6 @@
 // GOOGLE FONTS
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&family=Montserrat:wght@400;500;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 // VARIABLES
 
@@ -15,7 +15,7 @@ $success: #4bb543;
 // GENERAL STYLES
 html,
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -533,7 +533,7 @@ video {
     }
 
     &--phone {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
     }
   }
 
@@ -678,7 +678,7 @@ video {
         position: relative;
         &::after {
           background-color: $aqua;
-          content: '';
+          content: "";
           height: 3px;
           left: 0;
           position: absolute;
@@ -694,7 +694,7 @@ video {
         position: relative;
         &::after {
           background-color: $aqua;
-          content: '';
+          content: "";
           height: 3px;
           left: 0;
           position: absolute;
@@ -719,7 +719,7 @@ video {
       justify-content: center;
       margin: 50px 0;
       padding-bottom: 15px;
-      transition: border-color, .4s ease-in-out;
+      transition: border-color, 0.4s ease-in-out;
 
       &:hover {
         border-color: $aqua;
@@ -780,7 +780,7 @@ video {
       border: 1px solid $black;
       font-family: "Arial";
       font-size: 1.2rem;
-      font-weight:lighter;
+      font-weight: lighter;
       height: 150px;
       resize: none;
       width: 100%;
@@ -794,13 +794,12 @@ video {
         color: $error;
       }
 
-      &:invalid[focused="true"] ~ span{
+      &:invalid[focused="true"] ~ span {
         display: block;
       }
     }
 
     & div {
-
       & button {
         cursor: pointer;
       }
@@ -830,7 +829,7 @@ video {
 
         &::placeholder {
           color: darken($aqua, 25);
-          font-weight:lighter;
+          font-weight: lighter;
         }
 
         &:invalid[focused="true"] {
@@ -838,7 +837,7 @@ video {
           color: $error;
         }
 
-        &:invalid[focused="true"] ~ span{
+        &:invalid[focused="true"] ~ span {
           display: block;
         }
       }
@@ -879,7 +878,7 @@ video {
           background-color: $black;
           border: none;
           color: $bgc;
-          font-family: 'Raleway', sans-serif;
+          font-family: "Raleway", sans-serif;
           font-size: 1.4rem;
           font-weight: bolder;
           height: 50px;
@@ -931,7 +930,7 @@ video {
       align-items: center;
       display: flex;
       justify-content: center;
-      
+
       & img {
         animation-duration: 2.5s;
         animation-direction: alternate-reverse;
@@ -1170,11 +1169,11 @@ video {
       overflow: scroll;
       position: fixed;
       width: 100vw;
-      
+
       & div {
         margin-left: 20px;
-        position:relative;
-        overflow:auto;
+        position: relative;
+        overflow: auto;
         & div {
           margin: 5px 0;
         }
@@ -1208,7 +1207,7 @@ video {
 
       &::after {
         background-color: $bgc;
-        content: '';
+        content: "";
         height: 2px;
         left: 5px;
         position: absolute;
@@ -1219,7 +1218,7 @@ video {
 
       &::before {
         background-color: $bgc;
-        content: '';
+        content: "";
         height: 2px;
         left: 5px;
         position: absolute;
@@ -1430,7 +1429,6 @@ video {
 
   .properties-detail {
     & .slider {
-      
       & img {
         width: 100%;
       }
@@ -1705,7 +1703,7 @@ video {
     &::after {
       border-right: 80px solid transparent;
       border-bottom: 75px solid $black;
-      content: '';
+      content: "";
       height: 75px;
       left: -350px;
       position: absolute;
@@ -1816,7 +1814,7 @@ video {
         .hero--buttons__button {
           height: 50px;
           width: 200px;
-      }
+        }
       }
     }
   }
@@ -1836,12 +1834,12 @@ video {
   }
 
   @keyframes up-word {
-        0% {
-          top: 50px;
-        }
-        100% {
-          top: 0;
-        }
+    0% {
+      top: 50px;
+    }
+    100% {
+      top: 0;
+    }
   }
 
   @keyframes down-word {
@@ -1877,17 +1875,17 @@ video {
             position: relative;
             z-index: 1000;
           }
-          
+
           &::after {
             border-right: 80px solid transparent;
             border-bottom: 75px solid $black;
-            content: '';
+            content: "";
             height: 50px;
             left: -350px;
             position: absolute;
             text-align: center;
             top: -50px;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             width: 100%;
           }
 
@@ -1943,16 +1941,16 @@ video {
         overflow: hidden;
         position: relative;
         width: 300px;
-    
+
         & span {
           position: relative;
           z-index: 125;
         }
-    
+
         &::after {
           border-right: 80px solid transparent;
           border-bottom: 75px solid $black;
-          content: '';
+          content: "";
           height: 75px;
           left: -360px;
           position: absolute;
@@ -1960,7 +1958,7 @@ video {
           transition: all 0.3s ease-in-out;
           width: 100%;
         }
-    
+
         &:hover::after {
           left: 0;
         }
@@ -1993,7 +1991,7 @@ video {
     justify-content: flex-start;
     &--sell,
     &--buy {
-      margin: 0 100px 25px 100px ;
+      margin: 0 100px 25px 100px;
 
       &__title,
       &__subtitle {
@@ -2022,17 +2020,17 @@ video {
           position: relative;
           z-index: 1000;
         }
-        
+
         &::after {
           border-right: 80px solid transparent;
           border-bottom: 75px solid $black;
-          content: '';
+          content: "";
           height: 50px;
           left: -475px;
           position: absolute;
           text-align: center;
           top: -50px;
-          transition: all .3s ease-in-out;
+          transition: all 0.3s ease-in-out;
           width: 100%;
         }
 
@@ -2105,30 +2103,30 @@ video {
     &--details {
       & div button {
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        & > span {
           position: relative;
-          overflow: hidden;
+          z-index: 1000;
+        }
 
-          & > span {
-            position: relative;
-            z-index: 1000;
-          }
-          
-          &::after {
-            border-right: 80px solid transparent;
-            border-bottom: 75px solid $black;
-            content: '';
-            height: 50px;
-            left: -140px;
-            position: absolute;
-            text-align: center;
-            top: -50px;
-            transition: all .3s ease-in-out;
-            width: 100%;
-          }
+        &::after {
+          border-right: 80px solid transparent;
+          border-bottom: 75px solid $black;
+          content: "";
+          height: 50px;
+          left: -140px;
+          position: absolute;
+          text-align: center;
+          top: -50px;
+          transition: all 0.3s ease-in-out;
+          width: 100%;
+        }
 
-          &:hover::after {
-            left: 0;
-          }
+        &:hover::after {
+          left: 0;
+        }
       }
     }
 
@@ -2166,7 +2164,7 @@ video {
       align-items: flex-end;
       margin: 0;
     }
-  
+
     & .form--button__btn {
       background-color: lighten($black, 10);
       margin-right: 19px;
@@ -2175,13 +2173,12 @@ video {
       &:hover {
         background-color: $black;
       }
-  
+
       &:active {
         transform: scale(0.9);
       }
     }
   }
-
 
   .mobile-filters {
     display: none;
@@ -2224,8 +2221,8 @@ video {
   }
 
   .frequent-questions--container {
-    transition: border-color, .4s ease-in-out;
-    
+    transition: border-color, 0.4s ease-in-out;
+
     &:hover {
       border-color: $aqua;
     }
@@ -2282,7 +2279,7 @@ video {
           height: 75px;
           width: 250px;
         }
-      }    
+      }
     }
   }
 
