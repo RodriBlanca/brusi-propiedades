@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/brusi-propiedades/precache-manifest.16797d1325fc3346c35b41c59b7163e7.js"
+  "/brusi-propiedades/precache-manifest.aecc41f721c213ce49491eaa097e18e3.js"
 );
 
 workbox.clientsClaim();
