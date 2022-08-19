@@ -21,9 +21,9 @@ const FrequentQuestions = () => {
             className='frequent-questions--container__input' 
             id='question-2'
           />
-          <label className='frequent-questions--container__label' htmlFor='question-2'>2 - Aún no hay pregunta</label>
+          <label className='frequent-questions--container__label' htmlFor='question-2'>2 - ¿Qué es el plan de comercialización PREMIUM?</label>
           <div className='frequent-questions--container__answer'>
-            <p>Falta respuesta</p>
+            <p>El plan consiste en realizar una tasación acorde al mercado y brindarle a tu inmueble la mejor comercialización ( plano digital, amoblamiento, visita virtual 360, recorrido a pie, fotos y video con drone).</p>
           </div>
         </div>
         <div className='frequent-questions--container'>
@@ -32,20 +32,10 @@ const FrequentQuestions = () => {
             className='frequent-questions--container__input' 
             id='question-3'
           />
-          <label className='frequent-questions--container__label' htmlFor='question-3'>3 - Aún no hay pregunta</label>
+          <label className='frequent-questions--container__label' htmlFor='question-3'>3 - ¿Que es la exclusividad? ¿Y cuánto dura ?</label>
           <div className='frequent-questions--container__answer'>
-            <p>Falta respuesta</p>
-          </div>
-        </div>
-        <div className='frequent-questions--container'>
-          <input 
-            type='checkbox' 
-            className='frequent-questions--container__input' 
-            id='question-4'
-          />
-          <label className='frequent-questions--container__label' htmlFor='question-4'>4 - Aún no hay pregunta</label>
-          <div className='frequent-questions--container__answer'>
-            <p>Falta respuesta</p>
+            <p>El contrato de exclusividad inmobiliaria es un acuerdo que se formaliza entre el vendedor y la inmobiliaria, que establece que el propietario de la vivienda (vendedor) cede de modo exclusivo los derechos de venta de su inmueble por un tiempo determinado a la inmobiliaria en cuestión.<br /> El contrato de exclusividad inmobiliaria fija además de la condición de exclusividad, el precio del inmueble, los honorarios de la inmobiliaria y el plazo de duración de dicha exclusividad.
+            </p>
           </div>
         </div>
     </div>

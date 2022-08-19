@@ -573,7 +573,7 @@ video {
       &__answer {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.5s ease-in-out;
+        transition: max-height 1s ease-in-out;
         width: 100%;
 
         & p {
@@ -1464,6 +1464,10 @@ video {
       }
     }
   }
+
+  .not-found h1 {
+    padding-top: 80px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1550,6 +1554,25 @@ video {
   .form--contact {
     width: 600px;
   }
+
+  .not-found {
+    h1 {
+      padding-top: 100px;
+      width: 600px;
+    }
+
+    &--cta {
+      & a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+      &__button {
+        width: 300px;
+      }
+    }
+  } 
 }
 
 @media screen and (min-width: 900px) {
@@ -2227,6 +2250,16 @@ video {
       border-color: $aqua;
     }
   }
+
+  .not-found {
+    & div img {
+      width: 30%;
+    }
+
+    &--cta__button {
+      cursor: pointer;
+    }
+  }
 }
 
 @media screen and (min-width: 1124px) {
@@ -2340,6 +2373,12 @@ video {
       }
     }
   }
+
+  .not-found {
+    & div img {
+      width: 25%;
+    }
+  }
 }
 
 @media screen and (min-width: 1500px) {
@@ -2347,6 +2386,12 @@ video {
     &--buy,
     &--sell {
       width: 1500px;
+    }
+  }
+
+  .not-found {
+    & div img {
+      width: 20%;
     }
   }
 }
@@ -2362,6 +2407,6 @@ video {
   }
 
   .slider {
-    height: 375px;
+    height: 400px;
   }
 }
