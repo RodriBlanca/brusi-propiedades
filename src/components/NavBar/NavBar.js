@@ -1,16 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// Firebase
+import { db } from '../../firebase/firebaseConfig';
+import { collection, query, getDocs } from "firebase/firestore";
 
-const NavBar = () => {
+const NavBar = ({setProperties}) => {
     const scrollToTop = () => {
         window.scroll(0, 0);
+    }
+
+    const reloadProperties = () => {
+        window.scroll(0, 0);
+        const getProperties = async() => {
+            const q = query(collection(db, "propiedades"));
+            const docs = [];
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+                docs.push({...doc.data(), id: doc.id});
+                setProperties(docs);
+            });
+        };
+        getProperties(); 
     }
 
   return (
     <nav className='navbar'>
         <ul>
             <li className='navbar--item'>
-                <Link className='navbar--item__link' to={'/brusi-propiedades'} onClick={scrollToTop}>Inicio</Link>
+                <Link className='navbar--item__link' to={'/brusi-propiedades'} onClick={reloadProperties}>Inicio</Link>
             </li>
             <li className='navbar--item'>
                 <Link className='navbar--item__link' to={'/brusi-propiedades/servicios'} onClick={scrollToTop}>Servicios</Link>

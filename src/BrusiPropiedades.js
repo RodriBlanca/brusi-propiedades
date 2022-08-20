@@ -45,6 +45,7 @@ const BrusiPropiedades = () => {
         querySnapshot.forEach((doc) => {
             docs.push({...doc.data(), id: doc.id});
             setProperties(docs);
+            localStorage.setItem('propiedades', JSON.stringify(docs))
             setLoading(false);
         });
     };
@@ -63,7 +64,7 @@ const BrusiPropiedades = () => {
           <CheckButtonsProvider>
           <MenuSectionsProvider>
             <PropertyProvider>
-              <Header/>
+              <Header setProperties={setProperties} />
               <Routes>
                   <Route path='*' element={<NotFoundPage />}/>
                   <Route path='/brusi-propiedades' element={<Home properties={properties} loading={loading}/>}/>

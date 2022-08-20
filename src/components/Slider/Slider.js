@@ -29,7 +29,10 @@ const Slider = ({fotos, direccion, handleProperty}) => {
   return (
     <div className='slider'>
         <div className='slider--images'>
-            <img src={fotos[imageNumber]} alt={direccion} onChange={handleProperty}/>
+            {
+                fotos &&
+                <img src={fotos.fotos[imageNumber]} alt={direccion} onChange={handleProperty}/>
+            }
         </div>
         <div className='slider--arrows'>
             <button className='slider--arrows__left' onClick={prevImg}><img src={leftArrow} alt="left arrow"/></button>

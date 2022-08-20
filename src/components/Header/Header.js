@@ -5,12 +5,12 @@ import MenuMobile from '../MenuMobile/MenuMobile';
 import NavBar from '../NavBar/NavBar';
 
 
-const Header = () => {
+const Header = ({setProperties}) => {
   return (
     <header className='header'>
         <Brand />
-        <NavBar/>
-        <MenuMobile />
+        <NavBar setProperties={setProperties} />
+        <MenuMobile setProperties={setProperties} />
     </header>
   )
 }

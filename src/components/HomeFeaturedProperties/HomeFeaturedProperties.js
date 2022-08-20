@@ -1,6 +1,6 @@
 import React from 'react';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
-import PropertiesContainer from '../PropertiesContainer/PropertiesContainer';
+import FeaturedPropertiesContainer from '../FeaturedPropertiesContainer/FeaturedPropertiesContainer';
 
 const HomeFeaturedProperties = ({properties, loading}) => {
   console.log(properties)
@@ -13,7 +13,7 @@ const HomeFeaturedProperties = ({properties, loading}) => {
             loading ? 
             <LoadingSpinner />
             :
-            <PropertiesContainer properties={properties}/>
+            <FeaturedPropertiesContainer properties={properties}/>
           }
     </div>
   )

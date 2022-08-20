@@ -18,7 +18,7 @@ const Property = ({property}) => {
   return (
     <div className='property'>
       <div className='property--image'>
-        <Slider fotos={property.recursos.fotos} id={property.id} direccion={property.direccion}/>
+        <Slider fotos={property.recursos} id={property.id} direccion={property.direccion}/>
         <div className='property--image__title'>
           <p>{`${property.direccion}`}<br/>{`${property.localidad}`}</p>
         </div>

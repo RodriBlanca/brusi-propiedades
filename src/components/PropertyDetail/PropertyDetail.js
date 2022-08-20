@@ -1,7 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { PropertyContext } from '../../contexts/PropertyContext';
 import Slider from '../Slider/Slider';
 import MapView from '../MapView/MapView';
+import VideoScreen from '../VideoScreen/VideoScreen';
 // Firebase
 import { db } from '../../firebase/firebaseConfig';
 import { collection, query, getDocs } from "firebase/firestore";
@@ -11,27 +12,57 @@ import { Helmet } from 'react-helmet';
 const PropertyDetail = ({setProperties, properties}) => {
 
   const [propertyDetail, setPropertyDetail] = useContext(PropertyContext);
+  const [videoModal, setVideoModal] = useState(true);
+
+  // const beforeContentLoaded = () => {
+  //   window.onbeforeunload()
+  // }
+
+  // console.log(propertyDetail.recursos.video !== "" /* , propertyDetail.recursos.video , propertyDetail.recursos.video !== undefined */)
+
+  // console.log(propertyDetail.recursos)
+
+  // window.onbeforeunload
+  
+  // useEffect(() => {
+  //   console.log('Entró en el useEffect')
+  //   console.log(properties)
+  // }, [window.onbeforeunload])
+  
   
   // useEffect(() => {
   //   if(window.onbeforeunload) {
-  //     const getProperties = async () => {
-  //       const q = query(collection(db, "propiedades"));
-  //       const docs = [];
-  //       const querySnapshot = await getDocs(q);
-  //       querySnapshot.forEach((doc) => {
-  //           docs.push({...doc.data(), id: doc.id});
-  //           setProperties(docs);
-  //           console.log(properties)
-  //       });
-  //       getProperties()
-  //     };
+  //     if(properties === []) {
+  //       console.log('cuando recarga la página')
+  //       const getProperties = async () => {
+  //         const q = query(collection(db, "propiedades"));
+  //         const docs = [];
+  //         const querySnapshot = await getDocs(q);
+  //         querySnapshot.forEach((doc) => {
+  //             docs.push({...doc.data(), id: doc.id});
+  //             setProperties(docs);
+  //             console.log(properties)
+  //         });
+  //         getProperties()
+  //         console.log(properties);
+  //       };
+  //     }
+  //     // getSingleProperty();
   //   }
     
-  //   // getSingleProperty (getProperties);
   // }, []);
 
-  // const getSingleProperty = async (cb) => {
-  //   await cb()
+  // console.log(properties);
+
+  // const saved = window.localStorage.getItem('propiedad');
+      
+  //     if(!saved) {
+  //       window.localStorage.setItem('propiedad', JSON.stringify(propertyDetail))
+  //     } else {
+  //       setPropertyDetail(JSON.parse(saved));
+  //     }
+
+  // const getSingleProperty = () => {
   //   const savedProperty = window.localStorage.getItem("propiedad");
   //   console.log(savedProperty)
 
@@ -43,33 +74,51 @@ const PropertyDetail = ({setProperties, properties}) => {
   //   }
   // }
 
-  const savedProperty = window.localStorage.getItem("propiedad");
-  const matchProperty = properties.filter(property => /* property.id === JSON.parse(savedProperty).id */ console.log(property))
-  console.log(matchProperty)
-  console.log(properties)
-  console.log(savedProperty)
-  console.log(propertyDetail)
+  // const savedProperty = window.localStorage.getItem("propiedad");
+  // const matchProperty = properties.filter(property => /* property.id === JSON.parse(savedProperty).id */ console.log(property))
+  // console.log(matchProperty)
+  // console.log(properties)
+  // console.log(savedProperty)
+  // console.log(propertyDetail)
 
   return (
     <>
       <Helmet>
-        <title>{`${propertyDetail.direccion} - Brusi Propiedades`}</title>
-        <meta name='description' content={`${propertyDetail.descripcion}`}></meta>
+        {propertyDetail/* [0] */ !== "" && propertyDetail && propertyDetail !== undefined ?
+          <title>{`${propertyDetail.direccion} - Brusi Propiedades`}</title>
+          :
+          null
+        }
+        {propertyDetail/* [0] */ !== "" && propertyDetail && propertyDetail !== undefined ?
+          <meta name='description' content={`${propertyDetail.descripcion}`}></meta>
+          :
+          null
+        }
       </Helmet>
       <div className='property-detail'>
         {/* Imagenes */}
         {
-          !propertyDetail.recursos ? 
-          <div>No existe</div>
+          propertyDetail !== "" && propertyDetail && propertyDetail !== undefined ? 
+          <Slider fotos={propertyDetail.recursos} id={propertyDetail.id} direccion={propertyDetail.direccion}/> 
           :
-          <Slider fotos={propertyDetail.recursos.fotos} id={propertyDetail.id} direccion={propertyDetail.direccion}/> 
+          <div>No existe</div>
         }
         <div className='property-detail--information'>
           {
             propertyDetail ?
             <div>
-              <h1>{propertyDetail.direccion}</h1>
-              <h2>USD {propertyDetail.precio}</h2>
+              <h1>
+                {
+                  propertyDetail.direccion &&
+                  propertyDetail.direccion
+                }
+              </h1>
+              <h2>
+                {
+                  propertyDetail.precio &&
+                  `USD ${propertyDetail.precio}`
+                }
+              </h2>
             </div>
             : 
             <div></div>
@@ -78,7 +127,7 @@ const PropertyDetail = ({setProperties, properties}) => {
         <div className='property-detail--content'>
           {/* Detalles de la propiedad */}
           {
-            propertyDetail.detalles/* [0] */ !== "" || !propertyDetail.detalles ?
+            propertyDetail.detalles/* [0] */ !== "" && propertyDetail.detalles && propertyDetail !== undefined ?
             <div className='property-detail--feature'>
               <h3>Detalles de la propiedad</h3>
               <ul>
@@ -97,7 +146,7 @@ const PropertyDetail = ({setProperties, properties}) => {
           }
           {/* Información Básica */}
           {
-            propertyDetail.informacionBasica/* [0] */ !== "" || !propertyDetail.informacionBasica ? 
+            propertyDetail.informacionBasica/* [0] */ !== "" && propertyDetail.informacionBasica ? 
             <div className='property-detail--feature'>
               <h3>Información Básica</h3>
               <ul>
@@ -116,7 +165,7 @@ const PropertyDetail = ({setProperties, properties}) => {
           }
           {/* Superficies */}
           {
-            propertyDetail.superficies/* [0] */ !== ""|| !propertyDetail.superficies ? 
+            propertyDetail.superficies/* [0] */ !== "" && propertyDetail.superficies ? 
             <div className='property-detail--feature'>
               <h3>Superficies y Medidad</h3>
               <ul>
@@ -135,7 +184,7 @@ const PropertyDetail = ({setProperties, properties}) => {
           }
           {/* Descripción */}
           {
-            propertyDetail.descripcion/* [0] */ !== ""|| !propertyDetail.descripcion ?
+            propertyDetail.descripcion/* [0] */ !== "" && propertyDetail.descripcion && propertyDetail.descripcion !== undefined ?
             <div className='property-detail--feature'>
               <h3>Descripción</h3>
               <div>
@@ -154,7 +203,7 @@ const PropertyDetail = ({setProperties, properties}) => {
           }
           {/* Servicios */}
           {
-            propertyDetail.servicios/* [0] */ !== ""|| !propertyDetail.servicios ?
+            propertyDetail.servicios/* [0] */ !== "" && propertyDetail.servicios && propertyDetail.servicios !== undefined ?
             <div className='property-detail--feature'>
               <h3>Servicios</h3>
               <ul>
@@ -173,7 +222,7 @@ const PropertyDetail = ({setProperties, properties}) => {
           }
           {/* Ambientes */}
           {
-            propertyDetail.ambientes[0] !== ""|| !propertyDetail.ambientes ?
+            propertyDetail.ambientes/* [0] */ !== "" && propertyDetail.ambientes && propertyDetail.ambientes !== undefined ?
             <div className='property-detail--feature'>
               <h3>Ambientes</h3>
               <ul>
@@ -194,7 +243,7 @@ const PropertyDetail = ({setProperties, properties}) => {
           
           {/* Adicionales */}
           {
-            propertyDetail.adicionales[0] !== ""|| !propertyDetail.adicionales ?
+            propertyDetail.adicionales/* [0] */ !== "" && propertyDetail.adicionales && propertyDetail.adicionales !== undefined?
             <div className='property-detail--feature'>
               <h3>Adicionales</h3>
               <ul>
@@ -215,12 +264,12 @@ const PropertyDetail = ({setProperties, properties}) => {
         </div>
         {/* Video */}
         {
-          propertyDetail.recursos.video ? 
+          propertyDetail.recursos/* .video */ !== "" && propertyDetail.recursos && propertyDetail.recursos !== undefined ? 
           <div className='property-detail--feature'>
             <h3 className='property-detail--feature__title'>Video</h3>
             {
               <>
-                <video src={`${propertyDetail.recursos.video}`} autoPlay controls muted />
+                <video src={`${propertyDetail.recursos.video}`} controls muted />
                 <hr/>
               </>
             }
@@ -230,7 +279,7 @@ const PropertyDetail = ({setProperties, properties}) => {
         }
         {/* Tour 360° */}
         {
-          propertyDetail.recursos.tour !== '' ? 
+          propertyDetail.recursos/* .tour */ !== '' && propertyDetail.recursos !== undefined && propertyDetail.recursos/* .tour */ ? 
           <div className='property-detail--tour'>
             <h3>Tour 360°</h3>
             <iframe src={propertyDetail.recursos.tour}></iframe>
@@ -241,7 +290,7 @@ const PropertyDetail = ({setProperties, properties}) => {
         }
         {/* Ubicación */}
         {
-          propertyDetail.mapa ? 
+          propertyDetail.mapa !== "" && propertyDetail.mapa && propertyDetail.mapa !== undefined ? 
           <div>
             <h3>Ubicación</h3>
             <MapView coords={propertyDetail.mapa}/>
@@ -250,6 +299,10 @@ const PropertyDetail = ({setProperties, properties}) => {
           null
         }
       </div>
+      {
+        videoModal &&
+        <VideoScreen propertyDetail={propertyDetail} setVideoModal={setVideoModal} />
+      }
     </>
   )
 }
