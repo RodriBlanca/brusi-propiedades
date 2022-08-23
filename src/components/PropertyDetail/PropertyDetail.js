@@ -265,7 +265,7 @@ const PropertyDetail = ({setProperties, properties}) => {
         {/* Video */}
         {
           propertyDetail.recursos/* .video */ !== "" && propertyDetail.recursos && propertyDetail.recursos !== undefined ? 
-          <div className='property-detail--feature'>
+          <div className='property-detail--feature property-detail--video'>
             <h3 className='property-detail--feature__title'>Video</h3>
             {
               <>
@@ -279,7 +279,7 @@ const PropertyDetail = ({setProperties, properties}) => {
         }
         {/* Tour 360° */}
         {
-          propertyDetail.recursos/* .tour */ !== '' && propertyDetail.recursos !== undefined && propertyDetail.recursos/* .tour */ ? 
+          propertyDetail.recursos/* .tour */ !== '' && propertyDetail.recursos !== undefined && propertyDetail.recursos.tour/* .tour */ ? 
           <div className='property-detail--tour'>
             <h3>Tour 360°</h3>
             <iframe src={propertyDetail.recursos.tour}></iframe>
@@ -291,7 +291,7 @@ const PropertyDetail = ({setProperties, properties}) => {
         {/* Ubicación */}
         {
           propertyDetail.mapa !== "" && propertyDetail.mapa && propertyDetail.mapa !== undefined ? 
-          <div>
+          <div className='property-detail--map'>
             <h3>Ubicación</h3>
             <MapView coords={propertyDetail.mapa}/>
           </div>
