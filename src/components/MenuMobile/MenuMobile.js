@@ -46,16 +46,16 @@ const MenuMobile = ({setProperties}) => {
         <nav className='menu-container'>
           <ul>
               <li>
-                  <Link className='menu-container__link' to={'/brusi-propiedades'} onClick={reloadProperties}>Inicio</Link>
+                  <Link className='menu-container__link' to={'/'} onClick={reloadProperties}>Inicio</Link>
               </li>
               <li>
-                  <Link className='menu-container__link' to={'/brusi-propiedades/servicios'} onClick={closeMenu}>Servicios</Link>
+                  <Link className='menu-container__link' to={'/servicios'} onClick={closeMenu}>Servicios</Link>
               </li>
               <li>
-                  <Link className='menu-container__link' to={'/brusi-propiedades/propiedades'} onClick={closeMenu}>Propiedades</Link>
+                  <Link className='menu-container__link' to={'/propiedades'} onClick={closeMenu}>Propiedades</Link>
               </li>
               <li>
-                  <Link className='menu-container__link' to={'/brusi-propiedades/nosotros'} onClick={closeMenu}>Nosotros</Link>
+                  <Link className='menu-container__link' to={'/nosotros'} onClick={closeMenu}>Nosotros</Link>
               </li>
           </ul>
         </nav>

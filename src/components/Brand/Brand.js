@@ -8,7 +8,7 @@ const Brand = () => {
   }
 
   return (
-    <Link className='header--brand' to='/brusi-propiedades' onClick={scrollToTop}>
+    <Link className='header--brand' to='/' onClick={scrollToTop}>
       <img className='header--brand__img' src={logo} alt='Brusi Propiedades logo'/>
     </Link>
   )

@@ -917,7 +917,6 @@ video {
     align-items: center;
     display: flex;
     flex-direction: column;
-    // height: 10vh;
     justify-content: flex-start;
     margin: 200px 25px 25px 25px;
 
@@ -1045,7 +1044,6 @@ video {
     height: 300px;
     justify-content: flex-start;
     position: relative;
-    // width: 100%;
 
     &--images {
       align-items: center;
@@ -1065,7 +1063,7 @@ video {
       display: flex;
       position: absolute;
       justify-content: space-between;
-      top: 45%;
+      top: 50%;
       left: 0px;
       width: 100%;
 
@@ -1618,6 +1616,7 @@ video {
     & .slider {
       & img {
         height: 100%;
+        width: 100%;
       }
     }
   }
@@ -1654,6 +1653,10 @@ video {
 
   .not-found h1 {
     padding-top: 80px;
+  }
+
+  .properties .slider .slider--images img {
+    width: auto;
   }
 }
 
@@ -2280,6 +2283,7 @@ video {
     flex-direction: column;
     height: auto;
     margin-right: 20px;
+    max-height: 650px;
     width: 250px;
 
     & div {
@@ -2349,6 +2353,7 @@ video {
 
     &-detail {
       max-width: 900px;
+      min-width: 800px;
 
       &--feature {
         & iframe {
@@ -2473,12 +2478,39 @@ video {
     height: auto;
   }
 
-  .slider--images {
-    height: 400px;
+  .slider {
+    width: 100%;
+
+    &--images {
+      height: 400px;
+      width: 100%;
+
+      & > img:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--modal {
+      &__container {
+        height: 70%;
+        width: 80%;
+      }
+      &__button {
+        cursor: pointer;
+      }
+    }
   }
 
-  .slider--modal__container {
-    cursor: pointer;
+  .modal--arrows {
+    &__right img, &__left img {
+      margin: 0 !important;
+    }
+    &__right {
+      margin-right: 50px;
+    }
+    &__left {
+      margin-left: 50px;
+    }
   }
 }
 
@@ -2502,6 +2534,29 @@ video {
         width: 100%;
       }
     }
+
+    &--modal {
+      &__number {
+        margin-bottom: 0;
+      }
+      &__container {
+        height: 80%;
+        margin: 0;
+        position: relative;
+        & img {
+          position: absolute;
+          top: 15%;
+        }
+      }
+    }
+
+    &--arrows {
+      top: 48%;
+    }
+  }
+
+  .properties--container .property .slider .slider--arrows {
+    top: 40%;
   }
 }
 
@@ -2585,14 +2640,8 @@ video {
     }
   }
 
-  .slider {
-    height: 300px;
-    &--images {
-      & img {
-        height: auto;
-        width: 100%;
-      }
-    }
+  .properties .slider .slider--images img {
+    width: 100%;
   }
 
   .not-found {

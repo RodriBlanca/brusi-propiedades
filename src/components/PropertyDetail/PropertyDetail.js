@@ -13,73 +13,7 @@ const PropertyDetail = ({setProperties, properties}) => {
 
   const [propertyDetail, setPropertyDetail] = useContext(PropertyContext);
   const [videoModal, setVideoModal] = useState(true);
-
-  // const beforeContentLoaded = () => {
-  //   window.onbeforeunload()
-  // }
-
-  // console.log(propertyDetail.recursos.video !== "" /* , propertyDetail.recursos.video , propertyDetail.recursos.video !== undefined */)
-
-  // console.log(propertyDetail.recursos)
-
-  // window.onbeforeunload
-  
-  // useEffect(() => {
-  //   console.log('Entró en el useEffect')
-  //   console.log(properties)
-  // }, [window.onbeforeunload])
-  
-  
-  // useEffect(() => {
-  //   if(window.onbeforeunload) {
-  //     if(properties === []) {
-  //       console.log('cuando recarga la página')
-  //       const getProperties = async () => {
-  //         const q = query(collection(db, "propiedades"));
-  //         const docs = [];
-  //         const querySnapshot = await getDocs(q);
-  //         querySnapshot.forEach((doc) => {
-  //             docs.push({...doc.data(), id: doc.id});
-  //             setProperties(docs);
-  //             console.log(properties)
-  //         });
-  //         getProperties()
-  //         console.log(properties);
-  //       };
-  //     }
-  //     // getSingleProperty();
-  //   }
-    
-  // }, []);
-
-  // console.log(properties);
-
-  // const saved = window.localStorage.getItem('propiedad');
-      
-  //     if(!saved) {
-  //       window.localStorage.setItem('propiedad', JSON.stringify(propertyDetail))
-  //     } else {
-  //       setPropertyDetail(JSON.parse(saved));
-  //     }
-
-  // const getSingleProperty = () => {
-  //   const savedProperty = window.localStorage.getItem("propiedad");
-  //   console.log(savedProperty)
-
-  //   const matchProperty = properties.filter(property => property.id === JSON.parse(savedProperty).id)
-  //   console.log(matchProperty)
-    
-  //   if(matchProperty) {
-  //     setPropertyDetail(matchProperty[0]);
-  //   }
-  // }
-
-  // const savedProperty = window.localStorage.getItem("propiedad");
-  // const matchProperty = properties.filter(property => /* property.id === JSON.parse(savedProperty).id */ console.log(property))
-  // console.log(matchProperty)
-  // console.log(properties)
-  // console.log(savedProperty)
-  // console.log(propertyDetail)
+  // const ambientes = propertyDetail.ambientes[0];
 
   return (
     <>
@@ -222,7 +156,7 @@ const PropertyDetail = ({setProperties, properties}) => {
           }
           {/* Ambientes */}
           {
-            propertyDetail.ambientes/* [0] */ !== "" && propertyDetail.ambientes && propertyDetail.ambientes !== undefined ?
+            propertyDetail.ambientes/* [0] */ !== [] && propertyDetail.ambientes && propertyDetail.ambientes !== undefined ?
             <div className='property-detail--feature'>
               <h3>Ambientes</h3>
               <ul>
@@ -243,7 +177,7 @@ const PropertyDetail = ({setProperties, properties}) => {
           
           {/* Adicionales */}
           {
-            propertyDetail.adicionales/* [0] */ !== "" && propertyDetail.adicionales && propertyDetail.adicionales !== undefined?
+            propertyDetail.adicionales/* [0] */ !== [] && propertyDetail.adicionales && propertyDetail.adicionales !== undefined?
             <div className='property-detail--feature'>
               <h3>Adicionales</h3>
               <ul>

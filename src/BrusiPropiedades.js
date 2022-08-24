@@ -67,13 +67,13 @@ const BrusiPropiedades = () => {
               <Header setProperties={setProperties} />
               <Routes>
                   <Route path='*' element={<NotFoundPage />}/>
-                  <Route path='/brusi-propiedades' element={<Home properties={properties} loading={loading}/>}/>
-                  <Route path='/brusi-propiedades/servicios' element={<Services />}/>
-                  <Route path='/brusi-propiedades/propiedades' element={<Properties properties={properties} setProperties={setProperties} loading={loading} setLoading={setLoading} />}/>
-                  <Route path='/brusi-propiedades/nosotros' element={<About />}/>
-                  <Route path='/brusi-propiedades/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
-                  <Route path='/brusi-propiedades/propiedad:id' element={<PropertyDetails setProperties={setProperties} properties={properties}/>}/>
-                  <Route path='/brusi-propiedades/propiedades/propiedad:id' element={<PropertyDetails setProperties={setProperties} properties={properties}/>}/>
+                  <Route path='/' element={<Home properties={properties} loading={loading}/>}/>
+                  <Route path='/servicios' element={<Services />}/>
+                  <Route path='/propiedades' element={<Properties properties={properties} setProperties={setProperties} loading={loading} setLoading={setLoading} />}/>
+                  <Route path='/nosotros' element={<About />}/>
+                  <Route path='/contacto' element={<Navigate to={'https://wa.me/26517362'} replace/>}/>
+                  <Route path='/propiedad:id' element={<PropertyDetails setProperties={setProperties} properties={properties}/>}/>
+                  <Route path='/propiedades/propiedad:id' element={<PropertyDetails setProperties={setProperties} properties={properties}/>}/>
               </Routes>
               <WhatsappLogo />
               <Footer />

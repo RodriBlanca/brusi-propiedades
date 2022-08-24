@@ -940,7 +940,7 @@ video {
     display: flex;
     position: absolute;
     justify-content: space-between;
-    top: 45%;
+    top: 50%;
     left: 0px;
     width: 100%;
   }
@@ -1386,6 +1386,7 @@ video {
   }
   .properties-detail .slider img {
     height: 100%;
+    width: 100%;
   }
   .footer {
     height: 500px;
@@ -1412,6 +1413,9 @@ video {
   }
   .not-found h1 {
     padding-top: 80px;
+  }
+  .properties .slider .slider--images img {
+    width: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1934,6 +1938,7 @@ video {
     flex-direction: column;
     height: auto;
     margin-right: 20px;
+    max-height: 650px;
     width: 250px;
   }
   .filters div input {
@@ -1986,6 +1991,7 @@ video {
   }
   .property-detail {
     max-width: 900px;
+    min-width: 800px;
   }
   .property-detail--feature iframe {
     height: 400px;
@@ -2080,11 +2086,31 @@ video {
   .properties-detail .slider img {
     height: auto;
   }
+  .slider {
+    width: 100%;
+  }
   .slider--images {
     height: 400px;
+    width: 100%;
+  }
+  .slider--images > img:hover {
+    cursor: pointer;
   }
   .slider--modal__container {
+    height: 70%;
+    width: 80%;
+  }
+  .slider--modal__button {
     cursor: pointer;
+  }
+  .modal--arrows__right img, .modal--arrows__left img {
+    margin: 0 !important;
+  }
+  .modal--arrows__right {
+    margin-right: 50px;
+  }
+  .modal--arrows__left {
+    margin-left: 50px;
   }
 }
 @media screen and (min-width: 1124px) {
@@ -2102,6 +2128,24 @@ video {
     height: auto;
     transform: translateY(-15%);
     width: 100%;
+  }
+  .slider--modal__number {
+    margin-bottom: 0;
+  }
+  .slider--modal__container {
+    height: 80%;
+    margin: 0;
+    position: relative;
+  }
+  .slider--modal__container img {
+    position: absolute;
+    top: 15%;
+  }
+  .slider--arrows {
+    top: 48%;
+  }
+  .properties--container .property .slider .slider--arrows {
+    top: 40%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2163,11 +2207,7 @@ video {
   .property--image {
     height: 270px;
   }
-  .slider {
-    height: 300px;
-  }
-  .slider--images img {
-    height: auto;
+  .properties .slider .slider--images img {
     width: 100%;
   }
   .not-found div img {

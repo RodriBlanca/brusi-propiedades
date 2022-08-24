@@ -27,16 +27,16 @@ const NavBar = ({setProperties}) => {
     <nav className='navbar'>
         <ul>
             <li className='navbar--item'>
-                <Link className='navbar--item__link' to={'/brusi-propiedades'} onClick={reloadProperties}>Inicio</Link>
+                <Link className='navbar--item__link' to={'/'} onClick={reloadProperties}>Inicio</Link>
             </li>
             <li className='navbar--item'>
-                <Link className='navbar--item__link' to={'/brusi-propiedades/servicios'} onClick={scrollToTop}>Servicios</Link>
+                <Link className='navbar--item__link' to={'/servicios'} onClick={scrollToTop}>Servicios</Link>
             </li>
             <li className='navbar--item'>
-                <Link className='navbar--item__link' to={'/brusi-propiedades/propiedades'} onClick={scrollToTop}>Propiedades</Link>
+                <Link className='navbar--item__link' to={'/propiedades'} onClick={scrollToTop}>Propiedades</Link>
             </li>
             <li className='navbar--item'>
-                <Link className='navbar--item__link' to={'/brusi-propiedades/nosotros'} onClick={scrollToTop}>Nosotros</Link>
+                <Link className='navbar--item__link' to={'/nosotros'} onClick={scrollToTop}>Nosotros</Link>
             </li>
         </ul>
     </nav>

@@ -11,13 +11,13 @@ const FooterLinks = () => {
                     <Link className='footer--links__link' to={'/'}>Inicio</Link>
                 </li>
                 <li>
-                <Link className='footer--links__link' to={'/brusi-propiedades/servicios'}>Servicios</Link>
+                <Link className='footer--links__link' to={'/servicios'}>Servicios</Link>
                 </li>
                 <li>
-                    <Link className='footer--links__link' to={'/brusi-propiedades/propiedades'}>Propiedades</Link>
+                    <Link className='footer--links__link' to={'/propiedades'}>Propiedades</Link>
                 </li>
                 <li>
-                    <Link className='footer--links__link' to={'/brusi-propiedades/nosotros'}>Nosotros</Link>
+                    <Link className='footer--links__link' to={'/nosotros'}>Nosotros</Link>
                 </li>
             </ul>
         </div>
