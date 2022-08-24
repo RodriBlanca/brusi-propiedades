@@ -29,7 +29,7 @@ const Property = ({property}) => {
         </p>
         <div>
           <p className='property--details__price'>{`USD ${property.precio}`}</p>
-          <Link to={`/brusi-propiedades/propiedad:${property.id}`}>
+          <Link to={`/propiedad:${property.id}`}>
             <button className='property--details__button' onClick={handleProperty}><span>Ver más</span></button>
           </Link>
         </div>

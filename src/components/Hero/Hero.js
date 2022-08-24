@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import backgroundVideo from '../../videos/video-background.mp4';
+import backgroundVideo from '../../media/video-background.mp4';
 
 const Hero = () => {
 

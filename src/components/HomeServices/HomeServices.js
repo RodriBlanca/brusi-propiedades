@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import homeServiceImg from '../../images/Barrio Brickland-53.jpg';
+import homeServiceImg from '../../media/Barrio Brickland-53.jpg';
 
 const HomeServices = () => {
 

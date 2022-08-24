@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import leftArrow from '../../images/left-chevron.png';
-import rightArrow from '../../images/right-chevron.png';
+import leftArrow from '../../media/left-chevron.png';
+import rightArrow from '../../media/right-chevron.png';
 
 const Slider = ({fotos, direccion, handleProperty}) => {
     

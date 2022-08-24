@@ -1,17 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { PropertyContext } from '../../contexts/PropertyContext';
 import Slider from '../Slider/Slider';
 import MapView from '../MapView/MapView';
 import VideoScreen from '../VideoScreen/VideoScreen';
-// Firebase
-import { db } from '../../firebase/firebaseConfig';
-import { collection, query, getDocs } from "firebase/firestore";
 // React-helmet
 import { Helmet } from 'react-helmet';
 
-const PropertyDetail = ({setProperties, properties}) => {
+const PropertyDetail = () => {
 
-  const [propertyDetail, setPropertyDetail] = useContext(PropertyContext);
+  const [propertyDetail] = useContext(PropertyContext);
   const [videoModal, setVideoModal] = useState(true);
   // const ambientes = propertyDetail.ambientes[0];
 
