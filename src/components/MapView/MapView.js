@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import VectorSource from 'ol/source/Vector';
-import Icon from 'ol/style/Icon';
 import OSM from 'ol/source/OSM';
 import {useGeographic} from 'ol/proj';
 import Feature from 'ol/Feature';

@@ -7,8 +7,6 @@ const Property = ({property}) => {
 
   const [ , setPropertyDetail] = useContext(PropertyContext);
 
-  console.log(property.recursos.fotos)
-
   const handleProperty = () => {
     setPropertyDetail(property);
     window.localStorage.setItem('propiedad', JSON.stringify(property))

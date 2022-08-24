@@ -3,7 +3,6 @@ import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import FeaturedPropertiesContainer from '../FeaturedPropertiesContainer/FeaturedPropertiesContainer';
 
 const HomeFeaturedProperties = ({properties, loading}) => {
-  console.log(properties)
   return (
     <div className='featured-properties'>
         <h2 className='featured-properties--title'>¿Estás interesado en comprar?</h2>

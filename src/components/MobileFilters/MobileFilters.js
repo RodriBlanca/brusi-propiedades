@@ -142,7 +142,6 @@ const MobileFilters = ({setProperties}) => {
     const changeCheckedTipoDePropiedad = tipoDePropiedadStateList.map((propiedad) => propiedad.id === id ? {...propiedad, checked: !propiedad.checked}:propiedad);
     setTipoDePropiedadList(changeCheckedTipoDePropiedad);
   }
-  console.log(tipoDePropiedadList)
 
   const handleAmbientes = (id) => {
     const ambientesStateList = ambientesList;

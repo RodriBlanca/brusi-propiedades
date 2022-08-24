@@ -4,7 +4,7 @@ const FormTextarea = (props) => {
 
   const [focused, setFocused] = useState(false);
 
-  const handleFocus = (e) => {
+  const handleFocus = () => {
       setFocused(true);
   }
 

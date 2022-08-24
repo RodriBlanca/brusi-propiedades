@@ -43,8 +43,8 @@ const Slider = ({fotos, direccion, handleProperty}) => {
         e.preventDefault();
         console.log(window.location.href)
         const imagesModalElement = document.getElementById('slider-modal');
-        const propertiesPage = 'http://localhost:3000/brusi-propiedades/propiedades';
-        const homePage = 'http://localhost:3000/brusi-propiedades';
+        const propertiesPage = 'http://www.brusipropiedades.com/propiedades';
+        const homePage = 'http://www.brusipropiedades.com';
 
         if(window.location.href !== propertiesPage && window.location.href !== homePage) {
             if(!imagesModal) {

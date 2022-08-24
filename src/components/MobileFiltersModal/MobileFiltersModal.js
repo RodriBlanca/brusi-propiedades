@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MobileFiltersModal = ({children, modal, setModal, handleModal}) => {
+const MobileFiltersModal = ({children, modal, handleModal}) => {
   return (
     <>
         {modal &&

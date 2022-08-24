@@ -12,7 +12,6 @@ const Contact = () => {
   const handleNameInput = (e) => {
     setNameValue(e.target.value);
   }
-  console.log(nameValue)
 
   const handleEmailInput = (e) => {
     setEmailValue(e.target.value);
@@ -36,22 +35,15 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log(nameValue)
-
     // Form validation
     if(nameValue.length === 0 || nameValue.length < 3) {
-      console.log('Todos los campos son obligatorios');
     } else {
-      console.log('paso la primer evaluación')
       const reg = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
       if(!reg.exec(emailValue)) {
-        console.log('El email no es válido');
       } else {
         if(subjectValue.length === 0) {
-          console.log('El campo asunto es requerido')
         } else {
           if(messageValue.length === 0) {
-            console.log('El campo mensaje es requerido');
           } else {
             emailjs.sendForm('service_nq3f34m', 'template_hqar8mb', form.current , 'KL2SBPq0HCP-JfwB3')
             .then((result) => {
@@ -59,7 +51,6 @@ const Contact = () => {
             }, (error) => {
                 console.log(error.text);
             });
-
             resetForm();
           }
         }
