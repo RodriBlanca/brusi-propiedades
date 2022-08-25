@@ -61,7 +61,7 @@ const About = () => {
                         <p className='about--paragraph__text'>Es hacer que el proceso, muchas veces estresante de comprar o vender una propiedad, se convierta en uno de los momento más felices de tu vida.<br/>Es por eso, que acompañamos y aconsejamos a nuestros clientes como quisiéramos que lo hicieran con nosotros brindándoles a través de nuestros servicios una experiencia única al momento de comprar o vender
                         </p>
                         <button className='about--paragraph__button' onClick={scrollToTop}>
-                            <Link to={'/brusi-propiedades/servicios'} className="about--button__link"><span>Nuestros Servicios</span></Link>
+                            <Link to={'/servicios'} className="about--button__link"><span>Nuestros Servicios</span></Link>
                         </button>
                     </div>
                 </div>

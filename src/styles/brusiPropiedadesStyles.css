@@ -2197,7 +2197,6 @@ video {
   .slider--images img {
     height: 100%;
     transform: translateY(-15%);
-    width: auto;
   }
   .services--button {
     padding-top: 75px;

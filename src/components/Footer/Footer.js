@@ -3,11 +3,11 @@ import React from 'react';
 import FooterBrand from '../FooterBrand/FooterBrand';
 import FooterLinks from '../FooterLinks/FooterLinks';
 
-const Footer = () => {
+const Footer = ({setProperties}) => {
   return (
     <footer className='footer'>
         <FooterBrand />
-        <FooterLinks />
+        <FooterLinks setProperties={setProperties} />
     </footer>
   )
 }

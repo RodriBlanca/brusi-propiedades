@@ -146,7 +146,7 @@ const Services = () => {
             </div>
           </ul>
           <div className='services--button'>
-            <Link to={'/brusi-propiedades/propiedades'} onClick={scrollToTop}>
+            <Link to={'/propiedades'} onClick={scrollToTop}>
               <button><span>Nuestras Propiedades</span></button>
             </Link>
           </div>

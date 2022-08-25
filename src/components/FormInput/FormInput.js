@@ -10,7 +10,6 @@ const FormInput = (props) => {
     }
   }, [props.sended])
   
-
   const handleFocus = () => {
       setFocused(true);
   }

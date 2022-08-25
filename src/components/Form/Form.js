@@ -2,10 +2,10 @@ import React, { useRef, useState } from 'react';
 import FormInput from '../FormInput/FormInput';
 import FormTextarea from '../FormTextarea/FormTextarea';
 import emailjs from '@emailjs/browser';
-import instagramIcon from '../../media/instagram-icon.png';
-import tiktokIcon from '../../media/tiktok-icon.png';
-import whatsappIcon from '../../media/whatsapp-icon.png';
-import youtubeIcon from '../../media/youtube-icon.png';
+import instagramIcon from '../../images/instagram-icon.png';
+import tiktokIcon from '../../images/tiktok-icon.png';
+import whatsappIcon from '../../images/whatsapp-icon.png';
+import youtubeIcon from '../../images/youtube-icon.png';
 
 const Form = () => {
 

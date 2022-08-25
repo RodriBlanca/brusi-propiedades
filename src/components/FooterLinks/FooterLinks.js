@@ -1,23 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// Firebase
+import { db } from '../../firebase/firebaseConfig';
+import { collection, query, getDocs } from "firebase/firestore";
 
-const FooterLinks = () => {
+const FooterLinks = ({setProperties}) => {
+
+    const scrollToTop = () => {
+        window.scroll(0, 0);
+    }
+
+    const reloadProperties = () => {
+        window.scroll(0, 0);
+        const getProperties = async() => {
+            const q = query(collection(db, "propiedades"));
+            const docs = [];
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+                docs.push({...doc.data(), id: doc.id});
+                setProperties(docs);
+            });
+        };
+        getProperties(); 
+    }
+
   return (
     <div className='footer--links'>
         <div className='footer--links__section'>
             <p>Secciones</p>
             <ul>
                 <li>
-                    <Link className='footer--links__link' to={'/'}>Inicio</Link>
+                    <Link className='footer--links__link' to={'/'} onClick={reloadProperties} >Inicio</Link>
                 </li>
                 <li>
-                <Link className='footer--links__link' to={'/servicios'}>Servicios</Link>
+                    <Link className='footer--links__link' to={'/servicios'} onClick={scrollToTop} >Servicios</Link>
                 </li>
                 <li>
-                    <Link className='footer--links__link' to={'/propiedades'}>Propiedades</Link>
+                    <Link className='footer--links__link' to={'/propiedades'} onClick={scrollToTop} >Propiedades</Link>
                 </li>
                 <li>
-                    <Link className='footer--links__link' to={'/nosotros'}>Nosotros</Link>
+                    <Link className='footer--links__link' to={'/nosotros'} onClick={scrollToTop} >Nosotros</Link>
                 </li>
             </ul>
         </div>
@@ -32,7 +54,7 @@ const FooterLinks = () => {
             <p>Redes</p>
             <ul>
                 <li>
-                    <a href={'https://api.whatsapp.com/send/?phone=26517362&text&app_absent=0'} target={'_blank'} rel={"noreferrer"} className='footer--links__link'>Whatsapp</a>
+                    <a href={'https://api.whatsapp.com/send/?phone=36356829&text&app_absent=0'} target={'_blank'} rel={"noreferrer"} className='footer--links__link'>Whatsapp</a>
                 </li>
                 <li>
                     <a href={'https://www.instagram.com/jonathanbrusi/'} target={'_blank'} rel={"noreferrer"} className='footer--links__link'>Instagram</a>

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../media/logo-redim.png';
+import logo from '../../images/logo-redim.png';
 import { Link } from 'react-router-dom';
 
 const Brand = () => {

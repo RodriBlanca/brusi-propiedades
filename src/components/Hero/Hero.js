@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import backgroundVideo from '../../media/video-background.mp4';
+import backgroundVideo from '../../videos/video-background.mp4';
 
 const Hero = () => {
 
@@ -21,10 +21,10 @@ const Hero = () => {
         <div className='hero--buttons'>
           <p className='hero--buttons__text'>¿En qué podemos ayudarte?</p>
           <div>
-            <Link to='/brusi-propiedades/servicios'>
+            <Link to='/servicios'>
               <button className='hero--buttons__button' id='sell'><span>Quiero Vender</span></button>
             </Link>
-            <Link to='/brusi-propiedades/propiedades' onClick={scrollToTop}>
+            <Link to='/propiedades' onClick={scrollToTop}>
               <button className='hero--buttons__button' id='buy'><span>Quiero Comprar</span></button>
             </Link>
           </div>

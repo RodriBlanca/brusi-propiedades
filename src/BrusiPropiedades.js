@@ -76,7 +76,7 @@ const BrusiPropiedades = () => {
                   <Route path='/propiedades/propiedad:id' element={<PropertyDetails setProperties={setProperties} properties={properties}/>}/>
               </Routes>
               <WhatsappLogo />
-              <Footer />
+              <Footer setProperties={setProperties} />
             </PropertyProvider>
           </MenuSectionsProvider>
         </CheckButtonsProvider>
