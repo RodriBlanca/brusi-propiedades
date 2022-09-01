@@ -31,7 +31,6 @@ const BrusiPropiedades = () => {
 
   useEffect(() => {
     window.addEventListener('load', (e) => {
-      console.log(e);
       setDomLoaded(true);
     })
   }, []);
@@ -67,7 +66,7 @@ const BrusiPropiedades = () => {
               <Header setProperties={setProperties} />
               <Routes>
                   <Route path='*' element={<NotFoundPage />}/>
-                  <Route path='/' element={<Home properties={properties} loading={loading}/>}/>
+                  <Route path='/' element={<Home properties={properties} loading={loading} />}/>
                   <Route path='/servicios' element={<Services />}/>
                   <Route path='/propiedades' element={<Properties properties={properties} setProperties={setProperties} loading={loading} setLoading={setLoading} />}/>
                   <Route path='/nosotros' element={<About />}/>

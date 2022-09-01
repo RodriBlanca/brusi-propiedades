@@ -108,7 +108,7 @@ const Form = () => {
                     </div>
                     {/* Whatsapp */}
                     <div>
-                        <a href={'https://api.whatsapp.com/send/?phone=26517362&text&app_absent=0'} target={'_blank'} rel={"noreferrer"} className='social-media--link'>
+                        <a href={'https://api.whatsapp.com/send/?phone=36356829&text&app_absent=0'} target={'_blank'} rel={"noreferrer"} className='social-media--link'>
                             <img src={whatsappIcon} alt="link a whatsapp" className='social-media--link__img'/>
                         </a>
                     </div>
