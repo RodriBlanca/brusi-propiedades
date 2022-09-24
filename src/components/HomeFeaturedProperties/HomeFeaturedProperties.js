@@ -13,7 +13,7 @@ const HomeFeaturedProperties = ({properties, loading}) => {
             <LoadingSpinner />
             :
             <FeaturedPropertiesContainer properties={properties}/>
-          }
+        }
     </div>
   )
 }

@@ -41,12 +41,12 @@ const Slider = ({fotos, direccion, handleProperty}) => {
 
     const openModal = (e) => {
         e.preventDefault();
-        console.log(window.location.href)
         const imagesModalElement = document.getElementById('slider-modal');
-        const propertiesPage = 'http://www.brusipropiedades.com/propiedades';
-        const homePage = 'http://www.brusipropiedades.com';
+        const propertiesPage = 'https://www.brusipropiedades.com/#/propiedades';
+        const homePage = 'https://www.brusipropiedades.com/#/';
+        const homePageTwo = 'https://www.brusipropiedades.com/';
 
-        if(window.location.href !== propertiesPage && window.location.href !== homePage) {
+        if(window.location.href !== propertiesPage && window.location.href !== homePage && window.location.href !== homePageTwo) {
             if(!imagesModal) {
                 setImagesModal(true);
                 imagesModalElement.classList.remove('closed--modal');
@@ -82,7 +82,7 @@ const Slider = ({fotos, direccion, handleProperty}) => {
                             <button className='modal--arrows__left' onClick={prevImgModal}><img src={leftArrow} alt="left arrow"/></button>
                             <button className='modal--arrows__right' onClick={nextImgModal}><img src={rightArrow} alt="right arrow"/></button>
                         </div>
-                        <p className='slider--modal__number'>{`${imageNumber} / ${fotos.fotos.length}`}</p>
+                        <p className='slider--modal__number'>{`${imageNumber} / ${fotos.fotos.length - 1}`}</p>
                         <button className='slider--modal__button' onClick={closeModal}></button>
                     </div>
                 </>

@@ -6,7 +6,7 @@ import WhatsappLogo from './components/WhatsappLogo/WhatsappLogo';
 import Footer from './components/Footer/Footer';
 import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
 // React Router Dom
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, HashRouter } from 'react-router-dom';
 // Pages
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -30,7 +30,7 @@ const BrusiPropiedades = () => {
   const [domLoaded, setDomLoaded] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('load', (e) => {
+    window.addEventListener('DOMContentLoaded', (e) => {
       setDomLoaded(true);
     })
   }, []);
@@ -53,14 +53,7 @@ const BrusiPropiedades = () => {
 
   return (
     <div className='brusi-propiedades'>        
-        {
-          domLoaded === false ? 
-          <div className='spinner'>
-            <img src={logo} alt='Brusi Propiedades logo'/>
-            <LoadingSpinner />
-          </div>
-          :
-          <CheckButtonsProvider>
+        <CheckButtonsProvider>
           <MenuSectionsProvider>
             <PropertyProvider>
               <Header setProperties={setProperties} />
@@ -79,7 +72,6 @@ const BrusiPropiedades = () => {
             </PropertyProvider>
           </MenuSectionsProvider>
         </CheckButtonsProvider>
-        }
     </div>
   )
 }
